@@ -35,15 +35,15 @@ const valueMultipliers = [-1, 0, 1, 2]; // [0, 0.5, 1, 2] is save-like, rather t
 export function getExpectedValue(mod: Mod, dc: number) {
 	let result = 0;
 	for (let roll = 1; roll <= 20; roll++) {
-		const check = roll + mod + (roll == 1 ? -10 : roll == 20 ? 10 : 0);
+		const check = roll + mod;
 		// crit fail
-		if (check <= dc - 10) result += valueMultipliers[0];
+		if (check <= dc - 10) result += valueMultipliers[roll == 20 ? 1 : 0];
 		// crit success
-		else if (check >= dc + 10) result += valueMultipliers[3];
+		else if (check >= dc + 10) result += valueMultipliers[roll == 1 ? 2 : 3];
 		// fail
-		else if (check < dc) result += valueMultipliers[1];
+		else if (check < dc) result += valueMultipliers[roll == 20 ? 2 : roll == 1 ? 0 : 1];
 		// success
-		else result += valueMultipliers[2];
+		else result += valueMultipliers[roll == 20 ? 3 : roll == 1 ? 1 : 2];
 	}
 	return result / 20;
 }
