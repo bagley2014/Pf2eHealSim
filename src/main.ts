@@ -1,4 +1,6 @@
-import { getExpectedValue } from './mods';
+import './mods';
+
+import { getExpectedValue } from './mods/misc';
 
 function main() {
 	const dc = 30;

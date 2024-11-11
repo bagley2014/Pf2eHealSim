@@ -29,35 +29,19 @@ const skillItemTierList = ModTierListTable.parse(skillItemsJson);
 
 const standardDCs = z.number().array().length(21, 'because there are 20 levels, plus the 0th index').parse(standardDCsJson);
 
-const level = 1;
+const level = 17;
 
-const valueMultipliers = [-1, 0, 1, 2]; // [0, 0.5, 1, 2] is save-like, rather than rolling
-export function getExpectedValue(mod: Mod, dc: number) {
-	let result = 0;
-	for (let roll = 1; roll <= 20; roll++) {
-		const check = roll + mod;
-		// crit fail
-		if (check <= dc - 10) result += valueMultipliers[roll == 20 ? 1 : 0];
-		// crit success
-		else if (check >= dc + 10) result += valueMultipliers[roll == 1 ? 2 : 3];
-		// fail
-		else if (check < dc) result += valueMultipliers[roll == 20 ? 2 : roll == 1 ? 0 : 1];
-		// success
-		else result += valueMultipliers[roll == 20 ? 3 : roll == 1 ? 1 : 2];
-	}
-	return result / 20;
-}
-
-// Kind of arbitrary tiers; a maxed out first level skill gets A-tier
-function getTier(expectedValue: number): Tier {
-	if (expectedValue >= 1.25) return 'SS';
-	if (expectedValue >= 1) return 'S';
-	if (expectedValue >= 0.75) return 'A';
-	if (expectedValue >= 0.6) return 'B';
-	if (expectedValue >= 0.45) return 'C';
-	if (expectedValue >= 0.3) return 'D';
-	if (expectedValue >= 0.15) return 'F';
-	if (expectedValue > 0) return 'FF';
+function getTier(mod: Mod, dc: number): Tier {
+	const diff = dc - mod;
+	// if (diff <= 0) return 'SSS';
+	if (diff <= 3) return 'SS';
+	if (diff <= 5) return 'S';
+	if (diff <= 8) return 'A';
+	if (diff <= 9) return 'B';
+	if (diff <= 11) return 'C';
+	if (diff <= 13) return 'D';
+	if (diff <= 15) return 'F';
+	if (diff <= 16) return 'FF';
 	return 'FFF';
 }
 
@@ -80,10 +64,4 @@ function multiplyTiers(tierList1: CompositeTierList, tierList2: CompositeTierLis
 
 const t = multiplyTiers(multiplyTiers(attributeTierList[level]!, skillProficiencyTierList[level]!), skillItemTierList[level]!);
 t.sort((a, b) => b[1] - a[1]);
-console.log(
-	t.map((x) => [
-		arrayArrayable(x[0]).join('|'),
-		getExpectedValue(x[1], standardDCs[level]),
-		getTier(getExpectedValue(x[1], standardDCs[level])),
-	]),
-);
+console.log(t.map((x) => [arrayArrayable(x[0]).join('|'), x[1], getTier(x[1], standardDCs[level])]));
