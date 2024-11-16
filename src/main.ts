@@ -1,4 +1,4 @@
-import './mods';
+import './classes';
 
 function main() {}
 

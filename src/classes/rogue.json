@@ -1,0 +1,40 @@
+[
+	{
+		"name": "Thief Rogue",
+		"keyAttribute": "Dexterity",
+		"type": "Class",
+		"classArchetype": false,
+		"mechanicalDeity": false,
+		"armor": "Light",
+		"spellcaster": false,
+		"focusSpells": false
+	},
+	{
+		"name": "Scoundrel Rogue",
+		"keyAttribute": ["Dexterity", "Charisma"],
+		"type": "Class",
+		"classArchetype": false,
+		"mechanicalDeity": false
+	},
+	{
+		"name": "Mastermind Rogue",
+		"keyAttribute": ["Dexterity", "Intelligence"],
+		"type": "Class",
+		"classArchetype": false,
+		"mechanicalDeity": false
+	},
+	{
+		"name": "Ruffian Rogue",
+		"keyAttribute": ["Dexterity", "Strength"],
+		"type": "Class",
+		"classArchetype": false,
+		"mechanicalDeity": false
+	},
+	{
+		"name": "Avenger",
+		"keyAttribute": ["Dexterity", "Strength"],
+		"type": "Class",
+		"classArchetype": true,
+		"mechanicalDeity": true
+	}
+]
