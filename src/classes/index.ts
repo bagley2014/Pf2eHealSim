@@ -1,6 +1,5 @@
 import fg from 'fast-glob';
 import { readFileSync } from 'fs';
-import { std } from 'mathjs';
 import { z } from 'zod';
 
 type Arrayable<T> = T | T[];
@@ -13,7 +12,7 @@ const Attribute = z.enum(['Strength', 'Dexterity', 'Constitution', 'Intelligence
 const Character = z.object({
 	name: z.string(),
 	// armor: z.enum(['None', 'Light', 'Medium', 'Heavy']), bad, because higher levels imply lower levels, but I don't know how to represent that
-	classArchetype: z.boolean(), // this is also kind of bad, because there's no reason to remove classes that AREN'T class archetypes
+	classArchetype: z.boolean(),
 	// focusSpells: z.boolean(), see spellcaster
 	keyAttribute: Attribute.or(Attribute.array()).transform(arrayArrayable),
 	mechanicalDeity: z.boolean(),
@@ -56,35 +55,42 @@ function getQuestionText(trait: Trait): string {
 	}
 }
 
+function getApplicableAnswers(trait: Trait, character: Character): string[] {
+	switch (trait) {
+		case 'name':
+			return [character.name];
+		case 'classArchetype':
+			return character.classArchetype ? ['Yes'] : ['No', 'Yes'];
+		case 'keyAttribute':
+			return character.keyAttribute;
+		case 'mechanicalDeity':
+			return character.mechanicalDeity ? ['Yes', "Don't care"] : ['No', "Don't care"];
+		case 'type':
+			return [character.type, "Don't care"];
+	}
+}
+
 function getQuestion(trait: Trait, characters: Character[]): Question {
+	const average = (arr: number[]) => arr.reduce((acc, val) => acc + val) / arr.length;
+
 	const answers: AnswerMap = new Map<string, Character[]>();
 	const addCharacter = (key: string, value: Character) => answers.set(key, [...(answers.get(key) || []), value]);
 
 	for (const character of characters) {
-		const value = character[trait];
-		if (typeof value === 'string') {
-			addCharacter(value, character);
-		} else if (typeof value === 'boolean') {
-			addCharacter(value ? 'Yes' : 'No', character);
-		} else if (trait === 'keyAttribute') {
-			value.forEach((attribute) => addCharacter(attribute, character));
-		} else {
-			throw new Error(`There's no answer handler for ${trait}`);
+		for (const answer of getApplicableAnswers(trait, character)) {
+			addCharacter(answer, character);
 		}
 	}
 
 	return {
 		text: getQuestionText(trait),
 		answers: answers,
-		// Using standard deviation here might not make sense, considering the same class choice can appear in multiple categories
-		// Meaning a question might look like it splits things down the middle, but in fact it gives no new info at all
-		// Maybe some sort of average distance from half the total characters points?
-		score: std(
+		// This tells us how many characters remain given each answer, on average
+		score: average(
 			answers
 				.values()
 				.map((x) => x.length)
 				.toArray(),
-			'uncorrected',
 		),
 	};
 }
@@ -92,7 +98,8 @@ function getQuestion(trait: Trait, characters: Character[]): Question {
 function getBestQuestion(questions: Question[]) {
 	if (questions.length == 0) throw new Error('Questions must be non-zero in length');
 
-	questions.sort((a, b) => b.score - a.score);
+	questions.sort((a, b) => a.score - b.score);
+	console.log(questions);
 
 	if (questions.length == 1) return questions[0];
 	let bestQuestion = questions[0];

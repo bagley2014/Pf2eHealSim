@@ -30,7 +30,6 @@
     "dotenv": "^16.4.5",
     "dotenv-cli": "^7.4.2",
     "fast-glob": "^3.3.2",
-    "mathjs": "^13.2.2",
     "nodeplotlib": "^1.1.2",
     "zod": "^3.21.4"
   },
