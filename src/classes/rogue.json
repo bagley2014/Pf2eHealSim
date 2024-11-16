@@ -14,27 +14,31 @@
 		"keyAttribute": ["Dexterity", "Charisma"],
 		"type": "Class",
 		"classArchetype": false,
-		"mechanicalDeity": false
+		"mechanicalDeity": false,
+		"armor": "Light"
 	},
 	{
 		"name": "Mastermind Rogue",
 		"keyAttribute": ["Dexterity", "Intelligence"],
 		"type": "Class",
 		"classArchetype": false,
-		"mechanicalDeity": false
+		"mechanicalDeity": false,
+		"armor": "Light"
 	},
 	{
 		"name": "Ruffian Rogue",
 		"keyAttribute": ["Dexterity", "Strength"],
 		"type": "Class",
 		"classArchetype": false,
-		"mechanicalDeity": false
+		"mechanicalDeity": false,
+		"armor": "Medium"
 	},
 	{
 		"name": "Avenger",
 		"keyAttribute": ["Dexterity", "Strength"],
 		"type": "Class",
 		"classArchetype": true,
-		"mechanicalDeity": true
+		"mechanicalDeity": true,
+		"armor": "Medium"
 	}
 ]

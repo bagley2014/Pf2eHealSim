@@ -13,7 +13,8 @@ const Attribute = z.enum(['Strength', 'Dexterity', 'Constitution', 'Intelligence
 
 const Character = z.object({
 	name: z.string(),
-	// armor: z.enum(['None', 'Light', 'Medium', 'Heavy']), bad, because higher levels imply lower levels, but I don't know how to represent that
+	description: z.string().optional(),
+	armor: z.enum(['None', 'Light', 'Medium', 'Heavy']),
 	classArchetype: z.boolean(),
 	// focusSpells: z.boolean(), see spellcaster
 	keyAttribute: Attribute.or(Attribute.array()).transform(arrayArrayable),
@@ -42,6 +43,10 @@ function getQuestionText(trait: Trait): string {
 	switch (trait) {
 		case 'name':
 			return 'Here are your options:';
+		case 'description':
+			return 'N/A';
+		case 'armor':
+			return 'Which armor proficiency do you want?';
 		case 'classArchetype':
 			return 'Is taking a class archetype ok?';
 		// case 'focusSpells':
@@ -57,10 +62,21 @@ function getQuestionText(trait: Trait): string {
 	}
 }
 
+// Returns the list of answers that a character ISN'T disqualified by
 function getApplicableAnswers(trait: Trait, character: Character): string[] {
 	switch (trait) {
 		case 'name':
 			return [character.name];
+		case 'description':
+			return [];
+		case 'armor':
+			return character.armor == 'Heavy'
+				? ['None', 'Light', 'Medium', 'Heavy']
+				: character.armor == 'Medium'
+					? ['None', 'Light', 'Medium']
+					: character.armor == 'Light'
+						? ['None', 'Light']
+						: ['None'];
 		case 'classArchetype':
 			return character.classArchetype ? ['Yes'] : ['No', 'Yes'];
 		case 'keyAttribute':
@@ -88,12 +104,15 @@ function getQuestion(trait: Trait, characters: Character[]): Question {
 		text: getQuestionText(trait),
 		answers: answers,
 		// This tells us how many characters remain given each answer, on average
-		score: average(
-			answers
-				.values()
-				.map((x) => x.length)
-				.toArray(),
-		),
+		score:
+			answers.size == 0
+				? Infinity
+				: average(
+						answers
+							.values()
+							.map((x) => x.length)
+							.toArray(),
+					),
 	};
 }
 
