@@ -1,3 +1,5 @@
+import { confirm, select } from '@inquirer/prompts';
+
 import fg from 'fast-glob';
 import { readFileSync } from 'fs';
 import { z } from 'zod';
@@ -95,26 +97,29 @@ function getQuestion(trait: Trait, characters: Character[]): Question {
 	};
 }
 
-function getBestQuestion(questions: Question[]) {
+function getBestQuestion(questions: Question[], maxScore: number) {
 	if (questions.length == 0) throw new Error('Questions must be non-zero in length');
 
 	questions.sort((a, b) => a.score - b.score);
-	console.log(questions);
-
-	if (questions.length == 1) return questions[0];
 	let bestQuestion = questions[0];
 
+	// This function filters the list of questions, then returns a new best question, if it exists
+	const tryFilter = (predicate: (value: Question) => boolean) => {
+		questions = questions.filter(predicate);
+		return questions.length == 0 ? bestQuestion : questions[0];
+	};
+
 	// Filter out questions with only one answer, for they are useless
-	questions = questions.filter((question) => question.answers.size > 1);
-	if (questions.length == 0) return bestQuestion;
-	else if (questions.length == 1) return questions[0];
-	bestQuestion = questions[0];
+	bestQuestion = tryFilter((question) => question.answers.size > 1);
+
+	// Filter out questions with the max score, for they have no discernment power and are therefore useless
+	bestQuestion = tryFilter((question) => question.score + 0.0001 < maxScore);
+
+	// Avoid asking about the class directly, because we only want to do that if we have no other choice, since it isn't meaningful on its own
+	bestQuestion = tryFilter((question) => question.text != getQuestionText('name'));
 
 	// Filter out questions with more than three answers, for they are unwieldy
-	questions = questions.filter((question) => question.answers.size <= 3);
-	if (questions.length == 0) return bestQuestion;
-	else if (questions.length == 1) return questions[0];
-	bestQuestion = questions[0];
+	bestQuestion = tryFilter((question) => question.answers.size <= 3);
 
 	return bestQuestion;
 }
@@ -158,7 +163,39 @@ export function auditData() {
 	if (unexpectedTraits?.length) console.log('Unexpected Traits:', unexpectedTraits);
 }
 
-function main() {
+async function reduceCharacters(data: Character[], answeredQuestions: string[] = []) {
+	// Start of recursive function, with anchor point
+	if (data.length == 0) throw new Error('Data cannot be empty');
+	if (data.length == 1) return data[0];
+	console.log(`You've got ${data.length} options`);
+
+	// Figure out possible questions
+	const possibleQuestions = [];
+	for (const trait of Trait.options) {
+		possibleQuestions.push(getQuestion(trait, data));
+	}
+
+	// Decide which question to ask, ignoring questions that were already answered
+	const bestQuestion = getBestQuestion(
+		possibleQuestions.filter((x) => !answeredQuestions.includes(x.text)),
+		data.length,
+	);
+	answeredQuestions.push(bestQuestion.text);
+
+	// Ask the question
+	const remainingCharacters = await select({
+		message: bestQuestion.text,
+		choices: bestQuestion.answers
+			.entries()
+			.map(([answer, characters]) => ({ name: answer, value: characters }))
+			.toArray(),
+	});
+
+	// Recurse using the set of remaining options
+	return reduceCharacters(remainingCharacters, answeredQuestions);
+}
+
+async function main() {
 	// auditData();
 
 	// Get all data
@@ -169,18 +206,10 @@ function main() {
 		data.push(...fileData);
 	}
 
-	// Start of recursive function
-
-	// Figure out possible questions
-	const possibleQuestions = [];
-	for (const trait of Trait.options) {
-		possibleQuestions.push(getQuestion(trait, data));
-	}
-	// Decide which one gives us closest to an even 50-50 split
-	const bestQuestion = getBestQuestion(possibleQuestions);
-	console.log(bestQuestion);
-	// Ask the question
-	// Recurse using the set of remaining options
+	do {
+		const selectedCharacter = await reduceCharacters(data);
+		console.log(selectedCharacter.name);
+	} while (await confirm({ message: 'Start over?', default: false, transformer: (b) => (b ? 'Yes' : 'No') }));
 }
 
 main();
