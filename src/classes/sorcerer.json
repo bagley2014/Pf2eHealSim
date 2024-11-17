@@ -2,11 +2,8 @@
 	{
 		"name": "Aberrant Sorcerer",
 		"description": "You didn't choose to become a spellcaster—you were born one. There's magic in your blood. Something ancient and unknowable speaks to you from beyond the stars or below the earth.",
-		"keyAttribute": "Charisma",
-		"type": "Class",
-		"classArchetype": false,
+		"kind": { "name": "Class", "armor": "None", "classArchetype": false, "keyAttribute": "Charisma" },
 		"mechanicalDeity": false,
-		"armor": "None",
 		"spellcasting": {
 			"attribute": "Charisma",
 			"repertoire": true,
@@ -23,11 +20,8 @@
 	{
 		"name": "Angelic Sorcerer",
 		"description": "You didn't choose to become a spellcaster—you were born one. There's magic in your blood. One of your forebears hailed from a celestial realm, or your ancestors' devotion led to their lineage being blessed.",
-		"keyAttribute": "Charisma",
-		"type": "Class",
-		"classArchetype": false,
+		"kind": { "name": "Class", "armor": "None", "classArchetype": false, "keyAttribute": "Charisma" },
 		"mechanicalDeity": false,
-		"armor": "None",
 		"spellcasting": {
 			"attribute": "Charisma",
 			"repertoire": true,
@@ -44,11 +38,8 @@
 	{
 		"name": "Demonic Sorcerer",
 		"description": "You didn't choose to become a spellcaster—you were born one. There's magic in your blood. Demons debase all they touch. One of your ancestors fell victim to their corruption, and you're burdened by that sin.",
-		"keyAttribute": "Charisma",
-		"type": "Class",
-		"classArchetype": false,
+		"kind": { "name": "Class", "armor": "None", "classArchetype": false, "keyAttribute": "Charisma" },
 		"mechanicalDeity": false,
-		"armor": "None",
 		"spellcasting": {
 			"attribute": "Charisma",
 			"repertoire": true,
@@ -65,11 +56,8 @@
 	{
 		"name": "Diabolic Sorcerer",
 		"description": "You didn't choose to become a spellcaster—you were born one. There's magic in your blood. Devils are evil with a silver tongue, and one of your ancestors dallied in darkness or made an infernal pact.",
-		"keyAttribute": "Charisma",
-		"type": "Class",
-		"classArchetype": false,
+		"kind": { "name": "Class", "armor": "None", "classArchetype": false, "keyAttribute": "Charisma" },
 		"mechanicalDeity": false,
-		"armor": "None",
 		"spellcasting": {
 			"attribute": "Charisma",
 			"repertoire": true,
@@ -86,11 +74,8 @@
 	{
 		"name": "Arcane Draconic Sorcerer",
 		"description": "You didn't choose to become a spellcaster—you were born one. There's magic in your blood. The blood of dragons flows through your veins. These beasts are both fearsome in combat and skilled at magic.",
-		"keyAttribute": "Charisma",
-		"type": "Class",
-		"classArchetype": false,
+		"kind": { "name": "Class", "armor": "None", "classArchetype": false, "keyAttribute": "Charisma" },
 		"mechanicalDeity": false,
-		"armor": "None",
 		"spellcasting": {
 			"attribute": "Charisma",
 			"repertoire": true,
@@ -107,11 +92,8 @@
 	{
 		"name": "Divine Draconic Sorcerer",
 		"description": "You didn't choose to become a spellcaster—you were born one. There's magic in your blood. The blood of dragons flows through your veins. These beasts are both fearsome in combat and skilled at magic.",
-		"keyAttribute": "Charisma",
-		"type": "Class",
-		"classArchetype": false,
+		"kind": { "name": "Class", "armor": "None", "classArchetype": false, "keyAttribute": "Charisma" },
 		"mechanicalDeity": false,
-		"armor": "None",
 		"spellcasting": {
 			"attribute": "Charisma",
 			"repertoire": true,
@@ -128,11 +110,8 @@
 	{
 		"name": "Occult Draconic Sorcerer",
 		"description": "You didn't choose to become a spellcaster—you were born one. There's magic in your blood. The blood of dragons flows through your veins. These beasts are both fearsome in combat and skilled at magic.",
-		"keyAttribute": "Charisma",
-		"type": "Class",
-		"classArchetype": false,
+		"kind": { "name": "Class", "armor": "None", "classArchetype": false, "keyAttribute": "Charisma" },
 		"mechanicalDeity": false,
-		"armor": "None",
 		"spellcasting": {
 			"attribute": "Charisma",
 			"repertoire": true,
@@ -149,11 +128,8 @@
 	{
 		"name": "Primal Draconic Sorcerer",
 		"description": "You didn't choose to become a spellcaster—you were born one. There's magic in your blood. The blood of dragons flows through your veins. These beasts are both fearsome in combat and skilled at magic.",
-		"keyAttribute": "Charisma",
-		"type": "Class",
-		"classArchetype": false,
+		"kind": { "name": "Class", "armor": "None", "classArchetype": false, "keyAttribute": "Charisma" },
 		"mechanicalDeity": false,
-		"armor": "None",
 		"spellcasting": {
 			"attribute": "Charisma",
 			"repertoire": true,
@@ -170,11 +146,8 @@
 	{
 		"name": "Elemental Sorcerer",
 		"description": "You didn't choose to become a spellcaster—you were born one. There's magic in your blood. An elemental influence has imbued your blood with primal fury.",
-		"keyAttribute": "Charisma",
-		"type": "Class",
-		"classArchetype": false,
+		"kind": { "name": "Class", "armor": "None", "classArchetype": false, "keyAttribute": "Charisma" },
 		"mechanicalDeity": false,
-		"armor": "None",
 		"spellcasting": {
 			"attribute": "Charisma",
 			"repertoire": true,
@@ -191,11 +164,8 @@
 	{
 		"name": "Fey Sorcerer",
 		"description": "You didn't choose to become a spellcaster—you were born one. There's magic in your blood. Fey whimsy or a tryst in a moonlit grove put the bewitching magic of the First World into your family's bloodline.",
-		"keyAttribute": "Charisma",
-		"type": "Class",
-		"classArchetype": false,
+		"kind": { "name": "Class", "armor": "None", "classArchetype": false, "keyAttribute": "Charisma" },
 		"mechanicalDeity": false,
-		"armor": "None",
 		"spellcasting": {
 			"attribute": "Charisma",
 			"repertoire": true,
@@ -212,11 +182,8 @@
 	{
 		"name": "Hag Sorcerer",
 		"description": "You didn't choose to become a spellcaster—you were born one. There's magic in your blood. A hag cursed your family long ago, or you are a descendant of a hag or changeling, and their magic infests your blood and soul.",
-		"keyAttribute": "Charisma",
-		"type": "Class",
-		"classArchetype": false,
+		"kind": { "name": "Class", "armor": "None", "classArchetype": false, "keyAttribute": "Charisma" },
 		"mechanicalDeity": false,
-		"armor": "None",
 		"spellcasting": {
 			"attribute": "Charisma",
 			"repertoire": true,
@@ -233,11 +200,8 @@
 	{
 		"name": "Imperial Sorcerer",
 		"description": "You didn't choose to become a spellcaster—you were born one. There's magic in your blood. One of your ancestors was a mortal who mastered magic.",
-		"keyAttribute": "Charisma",
-		"type": "Class",
-		"classArchetype": false,
+		"kind": { "name": "Class", "armor": "None", "classArchetype": false, "keyAttribute": "Charisma" },
 		"mechanicalDeity": false,
-		"armor": "None",
 		"spellcasting": {
 			"attribute": "Charisma",
 			"repertoire": true,
@@ -254,11 +218,8 @@
 	{
 		"name": "Undead Sorcerer",
 		"description": "You didn't choose to become a spellcaster—you were born one. There's magic in your blood. The touch of undeath runs through your blood. Your family tree might contain powerful undead, like a vampire.",
-		"keyAttribute": "Charisma",
-		"type": "Class",
-		"classArchetype": false,
+		"kind": { "name": "Class", "armor": "None", "classArchetype": false, "keyAttribute": "Charisma" },
 		"mechanicalDeity": false,
-		"armor": "None",
 		"spellcasting": {
 			"attribute": "Charisma",
 			"repertoire": true,

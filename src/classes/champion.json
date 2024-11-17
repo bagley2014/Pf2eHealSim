@@ -2,11 +2,8 @@
 	{
 		"name": "Champion",
 		"description": "You are an emissary of a deity, a devoted servant who has taken up a weighty mantle, and you devoutly pursue a cause that holds you apart from those around you.",
-		"keyAttribute": ["Strength", "Dexterity"],
-		"type": "Class",
-		"classArchetype": false,
+		"kind": { "name": "Class", "armor": "Heavy", "classArchetype": false, "keyAttribute": ["Strength", "Dexterity"] },
 		"mechanicalDeity": true,
-		"armor": "Heavy",
 		"spellcasting": null,
 		"focusSpells": {
 			"attribute": "Charisma",

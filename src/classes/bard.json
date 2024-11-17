@@ -2,11 +2,8 @@
 	{
 		"name": "Bard",
 		"description": "You are a master of artistry, a scholar of hidden secrets, and a captivating persuader. Using powerful performances, you influence minds and elevate souls to new levels of heroics.",
-		"keyAttribute": "Charisma",
-		"type": "Class",
-		"classArchetype": false,
+		"kind": { "name": "Class", "armor": "Light", "classArchetype": false, "keyAttribute": "Charisma" },
 		"mechanicalDeity": false,
-		"armor": "Light",
 		"spellcasting": {
 			"attribute": "Charisma",
 			"repertoire": true,
