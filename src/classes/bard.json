@@ -17,7 +17,8 @@
 			"tradition": "Occult"
 		},
 		"martialWeaponTraining": true,
-		"shieldBlock": false
+		"shieldBlock": false,
+		"precisionDamage": false
 	},
 	{
 		"name": "Bard Archetype",
@@ -37,6 +38,7 @@
 			"tradition": "Occult"
 		},
 		"martialWeaponTraining": false,
-		"shieldBlock": false
+		"shieldBlock": false,
+		"precisionDamage": false
 	}
 ]

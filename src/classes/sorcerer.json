@@ -17,7 +17,8 @@
 			"tradition": "Occult"
 		},
 		"martialWeaponTraining": false,
-		"shieldBlock": false
+		"shieldBlock": false,
+		"precisionDamage": false
 	},
 	{
 		"name": "Angelic Sorcerer",
@@ -37,7 +38,8 @@
 			"tradition": "Divine"
 		},
 		"martialWeaponTraining": false,
-		"shieldBlock": false
+		"shieldBlock": false,
+		"precisionDamage": false
 	},
 	{
 		"name": "Demonic Sorcerer",
@@ -57,7 +59,8 @@
 			"tradition": "Divine"
 		},
 		"martialWeaponTraining": false,
-		"shieldBlock": false
+		"shieldBlock": false,
+		"precisionDamage": false
 	},
 	{
 		"name": "Diabolic Sorcerer",
@@ -77,7 +80,8 @@
 			"tradition": "Divine"
 		},
 		"martialWeaponTraining": false,
-		"shieldBlock": false
+		"shieldBlock": false,
+		"precisionDamage": false
 	},
 	{
 		"name": "Arcane Draconic Sorcerer",
@@ -97,7 +101,8 @@
 			"tradition": "Arcane"
 		},
 		"martialWeaponTraining": false,
-		"shieldBlock": false
+		"shieldBlock": false,
+		"precisionDamage": false
 	},
 	{
 		"name": "Divine Draconic Sorcerer",
@@ -117,7 +122,8 @@
 			"tradition": "Divine"
 		},
 		"martialWeaponTraining": false,
-		"shieldBlock": false
+		"shieldBlock": false,
+		"precisionDamage": false
 	},
 	{
 		"name": "Occult Draconic Sorcerer",
@@ -137,7 +143,8 @@
 			"tradition": "Occult"
 		},
 		"martialWeaponTraining": false,
-		"shieldBlock": false
+		"shieldBlock": false,
+		"precisionDamage": false
 	},
 	{
 		"name": "Primal Draconic Sorcerer",
@@ -157,7 +164,8 @@
 			"tradition": "Primal"
 		},
 		"martialWeaponTraining": false,
-		"shieldBlock": false
+		"shieldBlock": false,
+		"precisionDamage": false
 	},
 	{
 		"name": "Elemental Sorcerer",
@@ -177,7 +185,8 @@
 			"tradition": "Primal"
 		},
 		"martialWeaponTraining": false,
-		"shieldBlock": false
+		"shieldBlock": false,
+		"precisionDamage": false
 	},
 	{
 		"name": "Fey Sorcerer",
@@ -197,7 +206,8 @@
 			"tradition": "Primal"
 		},
 		"martialWeaponTraining": false,
-		"shieldBlock": false
+		"shieldBlock": false,
+		"precisionDamage": false
 	},
 	{
 		"name": "Hag Sorcerer",
@@ -217,7 +227,8 @@
 			"tradition": "Occult"
 		},
 		"martialWeaponTraining": false,
-		"shieldBlock": false
+		"shieldBlock": false,
+		"precisionDamage": false
 	},
 	{
 		"name": "Imperial Sorcerer",
@@ -237,7 +248,8 @@
 			"tradition": "Arcane"
 		},
 		"martialWeaponTraining": false,
-		"shieldBlock": false
+		"shieldBlock": false,
+		"precisionDamage": false
 	},
 	{
 		"name": "Undead Sorcerer",
@@ -257,7 +269,8 @@
 			"tradition": "Divine"
 		},
 		"martialWeaponTraining": false,
-		"shieldBlock": false
+		"shieldBlock": false,
+		"precisionDamage": false
 	},
 	{
 		"name": "Primal Sorcerer Archetype",
@@ -277,7 +290,8 @@
 			"tradition": "Primal"
 		},
 		"martialWeaponTraining": false,
-		"shieldBlock": false
+		"shieldBlock": false,
+		"precisionDamage": false
 	},
 	{
 		"name": "Occult Sorcerer Archetype",
@@ -297,7 +311,8 @@
 			"tradition": "Occult"
 		},
 		"martialWeaponTraining": false,
-		"shieldBlock": false
+		"shieldBlock": false,
+		"precisionDamage": false
 	},
 	{
 		"name": "Arcane Sorcerer Archetype",
@@ -317,7 +332,8 @@
 			"tradition": "Arcane"
 		},
 		"martialWeaponTraining": false,
-		"shieldBlock": false
+		"shieldBlock": false,
+		"precisionDamage": false
 	},
 	{
 		"name": "Divine Sorcerer Archetype",
@@ -337,6 +353,7 @@
 			"tradition": "Divine"
 		},
 		"martialWeaponTraining": false,
-		"shieldBlock": false
+		"shieldBlock": false,
+		"precisionDamage": false
 	}
 ]

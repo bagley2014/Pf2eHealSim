@@ -17,7 +17,8 @@
 			"tradition": "Primal"
 		},
 		"martialWeaponTraining": false,
-		"shieldBlock": true
+		"shieldBlock": true,
+		"precisionDamage": false
 	},
 	{
 		"name": "Flexible Druid",
@@ -37,7 +38,8 @@
 			"tradition": "Primal"
 		},
 		"martialWeaponTraining": false,
-		"shieldBlock": true
+		"shieldBlock": true,
+		"precisionDamage": false
 	},
 	{
 		"name": "Druid Archetype",
@@ -57,6 +59,7 @@
 			"tradition": "Primal"
 		},
 		"martialWeaponTraining": false,
-		"shieldBlock": false
+		"shieldBlock": false,
+		"precisionDamage": false
 	}
 ]

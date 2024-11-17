@@ -9,7 +9,8 @@
 		"spellcasting": null,
 		"focusSpells": null,
 		"martialWeaponTraining": true,
-		"shieldBlock": true
+		"shieldBlock": true,
+		"precisionDamage": false
 	},
 	{
 		"name": "Fighter Archetype",
@@ -21,6 +22,7 @@
 		"spellcasting": null,
 		"focusSpells": null,
 		"martialWeaponTraining": true,
-		"shieldBlock": false
+		"shieldBlock": false,
+		"precisionDamage": false
 	}
 ]

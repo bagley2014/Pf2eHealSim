@@ -17,7 +17,8 @@
 			"tradition": "Divine"
 		},
 		"martialWeaponTraining": "Favored Weapon",
-		"shieldBlock": true
+		"shieldBlock": true,
+		"precisionDamage": false
 	},
 	{
 		"name": "Cloistered Cleric",
@@ -37,7 +38,8 @@
 			"tradition": "Divine"
 		},
 		"martialWeaponTraining": "Favored Weapon",
-		"shieldBlock": false
+		"shieldBlock": false,
+		"precisionDamage": false
 	},
 	{
 		"name": "Flexible Warpriest Cleric",
@@ -57,7 +59,8 @@
 			"tradition": "Divine"
 		},
 		"martialWeaponTraining": "Favored Weapon",
-		"shieldBlock": true
+		"shieldBlock": true,
+		"precisionDamage": false
 	},
 	{
 		"name": "Flexible Cloistered Cleric",
@@ -77,7 +80,8 @@
 			"tradition": "Divine"
 		},
 		"martialWeaponTraining": "Favored Weapon",
-		"shieldBlock": false
+		"shieldBlock": false,
+		"precisionDamage": false
 	},
 	{
 		"name": "Battle Harbinger",
@@ -97,7 +101,8 @@
 			"tradition": "Divine"
 		},
 		"martialWeaponTraining": true,
-		"shieldBlock": false
+		"shieldBlock": false,
+		"precisionDamage": false
 	},
 	{
 		"name": "Cleric Archetype",
@@ -117,6 +122,7 @@
 			"tradition": "Divine"
 		},
 		"martialWeaponTraining": false,
-		"shieldBlock": false
+		"shieldBlock": false,
+		"precisionDamage": false
 	}
 ]

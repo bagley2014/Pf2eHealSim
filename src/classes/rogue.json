@@ -9,7 +9,8 @@
 		"spellcasting": null,
 		"focusSpells": null,
 		"martialWeaponTraining": true,
-		"shieldBlock": false
+		"shieldBlock": false,
+		"precisionDamage": true
 	},
 	{
 		"name": "Scoundrel Rogue",
@@ -21,7 +22,8 @@
 		"spellcasting": null,
 		"focusSpells": null,
 		"martialWeaponTraining": true,
-		"shieldBlock": false
+		"shieldBlock": false,
+		"precisionDamage": true
 	},
 	{
 		"name": "Mastermind Rogue",
@@ -33,7 +35,8 @@
 		"spellcasting": null,
 		"focusSpells": null,
 		"martialWeaponTraining": true,
-		"shieldBlock": false
+		"shieldBlock": false,
+		"precisionDamage": true
 	},
 	{
 		"name": "Ruffian Rogue",
@@ -45,7 +48,8 @@
 		"spellcasting": null,
 		"focusSpells": null,
 		"martialWeaponTraining": true,
-		"shieldBlock": false
+		"shieldBlock": false,
+		"precisionDamage": true
 	},
 	{
 		"name": "Avenger",
@@ -57,7 +61,8 @@
 		"spellcasting": null,
 		"focusSpells": null,
 		"martialWeaponTraining": true,
-		"shieldBlock": false
+		"shieldBlock": false,
+		"precisionDamage": true
 	},
 	{
 		"name": "Rogue Archetype",
@@ -69,6 +74,7 @@
 		"spellcasting": null,
 		"focusSpells": null,
 		"martialWeaponTraining": false,
-		"shieldBlock": false
+		"shieldBlock": false,
+		"precisionDamage": true
 	}
 ]

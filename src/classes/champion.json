@@ -12,7 +12,8 @@
 			"tradition": "Divine"
 		},
 		"martialWeaponTraining": true,
-		"shieldBlock": true
+		"shieldBlock": true,
+		"precisionDamage": false
 	},
 	{
 		"name": "Champion Archetype",
@@ -27,6 +28,7 @@
 			"tradition": "Divine"
 		},
 		"martialWeaponTraining": false,
-		"shieldBlock": false
+		"shieldBlock": false,
+		"precisionDamage": false
 	}
 ]

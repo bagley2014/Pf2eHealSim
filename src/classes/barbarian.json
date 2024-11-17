@@ -9,7 +9,8 @@
 		"spellcasting": null,
 		"focusSpells": null,
 		"martialWeaponTraining": true,
-		"shieldBlock": false
+		"shieldBlock": false,
+		"precisionDamage": false
 	},
 	{
 		"name": "Bloodrager",
@@ -26,7 +27,8 @@
 		},
 		"focusSpells": null,
 		"martialWeaponTraining": true,
-		"shieldBlock": false
+		"shieldBlock": false,
+		"precisionDamage": false
 	},
 	{
 		"name": "Barbarian Archetype",
@@ -38,6 +40,7 @@
 		"spellcasting": null,
 		"focusSpells": null,
 		"martialWeaponTraining": false,
-		"shieldBlock": false
+		"shieldBlock": false,
+		"precisionDamage": false
 	}
 ]

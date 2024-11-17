@@ -9,7 +9,8 @@
 		"spellcasting": null,
 		"focusSpells": null,
 		"martialWeaponTraining": "Alchemical Bombs",
-		"shieldBlock": false
+		"shieldBlock": false,
+		"precisionDamage": false
 	},
 	{
 		"name": "Alchemist Archetype",
@@ -21,6 +22,7 @@
 		"spellcasting": null,
 		"focusSpells": null,
 		"martialWeaponTraining": "Alchemical Bombs",
-		"shieldBlock": false
+		"shieldBlock": false,
+		"precisionDamage": false
 	}
 ]

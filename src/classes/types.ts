@@ -41,6 +41,7 @@ export const CharacterSource = z
 		shieldBlock: z.boolean(),
 		animalCompanion: z.boolean(),
 		familiar: z.boolean(),
+		precisionDamage: z.boolean(),
 		kind: z.discriminatedUnion('name', [
 			z.object({
 				name: z.literal(CharacterKind.enum.Class),
@@ -99,6 +100,7 @@ const Character = z.object({
 	kind: CharacterKind,
 	martialWeaponTraining: z.boolean().or(z.string()),
 	mechanicalDeity: z.boolean(),
+	precisionDamage: z.boolean(),
 	shieldBlock: z.boolean(),
 	spellcasting: z.boolean(),
 	spellcasting_attribute: Attribute.array().nullable(),

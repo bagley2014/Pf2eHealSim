@@ -52,6 +52,8 @@ function getQuestionText(trait: Trait): string {
 			return 'Do you want an animal companion?';
 		case Trait.enum.familiar:
 			return 'Do you want a familiar?';
+		case Trait.enum.precisionDamage:
+			return 'Do you want a way to add precision damage to your attacks?';
 	}
 }
 
@@ -67,6 +69,7 @@ function getApplicableAnswers(trait: Trait, character: Character): string[] {
 		// Simple booleans
 		case Trait.enum.mechanicalDeity:
 		case Trait.enum.focusSpells:
+		case Trait.enum.precisionDamage:
 		case Trait.enum.shieldBlock:
 		case Trait.enum.spellcasting:
 		case Trait.enum.spellcasting_full:
@@ -92,6 +95,7 @@ function getApplicableAnswers(trait: Trait, character: Character): string[] {
 		case Trait.enum.spellcasting_attribute:
 		case Trait.enum.spellcasting_tradition:
 			return [...(character[trait] || ['null']), "Don't Care"];
+
 		// Misc Section
 		case Trait.enum.description:
 			return [];
