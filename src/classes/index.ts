@@ -8,31 +8,31 @@ const getDataFilenames = () => fg.sync('**/classes/**/*.json');
 
 function getQuestionText(trait: Trait): string {
 	switch (trait) {
-		case 'name':
+		case Trait.enum.name:
 			return 'Here are your options:';
-		case 'description':
+		case Trait.enum.description:
 			return 'N/A';
-		case 'armor':
-			return 'Which armor proficiency do you want?';
-		case 'classArchetype':
+		case Trait.enum.armor:
+			return "What's the lowest armor proficiency you'd accept?";
+		case Trait.enum.classArchetype:
 			return 'Is taking a class archetype ok?';
 		// case 'focusSpells':
 		// 	return 'Do you want focus spells?';
-		case 'keyAttribute':
+		case Trait.enum.keyAttribute:
 			return 'What key attribute do you want?';
-		case 'mechanicalDeity':
+		case Trait.enum.mechanicalDeity:
 			return "Do you want your character's deity choice to have a mechanical impact?";
-		case 'spellcasting':
+		case Trait.enum.spellcasting:
 			return 'Do you want spell slots and a spellcasting class feature?';
-		case 'spellcasting_attribute':
+		case Trait.enum.spellcasting_attribute:
 			return 'What spellcasting attribute do you want?';
-		case 'spellcasting_full':
+		case Trait.enum.spellcasting_full:
 			return 'Do you want to be a full caster?';
-		case 'spellcasting_repertoire':
+		case Trait.enum.spellcasting_repertoire:
 			return 'Do you want a spell repertoire class feature?';
-		case 'spellcasting_tradition':
+		case Trait.enum.spellcasting_tradition:
 			return 'Which spellcasting tradition do you want?';
-		case 'type':
+		case Trait.enum.type:
 			return 'Are you looking for a class or an archetype?';
 	}
 }
@@ -41,23 +41,24 @@ function getQuestionText(trait: Trait): string {
 function getApplicableAnswers(trait: Trait, character: Character): string[] {
 	switch (trait) {
 		// Simple strings
-		case 'name':
+		case Trait.enum.name:
 			return [character[trait] || 'null'];
-		case 'spellcasting_attribute':
-		case 'spellcasting_tradition':
+		case Trait.enum.spellcasting_attribute:
+		case Trait.enum.spellcasting_tradition:
+		case Trait.enum.type:
 			return [character[trait] || 'null', "Don't care"];
 
 		// Simple booleans
-		case 'mechanicalDeity':
-		case 'spellcasting':
-		case 'spellcasting_full':
-		case 'spellcasting_repertoire':
+		case Trait.enum.mechanicalDeity:
+		case Trait.enum.spellcasting:
+		case Trait.enum.spellcasting_full:
+		case Trait.enum.spellcasting_repertoire:
 			return character[trait] ? ['Yes', "Don't care"] : ['No', "Don't care"];
 
 		// Misc Section
-		case 'description':
+		case Trait.enum.description:
 			return [];
-		case 'armor':
+		case Trait.enum.armor:
 			return character.armor == 'Heavy'
 				? ['None', 'Light', 'Medium', 'Heavy']
 				: character.armor == 'Medium'
@@ -65,12 +66,10 @@ function getApplicableAnswers(trait: Trait, character: Character): string[] {
 					: character.armor == 'Light'
 						? ['None', 'Light']
 						: ['None'];
-		case 'classArchetype':
+		case Trait.enum.classArchetype:
 			return character.classArchetype ? ['Yes'] : ['No', 'Yes'];
-		case 'keyAttribute':
+		case Trait.enum.keyAttribute:
 			return character.keyAttribute;
-		case 'type':
-			return [character.type, "Don't care"];
 	}
 }
 
@@ -215,7 +214,8 @@ async function main() {
 
 	do {
 		const selectedCharacter = await reduceCharacters(data);
-		console.log(selectedCharacter.description || selectedCharacter.name);
+		console.log(selectedCharacter.name);
+		if (selectedCharacter.description) console.log(selectedCharacter.description);
 	} while (await confirm({ message: 'Start over?', default: false, transformer: (b) => (b ? 'Yes' : 'No') }));
 }
 
