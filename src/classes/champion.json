@@ -17,7 +17,7 @@
 	{
 		"name": "Champion Archetype",
 		"description": "You've sworn a solemn oath to your deity, who has granted you champion powers to aid you in your cause.",
-		"kind": { "name": "Archetype", "multiclass": true, "tenPlusFeats": true },
+		"kind": { "name": "Archetype", "armorTraining": true, "multiclass": true, "tenPlusFeats": true },
 		"animalCompanion": true,
 		"familiar": false,
 		"mechanicalDeity": true,

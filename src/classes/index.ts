@@ -42,6 +42,8 @@ function getQuestionText(trait: Trait): string {
 			return 'Must the archetype have 10 or more feats?';
 		case Trait.enum.archetype_multiclass:
 			return 'Must the archetype be a multiclass archetype?';
+		case Trait.enum.archetype_armorTraining:
+			return 'Must the archetype give some armor training?';
 		case Trait.enum.martialWeaponTraining:
 			return 'Do you want martial weapon proficiency?';
 		case Trait.enum.shieldBlock:
@@ -73,6 +75,7 @@ function getApplicableAnswers(trait: Trait, character: Character): string[] {
 
 		// Booleans where "Yes" eliminates options, but "No" does not
 		case Trait.enum.animalCompanion:
+		case Trait.enum.archetype_armorTraining:
 		case Trait.enum.archetype_multiclass:
 		case Trait.enum.archetype_tenPlusFeats:
 		case Trait.enum.familiar:

@@ -52,7 +52,7 @@ export const CharacterSource = z
 				name: z.literal(CharacterKind.enum.Archetype),
 				multiclass: z.boolean(),
 				tenPlusFeats: z.boolean(),
-				// armorTraining: boolean, for something like Champion, that gives armor training
+				armorTraining: z.boolean(),
 			}),
 		]),
 	})
@@ -61,6 +61,7 @@ export const CharacterSource = z
 			...rest,
 
 			kind: kind.name,
+			archetype_armorTraining: kind.name == CharacterKind.enum.Archetype ? kind.armorTraining : null,
 			archetype_multiclass: kind.name == CharacterKind.enum.Archetype ? kind.multiclass : null,
 			archetype_tenPlusFeats: kind.name == CharacterKind.enum.Archetype ? kind.tenPlusFeats : null,
 			class_armor: kind.name == CharacterKind.enum.Class ? kind.armor : null,
@@ -85,6 +86,7 @@ const Character = z.object({
 	name: z.string(),
 	description: z.string().optional(),
 	animalCompanion: z.boolean(),
+	archetype_armorTraining: z.boolean().nullable(),
 	archetype_multiclass: z.boolean().nullable(),
 	archetype_tenPlusFeats: z.boolean().nullable(),
 	class_armor: Armor.nullable(),

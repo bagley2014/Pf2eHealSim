@@ -62,7 +62,7 @@
 	{
 		"name": "Rogue Archetype",
 		"description": "You’ve learned to sneak, steal, and disable traps. With time and luck, you’ll become capable of moving through the shadows, striking unseen, and escaping without notice.",
-		"kind": { "name": "Archetype", "multiclass": true, "tenPlusFeats": true },
+		"kind": { "name": "Archetype", "armorTraining": true, "multiclass": true, "tenPlusFeats": true },
 		"animalCompanion": false,
 		"familiar": false,
 		"mechanicalDeity": false,

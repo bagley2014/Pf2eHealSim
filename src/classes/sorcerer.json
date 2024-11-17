@@ -262,7 +262,7 @@
 	{
 		"name": "Primal Sorcerer Archetype",
 		"description": "You coax the magic power in your blood to manifest, accessing magic others don't expect you to have.",
-		"kind": { "name": "Archetype", "multiclass": true, "tenPlusFeats": true },
+		"kind": { "name": "Archetype", "armorTraining": false, "multiclass": true, "tenPlusFeats": true },
 		"animalCompanion": false,
 		"familiar": true,
 		"mechanicalDeity": false,
@@ -282,7 +282,7 @@
 	{
 		"name": "Occult Sorcerer Archetype",
 		"description": "You coax the magic power in your blood to manifest, accessing magic others don't expect you to have.",
-		"kind": { "name": "Archetype", "multiclass": true, "tenPlusFeats": true },
+		"kind": { "name": "Archetype", "armorTraining": false, "multiclass": true, "tenPlusFeats": true },
 		"animalCompanion": false,
 		"familiar": true,
 		"mechanicalDeity": false,
@@ -302,7 +302,7 @@
 	{
 		"name": "Arcane Sorcerer Archetype",
 		"description": "You coax the magic power in your blood to manifest, accessing magic others don't expect you to have.",
-		"kind": { "name": "Archetype", "multiclass": true, "tenPlusFeats": true },
+		"kind": { "name": "Archetype", "armorTraining": false, "multiclass": true, "tenPlusFeats": true },
 		"animalCompanion": false,
 		"familiar": true,
 		"mechanicalDeity": false,
@@ -322,7 +322,7 @@
 	{
 		"name": "Divine Sorcerer Archetype",
 		"description": "You coax the magic power in your blood to manifest, accessing magic others don't expect you to have.",
-		"kind": { "name": "Archetype", "multiclass": true, "tenPlusFeats": true },
+		"kind": { "name": "Archetype", "armorTraining": false, "multiclass": true, "tenPlusFeats": true },
 		"animalCompanion": false,
 		"familiar": true,
 		"mechanicalDeity": false,

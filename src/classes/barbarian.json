@@ -31,7 +31,7 @@
 	{
 		"name": "Barbarian Archetype",
 		"description": "There's a rage deep inside you that sometimes breaks loose, granting you some of the might of a barbarian in addition to your other abilities.",
-		"kind": { "name": "Archetype", "multiclass": true, "tenPlusFeats": true },
+		"kind": { "name": "Archetype", "armorTraining": false, "multiclass": true, "tenPlusFeats": true },
 		"animalCompanion": false,
 		"familiar": false,
 		"mechanicalDeity": false,

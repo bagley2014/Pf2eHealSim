@@ -102,7 +102,7 @@
 	{
 		"name": "Cleric Archetype",
 		"description": "You are an ordained priest of your deity and have even learned how to cast a few divine spells. Though your main training lies elsewhere, your religious calling provides you divine gifts.",
-		"kind": { "name": "Archetype", "multiclass": true, "tenPlusFeats": true },
+		"kind": { "name": "Archetype", "armorTraining": false, "multiclass": true, "tenPlusFeats": true },
 		"animalCompanion": false,
 		"familiar": false,
 		"mechanicalDeity": true,
