@@ -9,7 +9,8 @@
 		"armor": "Medium",
 		"spellcasting": null,
 		"focusSpells": null,
-		"martialWeaponTraining": true
+		"martialWeaponTraining": true,
+		"shieldBlock": false
 	},
 	{
 		"name": "Bloodrager",
@@ -26,6 +27,7 @@
 			"tradition": ["Arcane", "Divine"]
 		},
 		"focusSpells": null,
-		"martialWeaponTraining": true
+		"martialWeaponTraining": true,
+		"shieldBlock": false
 	}
 ]

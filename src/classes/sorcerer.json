@@ -16,7 +16,9 @@
 		"focusSpells": {
 			"attribute": "Charisma",
 			"tradition": "Occult"
-		}
+		},
+		"martialWeaponTraining": false,
+		"shieldBlock": false
 	},
 	{
 		"name": "Angelic Sorcerer",
@@ -35,7 +37,9 @@
 		"focusSpells": {
 			"attribute": "Charisma",
 			"tradition": "Divine"
-		}
+		},
+		"martialWeaponTraining": false,
+		"shieldBlock": false
 	},
 	{
 		"name": "Demonic Sorcerer",
@@ -54,7 +58,9 @@
 		"focusSpells": {
 			"attribute": "Charisma",
 			"tradition": "Divine"
-		}
+		},
+		"martialWeaponTraining": false,
+		"shieldBlock": false
 	},
 	{
 		"name": "Diabolic Sorcerer",
@@ -73,7 +79,9 @@
 		"focusSpells": {
 			"attribute": "Charisma",
 			"tradition": "Divine"
-		}
+		},
+		"martialWeaponTraining": false,
+		"shieldBlock": false
 	},
 	{
 		"name": "Arcane Draconic Sorcerer",
@@ -92,7 +100,9 @@
 		"focusSpells": {
 			"attribute": "Charisma",
 			"tradition": "Arcane"
-		}
+		},
+		"martialWeaponTraining": false,
+		"shieldBlock": false
 	},
 	{
 		"name": "Divine Draconic Sorcerer",
@@ -111,7 +121,9 @@
 		"focusSpells": {
 			"attribute": "Charisma",
 			"tradition": "Divine"
-		}
+		},
+		"martialWeaponTraining": false,
+		"shieldBlock": false
 	},
 	{
 		"name": "Occult Draconic Sorcerer",
@@ -130,7 +142,9 @@
 		"focusSpells": {
 			"attribute": "Charisma",
 			"tradition": "Occult"
-		}
+		},
+		"martialWeaponTraining": false,
+		"shieldBlock": false
 	},
 	{
 		"name": "Primal Draconic Sorcerer",
@@ -149,7 +163,9 @@
 		"focusSpells": {
 			"attribute": "Charisma",
 			"tradition": "Primal"
-		}
+		},
+		"martialWeaponTraining": false,
+		"shieldBlock": false
 	},
 	{
 		"name": "Elemental Sorcerer",
@@ -168,7 +184,9 @@
 		"focusSpells": {
 			"attribute": "Charisma",
 			"tradition": "Primal"
-		}
+		},
+		"martialWeaponTraining": false,
+		"shieldBlock": false
 	},
 	{
 		"name": "Fey Sorcerer",
@@ -187,7 +205,9 @@
 		"focusSpells": {
 			"attribute": "Charisma",
 			"tradition": "Primal"
-		}
+		},
+		"martialWeaponTraining": false,
+		"shieldBlock": false
 	},
 	{
 		"name": "Hag Sorcerer",
@@ -206,7 +226,9 @@
 		"focusSpells": {
 			"attribute": "Charisma",
 			"tradition": "Occult"
-		}
+		},
+		"martialWeaponTraining": false,
+		"shieldBlock": false
 	},
 	{
 		"name": "Imperial Sorcerer",
@@ -225,7 +247,9 @@
 		"focusSpells": {
 			"attribute": "Charisma",
 			"tradition": "Arcane"
-		}
+		},
+		"martialWeaponTraining": false,
+		"shieldBlock": false
 	},
 	{
 		"name": "Undead Sorcerer",
@@ -244,6 +268,8 @@
 		"focusSpells": {
 			"attribute": "Charisma",
 			"tradition": "Divine"
-		}
+		},
+		"martialWeaponTraining": false,
+		"shieldBlock": false
 	}
 ]

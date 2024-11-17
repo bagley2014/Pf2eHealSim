@@ -8,7 +8,9 @@
 		"mechanicalDeity": false,
 		"armor": "Light",
 		"spellcasting": null,
-		"focusSpells": null
+		"focusSpells": null,
+		"martialWeaponTraining": true,
+		"shieldBlock": false
 	},
 	{
 		"name": "Scoundrel Rogue",
@@ -19,7 +21,9 @@
 		"mechanicalDeity": false,
 		"armor": "Light",
 		"spellcasting": null,
-		"focusSpells": null
+		"focusSpells": null,
+		"martialWeaponTraining": true,
+		"shieldBlock": false
 	},
 	{
 		"name": "Mastermind Rogue",
@@ -30,7 +34,9 @@
 		"mechanicalDeity": false,
 		"armor": "Light",
 		"spellcasting": null,
-		"focusSpells": null
+		"focusSpells": null,
+		"martialWeaponTraining": true,
+		"shieldBlock": false
 	},
 	{
 		"name": "Ruffian Rogue",
@@ -41,7 +47,9 @@
 		"mechanicalDeity": false,
 		"armor": "Medium",
 		"spellcasting": null,
-		"focusSpells": null
+		"focusSpells": null,
+		"martialWeaponTraining": true,
+		"shieldBlock": false
 	},
 	{
 		"name": "Avenger",
@@ -52,6 +60,8 @@
 		"mechanicalDeity": true,
 		"armor": "Medium",
 		"spellcasting": null,
-		"focusSpells": null
+		"focusSpells": null,
+		"martialWeaponTraining": true,
+		"shieldBlock": false
 	}
 ]

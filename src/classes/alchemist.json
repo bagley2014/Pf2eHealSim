@@ -9,6 +9,7 @@
 		"armor": "Medium",
 		"spellcasting": null,
 		"focusSpells": null,
-		"martialWeaponTraining": "Alchemical Bombs"
+		"martialWeaponTraining": "Alchemical Bombs",
+		"shieldBlock": false
 	}
 ]

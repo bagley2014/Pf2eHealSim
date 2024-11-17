@@ -17,6 +17,7 @@
 			"attribute": "Charisma",
 			"tradition": "Occult"
 		},
-		"martialWeaponTraining": true
+		"martialWeaponTraining": true,
+		"shieldBlock": false
 	}
 ]
