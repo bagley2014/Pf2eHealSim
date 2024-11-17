@@ -37,6 +37,7 @@ export const CharacterSource = z
 				tradition: SpellcastingTradition.or(SpellcastingTradition.array()).transform(arrayArrayable),
 			})
 			.nullable(),
+		// Maybe I should make a pseudospellcasting property for impulses and quick alchemy
 		martialWeaponTraining: z.boolean().or(z.string()),
 		shieldBlock: z.boolean(),
 		animalCompanion: z.boolean(),

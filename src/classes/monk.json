@@ -1,0 +1,34 @@
+[
+	{
+		"name": "Monk",
+		"description": "The strength of your fist flows from your mind and spirit. You seek perfection, honing your body into a flawless instrument and your mind into an orderly bastion of wisdom.",
+		"kind": { "name": "Class", "armor": "None", "classArchetype": false, "keyAttribute": ["Strength", "Dexterity"] },
+		"animalCompanion": false,
+		"familiar": false,
+		"mechanicalDeity": false,
+		"spellcasting": null,
+		"focusSpells": {
+			"attribute": "Wisdom",
+			"tradition": ["Divine", "Occult"]
+		},
+		"martialWeaponTraining": false,
+		"shieldBlock": false,
+		"precisionDamage": false
+	},
+	{
+		"name": "Monk Archetype",
+		"description": "Monastic training has taught you martial arts and allowed you to hone your mind, body, and spirit.",
+		"kind": { "name": "Archetype", "armorTraining": false, "multiclass": true, "tenPlusFeats": true },
+		"animalCompanion": false,
+		"familiar": false,
+		"mechanicalDeity": false,
+		"spellcasting": null,
+		"focusSpells": {
+			"attribute": "Wisdom",
+			"tradition": ["Divine", "Occult"]
+		},
+		"martialWeaponTraining": false,
+		"shieldBlock": false,
+		"precisionDamage": false
+	}
+]

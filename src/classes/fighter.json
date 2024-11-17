@@ -13,6 +13,19 @@
 		"precisionDamage": false
 	},
 	{
+		"name": "Warrior of Legend",
+		"description": "You have received a blessing that will ensure your ascension to legend, and a curse that foretells your inevitable fall.",
+		"kind": { "name": "Class", "armor": "Medium", "classArchetype": true, "keyAttribute": ["Strength", "Dexterity"] },
+		"animalCompanion": false,
+		"familiar": false,
+		"mechanicalDeity": false,
+		"spellcasting": null,
+		"focusSpells": null,
+		"martialWeaponTraining": true,
+		"shieldBlock": false,
+		"precisionDamage": false
+	},
+	{
 		"name": "Fighter Archetype",
 		"description": "You have spent time learning the art of warfare, increasing your skill with martial arms and at wearing armor. With further training, you can become a true combat specialist.",
 		"kind": { "name": "Archetype", "armorTraining": false, "multiclass": true, "tenPlusFeats": true },

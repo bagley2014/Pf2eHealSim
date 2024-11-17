@@ -1,0 +1,28 @@
+[
+	{
+		"name": "Investigator",
+		"description": "You seek to uncover the truth, doggedly pursuing leads to reveal the plots of devious villains, discover ancient secrets, or unravel other mysteries. Your analytical mind quickly formulates solutions to complicated problems, and your honed senses identify even the most obscure clues.",
+		"kind": { "name": "Class", "armor": "Light", "classArchetype": false, "keyAttribute": "Intelligence" },
+		"animalCompanion": false,
+		"familiar": false,
+		"mechanicalDeity": false,
+		"spellcasting": null,
+		"focusSpells": null,
+		"martialWeaponTraining": true,
+		"shieldBlock": false,
+		"precisionDamage": true
+	},
+	{
+		"name": "Investigator Archetype",
+		"description": "You’ve developed a keen eye for investigating mysteries.",
+		"kind": { "name": "Archetype", "armorTraining": false, "multiclass": true, "tenPlusFeats": true },
+		"animalCompanion": false,
+		"familiar": false,
+		"mechanicalDeity": false,
+		"spellcasting": null,
+		"focusSpells": null,
+		"martialWeaponTraining": false,
+		"shieldBlock": false,
+		"precisionDamage": false
+	}
+]
