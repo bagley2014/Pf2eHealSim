@@ -13,7 +13,7 @@ function getQuestionText(trait: Trait): string {
 		case Trait.enum.class_armor:
 			return "What's the lowest armor proficiency you'd accept?";
 		case Trait.enum.class_classArchetype:
-			return 'Is taking a class archetype ok?';
+			return 'Are you fine with taking a class archetype?';
 		case Trait.enum.focusSpells:
 			return 'Do you want focus spells?';
 		case Trait.enum.focusSpells_attribute:
@@ -41,15 +41,15 @@ function getQuestionText(trait: Trait): string {
 		case Trait.enum.archetype_multiclass:
 			return 'Must the archetype be a multiclass archetype?';
 		case Trait.enum.archetype_armorTraining:
-			return 'Must the archetype give some armor training?';
+			return 'Must the archetype dedication give some armor training?';
 		case Trait.enum.martialWeaponTraining:
-			return 'Do you want martial weapon proficiency?';
+			return 'Do you want martial weapon proficiency at level 1?';
 		case Trait.enum.shieldBlock:
 			return 'Do you want Shield Block at level 1?';
 		case Trait.enum.animalCompanion:
-			return 'Is access to an animal companion necessary?';
+			return 'Do you want to get access to an animal companion?';
 		case Trait.enum.familiar:
-			return 'Do you want a familiar?';
+			return 'Do you want to get access to a familiar?';
 		case Trait.enum.precisionDamage:
 			return 'Do you want a way to add precision damage to your attacks?';
 	}
@@ -80,11 +80,11 @@ function getApplicableAnswers(trait: Trait, character: Character): string[] {
 		case Trait.enum.archetype_multiclass:
 		case Trait.enum.archetype_tenPlusFeats:
 		case Trait.enum.familiar:
-			return character[trait] ? ['Yes', 'No'] : ['No'];
+			return character[trait] ? ['Yes', "Don't care"] : ["Don't care"];
 
 		// Booleans where "No" eliminates options, but "Yes" does not
 		case Trait.enum.class_classArchetype:
-			return character[trait] ? ['Yes'] : ['No', 'Yes'];
+			return character[trait] ? ["Don't care"] : ['No', "Don't care"];
 
 		// String arrays
 		case Trait.enum.class_keyAttribute:
@@ -115,7 +115,12 @@ function getApplicableAnswers(trait: Trait, character: Character): string[] {
 }
 
 function getQuestion(trait: Trait, characters: Character[]): Question {
-	const average = (arr: number[]) => arr.reduce((acc, val) => acc + val) / arr.length;
+	// geometric mean
+	const average = (arr: number[]) =>
+		Math.pow(
+			arr.reduce((acc, val) => acc * val, 1),
+			1 / arr.length,
+		);
 
 	const answers: AnswerMap = new Map<string, Character[]>();
 	const addCharacter = (key: string, value: Character) => answers.set(key, [...(answers.get(key) || []), value]);
@@ -196,7 +201,10 @@ async function reduceCharacters(data: Character[], answeredQuestions: string[] =
 			.entries()
 			.toArray()
 			.sort()
-			.sort(([answerA, _], [answerB, __]) => CanonicalOptionOrdering.indexOf(answerA) - CanonicalOptionOrdering.indexOf(answerB))
+			.sort(
+				([answerA, _], [answerB, __]) =>
+					(CanonicalOptionOrdering.indexOf(answerA) + 1 || Infinity) - (CanonicalOptionOrdering.indexOf(answerB) + 1 || Infinity),
+			)
 			.map(([answer, characters]) => ({ name: answer, value: characters })),
 	});
 
