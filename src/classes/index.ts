@@ -47,10 +47,6 @@ function getApplicableAnswers(trait: Trait, character: Character): string[] {
 		// Simple strings
 		case Trait.enum.name:
 			return [character[trait]];
-		case Trait.enum.focusSpells_attribute:
-		case Trait.enum.focusSpells_tradition:
-		case Trait.enum.spellcasting_attribute:
-		case Trait.enum.spellcasting_tradition:
 		case Trait.enum.type:
 			return [character[trait] || 'null', "Don't care"];
 
@@ -61,6 +57,14 @@ function getApplicableAnswers(trait: Trait, character: Character): string[] {
 		case Trait.enum.spellcasting_full:
 		case Trait.enum.spellcasting_repertoire:
 			return character[trait] ? ['Yes', "Don't care"] : ['No', "Don't care"];
+
+		// String arrays
+		case Trait.enum.keyAttribute:
+		case Trait.enum.focusSpells_attribute:
+		case Trait.enum.focusSpells_tradition:
+		case Trait.enum.spellcasting_attribute:
+		case Trait.enum.spellcasting_tradition:
+			return [...(character[trait] || ['null']), "Don't Care"];
 
 		// Misc Section
 		case Trait.enum.description:
@@ -75,8 +79,6 @@ function getApplicableAnswers(trait: Trait, character: Character): string[] {
 						: ['None'];
 		case Trait.enum.classArchetype:
 			return character.classArchetype ? ['Yes'] : ['No', 'Yes'];
-		case Trait.enum.keyAttribute:
-			return character.keyAttribute;
 	}
 }
 

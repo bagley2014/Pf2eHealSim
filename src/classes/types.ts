@@ -26,18 +26,18 @@ export const CharacterSource = z
 		classArchetype: z.boolean(),
 		focusSpells: z
 			.object({
-				attribute: Attribute,
-				tradition: SpellcastingTradition,
+				attribute: Attribute.or(Attribute.array()).transform(arrayArrayable),
+				tradition: SpellcastingTradition.or(SpellcastingTradition.array()).transform(arrayArrayable),
 			})
 			.nullable(),
 		keyAttribute: Attribute.or(Attribute.array()).transform(arrayArrayable),
 		mechanicalDeity: z.boolean(),
 		spellcasting: z
 			.object({
-				attribute: Attribute,
+				attribute: Attribute.or(Attribute.array()).transform(arrayArrayable),
 				repertoire: z.boolean(),
 				full: z.boolean(),
-				tradition: SpellcastingTradition,
+				tradition: SpellcastingTradition.or(SpellcastingTradition.array()).transform(arrayArrayable),
 			})
 			.nullable(),
 		type: CharacterType,
@@ -66,15 +66,15 @@ const Character = z.object({
 	armor: Armor,
 	classArchetype: z.boolean(),
 	focusSpells: z.boolean(),
-	focusSpells_attribute: Attribute.nullable(),
-	focusSpells_tradition: SpellcastingTradition.nullable(),
+	focusSpells_attribute: Attribute.array().nullable(),
+	focusSpells_tradition: SpellcastingTradition.array().nullable(),
 	keyAttribute: Attribute.array(),
 	mechanicalDeity: z.boolean(),
 	spellcasting: z.boolean(),
-	spellcasting_attribute: Attribute.nullable(),
+	spellcasting_attribute: Attribute.array().nullable(),
 	spellcasting_repertoire: z.boolean().nullable(),
 	spellcasting_full: z.boolean().nullable(),
-	spellcasting_tradition: SpellcastingTradition.nullable(),
+	spellcasting_tradition: SpellcastingTradition.array().nullable(),
 	type: CharacterType,
 });
 export type Character = z.infer<typeof Character>;

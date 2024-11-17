@@ -1,0 +1,31 @@
+[
+	{
+		"name": "Barbarian",
+		"description": "Rage consumes you in battle. You delight in wreaking havoc and using powerful weapons to carve through your enemies, relying on astonishing durability without needing complicated techniques or rigid training.",
+		"keyAttribute": "Strength",
+		"type": "Class",
+		"classArchetype": false,
+		"mechanicalDeity": false,
+		"armor": "Medium",
+		"spellcasting": null,
+		"focusSpells": null,
+		"martialWeaponTraining": true
+	},
+	{
+		"name": "Bloodrager",
+		"description": "You use the power of ingested blood to generate magical power and fuel you in combat, transforming you into a horrifyingly fearsome opponent.",
+		"keyAttribute": "Strength",
+		"type": "Class",
+		"classArchetype": true,
+		"mechanicalDeity": false,
+		"armor": "Medium",
+		"spellcasting": {
+			"attribute": "Charisma",
+			"repertoire": true,
+			"full": false,
+			"tradition": ["Arcane", "Divine"]
+		},
+		"focusSpells": null,
+		"martialWeaponTraining": true
+	}
+]
