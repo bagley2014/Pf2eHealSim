@@ -3,6 +3,8 @@
 		"name": "Aberrant Sorcerer",
 		"description": "You didn't choose to become a spellcaster—you were born one. There's magic in your blood. Something ancient and unknowable speaks to you from beyond the stars or below the earth.",
 		"kind": { "name": "Class", "armor": "None", "classArchetype": false, "keyAttribute": "Charisma" },
+		"animalCompanion": false,
+		"familiar": true,
 		"mechanicalDeity": false,
 		"spellcasting": {
 			"attribute": "Charisma",
@@ -21,6 +23,8 @@
 		"name": "Angelic Sorcerer",
 		"description": "You didn't choose to become a spellcaster—you were born one. There's magic in your blood. One of your forebears hailed from a celestial realm, or your ancestors' devotion led to their lineage being blessed.",
 		"kind": { "name": "Class", "armor": "None", "classArchetype": false, "keyAttribute": "Charisma" },
+		"animalCompanion": false,
+		"familiar": true,
 		"mechanicalDeity": false,
 		"spellcasting": {
 			"attribute": "Charisma",
@@ -39,6 +43,8 @@
 		"name": "Demonic Sorcerer",
 		"description": "You didn't choose to become a spellcaster—you were born one. There's magic in your blood. Demons debase all they touch. One of your ancestors fell victim to their corruption, and you're burdened by that sin.",
 		"kind": { "name": "Class", "armor": "None", "classArchetype": false, "keyAttribute": "Charisma" },
+		"animalCompanion": false,
+		"familiar": true,
 		"mechanicalDeity": false,
 		"spellcasting": {
 			"attribute": "Charisma",
@@ -57,6 +63,8 @@
 		"name": "Diabolic Sorcerer",
 		"description": "You didn't choose to become a spellcaster—you were born one. There's magic in your blood. Devils are evil with a silver tongue, and one of your ancestors dallied in darkness or made an infernal pact.",
 		"kind": { "name": "Class", "armor": "None", "classArchetype": false, "keyAttribute": "Charisma" },
+		"animalCompanion": false,
+		"familiar": true,
 		"mechanicalDeity": false,
 		"spellcasting": {
 			"attribute": "Charisma",
@@ -75,6 +83,8 @@
 		"name": "Arcane Draconic Sorcerer",
 		"description": "You didn't choose to become a spellcaster—you were born one. There's magic in your blood. The blood of dragons flows through your veins. These beasts are both fearsome in combat and skilled at magic.",
 		"kind": { "name": "Class", "armor": "None", "classArchetype": false, "keyAttribute": "Charisma" },
+		"animalCompanion": false,
+		"familiar": true,
 		"mechanicalDeity": false,
 		"spellcasting": {
 			"attribute": "Charisma",
@@ -93,6 +103,8 @@
 		"name": "Divine Draconic Sorcerer",
 		"description": "You didn't choose to become a spellcaster—you were born one. There's magic in your blood. The blood of dragons flows through your veins. These beasts are both fearsome in combat and skilled at magic.",
 		"kind": { "name": "Class", "armor": "None", "classArchetype": false, "keyAttribute": "Charisma" },
+		"animalCompanion": false,
+		"familiar": true,
 		"mechanicalDeity": false,
 		"spellcasting": {
 			"attribute": "Charisma",
@@ -111,6 +123,8 @@
 		"name": "Occult Draconic Sorcerer",
 		"description": "You didn't choose to become a spellcaster—you were born one. There's magic in your blood. The blood of dragons flows through your veins. These beasts are both fearsome in combat and skilled at magic.",
 		"kind": { "name": "Class", "armor": "None", "classArchetype": false, "keyAttribute": "Charisma" },
+		"animalCompanion": false,
+		"familiar": true,
 		"mechanicalDeity": false,
 		"spellcasting": {
 			"attribute": "Charisma",
@@ -129,6 +143,8 @@
 		"name": "Primal Draconic Sorcerer",
 		"description": "You didn't choose to become a spellcaster—you were born one. There's magic in your blood. The blood of dragons flows through your veins. These beasts are both fearsome in combat and skilled at magic.",
 		"kind": { "name": "Class", "armor": "None", "classArchetype": false, "keyAttribute": "Charisma" },
+		"animalCompanion": false,
+		"familiar": true,
 		"mechanicalDeity": false,
 		"spellcasting": {
 			"attribute": "Charisma",
@@ -147,6 +163,8 @@
 		"name": "Elemental Sorcerer",
 		"description": "You didn't choose to become a spellcaster—you were born one. There's magic in your blood. An elemental influence has imbued your blood with primal fury.",
 		"kind": { "name": "Class", "armor": "None", "classArchetype": false, "keyAttribute": "Charisma" },
+		"animalCompanion": false,
+		"familiar": true,
 		"mechanicalDeity": false,
 		"spellcasting": {
 			"attribute": "Charisma",
@@ -165,6 +183,8 @@
 		"name": "Fey Sorcerer",
 		"description": "You didn't choose to become a spellcaster—you were born one. There's magic in your blood. Fey whimsy or a tryst in a moonlit grove put the bewitching magic of the First World into your family's bloodline.",
 		"kind": { "name": "Class", "armor": "None", "classArchetype": false, "keyAttribute": "Charisma" },
+		"animalCompanion": false,
+		"familiar": true,
 		"mechanicalDeity": false,
 		"spellcasting": {
 			"attribute": "Charisma",
@@ -183,6 +203,8 @@
 		"name": "Hag Sorcerer",
 		"description": "You didn't choose to become a spellcaster—you were born one. There's magic in your blood. A hag cursed your family long ago, or you are a descendant of a hag or changeling, and their magic infests your blood and soul.",
 		"kind": { "name": "Class", "armor": "None", "classArchetype": false, "keyAttribute": "Charisma" },
+		"animalCompanion": false,
+		"familiar": true,
 		"mechanicalDeity": false,
 		"spellcasting": {
 			"attribute": "Charisma",
@@ -201,6 +223,8 @@
 		"name": "Imperial Sorcerer",
 		"description": "You didn't choose to become a spellcaster—you were born one. There's magic in your blood. One of your ancestors was a mortal who mastered magic.",
 		"kind": { "name": "Class", "armor": "None", "classArchetype": false, "keyAttribute": "Charisma" },
+		"animalCompanion": false,
+		"familiar": true,
 		"mechanicalDeity": false,
 		"spellcasting": {
 			"attribute": "Charisma",
@@ -219,6 +243,8 @@
 		"name": "Undead Sorcerer",
 		"description": "You didn't choose to become a spellcaster—you were born one. There's magic in your blood. The touch of undeath runs through your blood. Your family tree might contain powerful undead, like a vampire.",
 		"kind": { "name": "Class", "armor": "None", "classArchetype": false, "keyAttribute": "Charisma" },
+		"animalCompanion": false,
+		"familiar": true,
 		"mechanicalDeity": false,
 		"spellcasting": {
 			"attribute": "Charisma",

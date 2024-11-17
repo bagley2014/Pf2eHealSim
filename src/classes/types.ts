@@ -39,6 +39,8 @@ export const CharacterSource = z
 			.nullable(),
 		martialWeaponTraining: z.boolean().or(z.string()),
 		shieldBlock: z.boolean(),
+		animalCompanion: z.boolean(),
+		familiar: z.boolean(),
 		kind: z.discriminatedUnion('name', [
 			z.object({
 				name: z.literal(CharacterKind.enum.Class),
@@ -81,11 +83,13 @@ export const CharacterSource = z
 const Character = z.object({
 	name: z.string(),
 	description: z.string().optional(),
+	animalCompanion: z.boolean(),
 	archetype_isMulticlass: z.boolean().nullable(),
 	archetype_has10OrMoreFeats: z.boolean().nullable(),
 	class_armor: Armor.nullable(),
 	class_classArchetype: z.boolean().nullable(),
 	class_keyAttribute: Attribute.array().nullable(),
+	familiar: z.boolean(),
 	focusSpells: z.boolean(),
 	focusSpells_attribute: Attribute.array().nullable(),
 	focusSpells_tradition: SpellcastingTradition.array().nullable(),

@@ -46,6 +46,10 @@ function getQuestionText(trait: Trait): string {
 			return 'Do you want martial weapon proficiency?';
 		case Trait.enum.shieldBlock:
 			return 'Do you want Shield Block at level 1?';
+		case Trait.enum.animalCompanion:
+			return 'Do you want an animal companion?';
+		case Trait.enum.familiar:
+			return 'Do you want a familiar?';
 	}
 }
 
@@ -68,8 +72,10 @@ function getApplicableAnswers(trait: Trait, character: Character): string[] {
 			return character[trait] ? ['Yes', "Don't care"] : ['No', "Don't care"];
 
 		// Booleans where "Yes" eliminates options, but "No" does not
+		case Trait.enum.animalCompanion:
 		case Trait.enum.archetype_isMulticlass:
 		case Trait.enum.archetype_has10OrMoreFeats:
+		case Trait.enum.familiar:
 			return character[trait] ? ['Yes', 'No'] : ['No'];
 
 		// Booleans where "No" eliminates options, but "Yes" does not

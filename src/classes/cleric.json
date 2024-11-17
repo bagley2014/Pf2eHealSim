@@ -3,6 +3,8 @@
 		"name": "Warpriest Cleric",
 		"description": "Deities work their will upon the world in infinite ways, and you serve as one of their most stalwart mortal servants. You have trained in the more militant doctrine of your church, focusing on both spells and battle.",
 		"kind": { "name": "Class", "armor": "Medium", "classArchetype": false, "keyAttribute": "Wisdom" },
+		"animalCompanion": false,
+		"familiar": false,
 		"mechanicalDeity": true,
 		"spellcasting": {
 			"attribute": "Wisdom",
@@ -21,6 +23,8 @@
 		"name": "Cloistered Cleric",
 		"description": "Deities work their will upon the world in infinite ways, and you serve as one of their most stalwart mortal servants. You are a cleric of the cloth, focusing on divine magic and your connection to your deity’s domains.",
 		"kind": { "name": "Class", "armor": "None", "classArchetype": false, "keyAttribute": "Wisdom" },
+		"animalCompanion": false,
+		"familiar": false,
 		"mechanicalDeity": true,
 		"spellcasting": {
 			"attribute": "Wisdom",
@@ -39,6 +43,8 @@
 		"name": "Flexible Warpriest Cleric",
 		"description": "Deities work their will upon the world in infinite ways, and you serve as one of their most stalwart mortal servants. You have trained in the more militant doctrine of your church, focusing on both spells and battle. You've learned how to cast spells flexibly, blending the best elements of spontaneous and prepared spellcasting at the cost of casting fewer spells each day.",
 		"kind": { "name": "Class", "armor": "Medium", "classArchetype": true, "keyAttribute": "Wisdom" },
+		"animalCompanion": false,
+		"familiar": false,
 		"mechanicalDeity": true,
 		"spellcasting": {
 			"attribute": "Wisdom",
@@ -57,6 +63,8 @@
 		"name": "Flexible Cloistered Cleric",
 		"description": "Deities work their will upon the world in infinite ways, and you serve as one of their most stalwart mortal servants. You are a cleric of the cloth, focusing on divine magic and your connection to your deity’s domains. You've learned how to cast spells flexibly, blending the best elements of spontaneous and prepared spellcasting at the cost of casting fewer spells each day.",
 		"kind": { "name": "Class", "armor": "None", "classArchetype": true, "keyAttribute": "Wisdom" },
+		"animalCompanion": false,
+		"familiar": false,
 		"mechanicalDeity": true,
 		"spellcasting": {
 			"attribute": "Wisdom",
@@ -75,6 +83,8 @@
 		"name": "Battle Harbinger",
 		"description": "Deities work their will upon the world in infinite ways, and you serve as one of their most stalwart mortal servants. You have trained extensively in combat, battlefield tactics, and stamina, focusing on being an exceptional warrior for your faith in exchange for less time studying the traditional spells and scriptures.",
 		"kind": { "name": "Class", "armor": "Medium", "classArchetype": true, "keyAttribute": "Wisdom" },
+		"animalCompanion": false,
+		"familiar": false,
 		"mechanicalDeity": true,
 		"spellcasting": {
 			"attribute": "Wisdom",
