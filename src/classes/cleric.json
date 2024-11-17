@@ -1,0 +1,107 @@
+[
+	{
+		"name": "Warpriest Cleric",
+		"description": "Deities work their will upon the world in infinite ways, and you serve as one of their most stalwart mortal servants. You have trained in the more militant doctrine of your church, focusing on both spells and battle.",
+		"keyAttribute": "Wisdom",
+		"type": "Class",
+		"classArchetype": false,
+		"mechanicalDeity": true,
+		"armor": "Medium",
+		"spellcasting": {
+			"attribute": "Wisdom",
+			"repertoire": false,
+			"full": true,
+			"tradition": "Divine"
+		},
+		"focusSpells": {
+			"attribute": "Wisdom",
+			"tradition": "Divine"
+		},
+		"martialWeaponTraining": "Favored Weapon",
+		"shieldBlock": true
+	},
+	{
+		"name": "Cloistered Cleric",
+		"description": "Deities work their will upon the world in infinite ways, and you serve as one of their most stalwart mortal servants. You are a cleric of the cloth, focusing on divine magic and your connection to your deity’s domains.",
+		"keyAttribute": "Wisdom",
+		"type": "Class",
+		"classArchetype": false,
+		"mechanicalDeity": true,
+		"armor": "None",
+		"spellcasting": {
+			"attribute": "Wisdom",
+			"repertoire": false,
+			"full": true,
+			"tradition": "Divine"
+		},
+		"focusSpells": {
+			"attribute": "Wisdom",
+			"tradition": "Divine"
+		},
+		"martialWeaponTraining": "Favored Weapon",
+		"shieldBlock": false
+	},
+	{
+		"name": "Flexible Warpriest Cleric",
+		"description": "Deities work their will upon the world in infinite ways, and you serve as one of their most stalwart mortal servants. You have trained in the more militant doctrine of your church, focusing on both spells and battle. You've learned how to cast spells flexibly, blending the best elements of spontaneous and prepared spellcasting at the cost of casting fewer spells each day.",
+		"keyAttribute": "Wisdom",
+		"type": "Class",
+		"classArchetype": true,
+		"mechanicalDeity": true,
+		"armor": "Medium",
+		"spellcasting": {
+			"attribute": "Wisdom",
+			"repertoire": true,
+			"full": true,
+			"tradition": "Divine"
+		},
+		"focusSpells": {
+			"attribute": "Wisdom",
+			"tradition": "Divine"
+		},
+		"martialWeaponTraining": "Favored Weapon",
+		"shieldBlock": true
+	},
+	{
+		"name": "Flexible Cloistered Cleric",
+		"description": "Deities work their will upon the world in infinite ways, and you serve as one of their most stalwart mortal servants. You are a cleric of the cloth, focusing on divine magic and your connection to your deity’s domains. You've learned how to cast spells flexibly, blending the best elements of spontaneous and prepared spellcasting at the cost of casting fewer spells each day.",
+		"keyAttribute": "Wisdom",
+		"type": "Class",
+		"classArchetype": true,
+		"mechanicalDeity": true,
+		"armor": "None",
+		"spellcasting": {
+			"attribute": "Wisdom",
+			"repertoire": true,
+			"full": true,
+			"tradition": "Divine"
+		},
+		"focusSpells": {
+			"attribute": "Wisdom",
+			"tradition": "Divine"
+		},
+		"martialWeaponTraining": "Favored Weapon",
+		"shieldBlock": false
+	},
+	{
+		"name": "Battle Harbinger",
+		"description": "Deities work their will upon the world in infinite ways, and you serve as one of their most stalwart mortal servants. You have trained extensively in combat, battlefield tactics, and stamina, focusing on being an exceptional warrior for your faith in exchange for less time studying the traditional spells and scriptures.",
+		"keyAttribute": "Wisdom",
+		"type": "Class",
+		"classArchetype": true,
+		"mechanicalDeity": true,
+		"armor": "Medium",
+		"spellcasting": {
+			"attribute": "Wisdom",
+			"repertoire": false,
+			"full": true,
+			"tradition": "Divine"
+		},
+		"focusSpells": {
+			"attribute": "Wisdom",
+			"tradition": "Divine"
+		},
+		"martialWeaponTraining": true,
+		"shieldBlock": true
+	}
+]

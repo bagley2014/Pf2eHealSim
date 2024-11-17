@@ -188,7 +188,7 @@ async function reduceCharacters(data: Character[], answeredQuestions: string[] =
 	const possibleQuestions = [];
 	for (const trait of Trait.options) {
 		// Skip any traits where any of the characters have a null value
-		if (!data.map((x) => x[trait]).filter((x) => x === null).length) possibleQuestions.push(getQuestion(trait, data));
+		if (!data.filter((x) => x[trait] === null).length) possibleQuestions.push(getQuestion(trait, data));
 	}
 
 	// Decide which question to ask, ignoring questions that were already answered

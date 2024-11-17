@@ -47,14 +47,14 @@ export const CharacterSource = z
 			...rest,
 
 			focusSpells: focusSpells ? true : false,
-			focusSpells_attribute: focusSpells?.attribute || null,
-			focusSpells_tradition: focusSpells?.tradition || null,
+			focusSpells_attribute: focusSpells && focusSpells.attribute,
+			focusSpells_tradition: focusSpells && focusSpells.tradition,
 
 			spellcasting: spellcasting ? true : false,
-			spellcasting_attribute: spellcasting?.attribute || null,
-			spellcasting_full: spellcasting?.full || null,
-			spellcasting_repertoire: spellcasting?.repertoire || null,
-			spellcasting_tradition: spellcasting?.tradition || null,
+			spellcasting_attribute: spellcasting && spellcasting.attribute,
+			spellcasting_full: spellcasting && spellcasting.full,
+			spellcasting_repertoire: spellcasting && spellcasting.repertoire,
+			spellcasting_tradition: spellcasting && spellcasting.tradition,
 		};
 		return character;
 	});
