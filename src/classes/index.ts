@@ -49,7 +49,7 @@ function getQuestionText(trait: Trait): string {
 		case Trait.enum.shieldBlock:
 			return 'Do you want Shield Block at level 1?';
 		case Trait.enum.animalCompanion:
-			return 'Do you want an animal companion?';
+			return 'Is access to an animal companion necessary?';
 		case Trait.enum.familiar:
 			return 'Do you want a familiar?';
 		case Trait.enum.precisionDamage:
