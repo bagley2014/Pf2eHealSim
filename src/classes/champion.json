@@ -13,5 +13,20 @@
 		},
 		"martialWeaponTraining": true,
 		"shieldBlock": true
+	},
+	{
+		"name": "Champion Archetype",
+		"description": "You've sworn a solemn oath to your deity, who has granted you champion powers to aid you in your cause.",
+		"kind": { "name": "Archetype", "multiclass": true, "tenPlusFeats": true },
+		"animalCompanion": true,
+		"familiar": false,
+		"mechanicalDeity": true,
+		"spellcasting": null,
+		"focusSpells": {
+			"attribute": "Charisma",
+			"tradition": "Divine"
+		},
+		"martialWeaponTraining": false,
+		"shieldBlock": false
 	}
 ]

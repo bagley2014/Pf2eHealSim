@@ -10,5 +10,17 @@
 		"focusSpells": null,
 		"martialWeaponTraining": "Alchemical Bombs",
 		"shieldBlock": false
+	},
+	{
+		"name": "Alchemist Archetype",
+		"description": "You enjoy tinkering with alchemical formulas and substances in your spare time, and your studies have progressed beyond mere experimentation. You might throw bombs, drink mutagens, or carry an assortment of helpful elixirs and alchemical tools.",
+		"kind": { "name": "Archetype", "multiclass": true, "tenPlusFeats": true },
+		"animalCompanion": false,
+		"familiar": true,
+		"mechanicalDeity": false,
+		"spellcasting": null,
+		"focusSpells": null,
+		"martialWeaponTraining": "Alchemical Bombs",
+		"shieldBlock": false
 	}
 ]

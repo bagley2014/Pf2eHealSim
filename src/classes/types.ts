@@ -52,6 +52,7 @@ export const CharacterSource = z
 				name: z.literal(CharacterKind.enum.Archetype),
 				multiclass: z.boolean(),
 				tenPlusFeats: z.boolean(),
+				// armorTraining: boolean, for something like Champion, that gives armor training
 			}),
 		]),
 	})

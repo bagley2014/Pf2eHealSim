@@ -18,5 +18,25 @@
 		},
 		"martialWeaponTraining": true,
 		"shieldBlock": false
+	},
+	{
+		"name": "Bard Archetype",
+		"description": "A muse has called you to dabble in occult lore, allowing you to cast a few spells. The deeper you delve, the more powerful your performances become.",
+		"kind": { "name": "Archetype", "multiclass": true, "tenPlusFeats": true },
+		"animalCompanion": false,
+		"familiar": false,
+		"mechanicalDeity": false,
+		"spellcasting": {
+			"attribute": "Charisma",
+			"repertoire": true,
+			"full": false,
+			"tradition": "Occult"
+		},
+		"focusSpells": {
+			"attribute": "Charisma",
+			"tradition": "Occult"
+		},
+		"martialWeaponTraining": false,
+		"shieldBlock": false
 	}
 ]

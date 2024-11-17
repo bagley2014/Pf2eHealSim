@@ -27,5 +27,17 @@
 		"focusSpells": null,
 		"martialWeaponTraining": true,
 		"shieldBlock": false
+	},
+	{
+		"name": "Barbarian Archetype",
+		"description": "There's a rage deep inside you that sometimes breaks loose, granting you some of the might of a barbarian in addition to your other abilities.",
+		"kind": { "name": "Archetype", "multiclass": true, "tenPlusFeats": true },
+		"animalCompanion": false,
+		"familiar": false,
+		"mechanicalDeity": false,
+		"spellcasting": null,
+		"focusSpells": null,
+		"martialWeaponTraining": false,
+		"shieldBlock": false
 	}
 ]

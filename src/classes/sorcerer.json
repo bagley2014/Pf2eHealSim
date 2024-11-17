@@ -258,5 +258,85 @@
 		},
 		"martialWeaponTraining": false,
 		"shieldBlock": false
+	},
+	{
+		"name": "Primal Sorcerer Archetype",
+		"description": "You coax the magic power in your blood to manifest, accessing magic others don't expect you to have.",
+		"kind": { "name": "Archetype", "multiclass": true, "tenPlusFeats": true },
+		"animalCompanion": false,
+		"familiar": true,
+		"mechanicalDeity": false,
+		"spellcasting": {
+			"attribute": "Charisma",
+			"repertoire": true,
+			"full": false,
+			"tradition": "Primal"
+		},
+		"focusSpells": {
+			"attribute": "Charisma",
+			"tradition": "Primal"
+		},
+		"martialWeaponTraining": false,
+		"shieldBlock": false
+	},
+	{
+		"name": "Occult Sorcerer Archetype",
+		"description": "You coax the magic power in your blood to manifest, accessing magic others don't expect you to have.",
+		"kind": { "name": "Archetype", "multiclass": true, "tenPlusFeats": true },
+		"animalCompanion": false,
+		"familiar": true,
+		"mechanicalDeity": false,
+		"spellcasting": {
+			"attribute": "Charisma",
+			"repertoire": true,
+			"full": false,
+			"tradition": "Occult"
+		},
+		"focusSpells": {
+			"attribute": "Charisma",
+			"tradition": "Occult"
+		},
+		"martialWeaponTraining": false,
+		"shieldBlock": false
+	},
+	{
+		"name": "Arcane Sorcerer Archetype",
+		"description": "You coax the magic power in your blood to manifest, accessing magic others don't expect you to have.",
+		"kind": { "name": "Archetype", "multiclass": true, "tenPlusFeats": true },
+		"animalCompanion": false,
+		"familiar": true,
+		"mechanicalDeity": false,
+		"spellcasting": {
+			"attribute": "Charisma",
+			"repertoire": true,
+			"full": false,
+			"tradition": "Arcane"
+		},
+		"focusSpells": {
+			"attribute": "Charisma",
+			"tradition": "Arcane"
+		},
+		"martialWeaponTraining": false,
+		"shieldBlock": false
+	},
+	{
+		"name": "Divine Sorcerer Archetype",
+		"description": "You coax the magic power in your blood to manifest, accessing magic others don't expect you to have.",
+		"kind": { "name": "Archetype", "multiclass": true, "tenPlusFeats": true },
+		"animalCompanion": false,
+		"familiar": true,
+		"mechanicalDeity": false,
+		"spellcasting": {
+			"attribute": "Charisma",
+			"repertoire": true,
+			"full": false,
+			"tradition": "Divine"
+		},
+		"focusSpells": {
+			"attribute": "Charisma",
+			"tradition": "Divine"
+		},
+		"martialWeaponTraining": false,
+		"shieldBlock": false
 	}
 ]
