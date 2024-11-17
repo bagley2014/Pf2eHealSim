@@ -50,8 +50,8 @@ export const CharacterSource = z
 			}),
 			z.object({
 				name: z.literal(CharacterKind.enum.Archetype),
-				isMulticlass: z.boolean(),
-				has10OrMoreFeats: z.boolean(),
+				multiclass: z.boolean(),
+				tenPlusFeats: z.boolean(),
 			}),
 		]),
 	})
@@ -60,8 +60,8 @@ export const CharacterSource = z
 			...rest,
 
 			kind: kind.name,
-			archetype_isMulticlass: kind.name == CharacterKind.enum.Archetype ? kind.isMulticlass : null,
-			archetype_has10OrMoreFeats: kind.name == CharacterKind.enum.Archetype ? kind.has10OrMoreFeats : null,
+			archetype_multiclass: kind.name == CharacterKind.enum.Archetype ? kind.multiclass : null,
+			archetype_tenPlusFeats: kind.name == CharacterKind.enum.Archetype ? kind.tenPlusFeats : null,
 			class_armor: kind.name == CharacterKind.enum.Class ? kind.armor : null,
 			class_classArchetype: kind.name == CharacterKind.enum.Class ? kind.classArchetype : null,
 			class_keyAttribute: kind.name == CharacterKind.enum.Class ? kind.keyAttribute : null,
@@ -84,8 +84,8 @@ const Character = z.object({
 	name: z.string(),
 	description: z.string().optional(),
 	animalCompanion: z.boolean(),
-	archetype_isMulticlass: z.boolean().nullable(),
-	archetype_has10OrMoreFeats: z.boolean().nullable(),
+	archetype_multiclass: z.boolean().nullable(),
+	archetype_tenPlusFeats: z.boolean().nullable(),
 	class_armor: Armor.nullable(),
 	class_classArchetype: z.boolean().nullable(),
 	class_keyAttribute: Attribute.array().nullable(),

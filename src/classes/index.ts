@@ -38,9 +38,9 @@ function getQuestionText(trait: Trait): string {
 			return 'Which spellcasting tradition do you want?';
 		case Trait.enum.kind:
 			return 'Are you looking for a class or just an archetype?';
-		case Trait.enum.archetype_has10OrMoreFeats:
+		case Trait.enum.archetype_tenPlusFeats:
 			return 'Must the archetype have 10 or more feats?';
-		case Trait.enum.archetype_isMulticlass:
+		case Trait.enum.archetype_multiclass:
 			return 'Must the archetype be a multiclass archetype?';
 		case Trait.enum.martialWeaponTraining:
 			return 'Do you want martial weapon proficiency?';
@@ -73,8 +73,8 @@ function getApplicableAnswers(trait: Trait, character: Character): string[] {
 
 		// Booleans where "Yes" eliminates options, but "No" does not
 		case Trait.enum.animalCompanion:
-		case Trait.enum.archetype_isMulticlass:
-		case Trait.enum.archetype_has10OrMoreFeats:
+		case Trait.enum.archetype_multiclass:
+		case Trait.enum.archetype_tenPlusFeats:
 		case Trait.enum.familiar:
 			return character[trait] ? ['Yes', 'No'] : ['No'];
 
