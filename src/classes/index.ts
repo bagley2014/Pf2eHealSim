@@ -12,9 +12,9 @@ function getQuestionText(trait: Trait): string {
 			return 'Here are your options:';
 		case Trait.enum.description:
 			return 'N/A';
-		case Trait.enum.armor:
+		case Trait.enum.class_armor:
 			return "What's the lowest armor proficiency you'd accept?";
-		case Trait.enum.classArchetype:
+		case Trait.enum.class_classArchetype:
 			return 'Is taking a class archetype ok?';
 		case Trait.enum.focusSpells:
 			return 'Do you want focus spells?';
@@ -22,7 +22,7 @@ function getQuestionText(trait: Trait): string {
 			return 'What focus spell spellcasting attribute do you want?';
 		case Trait.enum.focusSpells_tradition:
 			return 'Which focus spell tradition do you want?';
-		case Trait.enum.keyAttribute:
+		case Trait.enum.class_keyAttribute:
 			return 'What key attribute do you want?';
 		case Trait.enum.mechanicalDeity:
 			return "Do you want your character's deity choice to have a mechanical impact?";
@@ -36,8 +36,16 @@ function getQuestionText(trait: Trait): string {
 			return 'Do you want a spell repertoire class feature?';
 		case Trait.enum.spellcasting_tradition:
 			return 'Which spellcasting tradition do you want?';
-		case Trait.enum.type:
-			return 'Are you looking for a class or an archetype?';
+		case Trait.enum.kind:
+			return 'Are you looking for a class or just an archetype?';
+		case Trait.enum.archetype_has10OrMoreFeats:
+			return 'Must the archetype have 10 or more feats?';
+		case Trait.enum.archetype_isMulticlass:
+			return 'Must the archetype be a multiclass archetype?';
+		case Trait.enum.martialWeaponTraining:
+			return 'Do you want martial weapon proficiency?';
+		case Trait.enum.shieldBlock:
+			return 'Do you want Shield Block at level 1?';
 	}
 }
 
@@ -47,38 +55,51 @@ function getApplicableAnswers(trait: Trait, character: Character): string[] {
 		// Simple strings
 		case Trait.enum.name:
 			return [character[trait]];
-		case Trait.enum.type:
+		case Trait.enum.kind:
 			return [character[trait] || 'null', "Don't care"];
 
 		// Simple booleans
 		case Trait.enum.mechanicalDeity:
 		case Trait.enum.focusSpells:
+		case Trait.enum.shieldBlock:
 		case Trait.enum.spellcasting:
 		case Trait.enum.spellcasting_full:
 		case Trait.enum.spellcasting_repertoire:
 			return character[trait] ? ['Yes', "Don't care"] : ['No', "Don't care"];
 
+		// Booleans where "Yes" eliminates options, but "No" does not
+		case Trait.enum.archetype_isMulticlass:
+		case Trait.enum.archetype_has10OrMoreFeats:
+			return character[trait] ? ['Yes', 'No'] : ['No'];
+
+		// Booleans where "No" eliminates options, but "Yes" does not
+		case Trait.enum.class_classArchetype:
+			return character[trait] ? ['Yes'] : ['No', 'Yes'];
+
 		// String arrays
-		case Trait.enum.keyAttribute:
+		case Trait.enum.class_keyAttribute:
 		case Trait.enum.focusSpells_attribute:
 		case Trait.enum.focusSpells_tradition:
 		case Trait.enum.spellcasting_attribute:
 		case Trait.enum.spellcasting_tradition:
 			return [...(character[trait] || ['null']), "Don't Care"];
-
 		// Misc Section
 		case Trait.enum.description:
 			return [];
-		case Trait.enum.armor:
-			return character.armor == 'Heavy'
+		case Trait.enum.class_armor:
+			return character.class_armor == 'Heavy'
 				? ['None', 'Light', 'Medium', 'Heavy']
-				: character.armor == 'Medium'
+				: character.class_armor == 'Medium'
 					? ['None', 'Light', 'Medium']
-					: character.armor == 'Light'
+					: character.class_armor == 'Light'
 						? ['None', 'Light']
 						: ['None'];
-		case Trait.enum.classArchetype:
-			return character.classArchetype ? ['Yes'] : ['No', 'Yes'];
+		case Trait.enum.martialWeaponTraining:
+			return character.martialWeaponTraining === true
+				? ['Yes, all martial weapons', 'Yes, some martial weapons', "Don't care"]
+				: character.martialWeaponTraining
+					? ['Yes, some martial weapons', "Don't care"]
+					: ["Don't care"];
 	}
 }
 
