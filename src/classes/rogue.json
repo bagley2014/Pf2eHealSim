@@ -1,44 +1,53 @@
 [
 	{
 		"name": "Thief Rogue",
+		"description": "Nothing beats the thrill of taking something that belongs to someone else, especially if you can do so completely unnoticed. You might be a pickpocket working the streets, a cat burglar sneaking through windows, or even a consultant, testing clients’ vaults for openings.",
 		"keyAttribute": "Dexterity",
 		"type": "Class",
 		"classArchetype": false,
 		"mechanicalDeity": false,
 		"armor": "Light",
-		"spellcaster": false,
+		"spellcasting": null,
 		"focusSpells": false
 	},
 	{
 		"name": "Scoundrel Rogue",
+		"description": "You use fast-talking, flattery, and a silver tongue to avoid danger and escape tricky situations. You might be a grifter or con artist, or you might use your skills in certain reputable professions, like a barrister or diplomat.",
 		"keyAttribute": ["Dexterity", "Charisma"],
 		"type": "Class",
 		"classArchetype": false,
 		"mechanicalDeity": false,
+		"spellcasting": null,
 		"armor": "Light"
 	},
 	{
 		"name": "Mastermind Rogue",
+		"description": "You rely on your intellect to craft intricate schemes, planning 10 steps ahead where others might plan three. You might be a driven detective, a spymaster in the service of a powerful house, or an aspiring crime lord or information broker.",
 		"keyAttribute": ["Dexterity", "Intelligence"],
 		"type": "Class",
 		"classArchetype": false,
 		"mechanicalDeity": false,
+		"spellcasting": null,
 		"armor": "Light"
 	},
 	{
 		"name": "Ruffian Rogue",
+		"description": "You prefer the direct approach: strong-arming or intimidation. You might be an enforcer for organized crime, a highway bandit, or a noble who bullies others with threats of your family's power.",
 		"keyAttribute": ["Dexterity", "Strength"],
 		"type": "Class",
 		"classArchetype": false,
 		"mechanicalDeity": false,
+		"spellcasting": null,
 		"armor": "Medium"
 	},
 	{
 		"name": "Avenger",
+		"description": "Trained to be a precise but brutal weapon by the priests of your faith, you eschew complex trickery for swift and deadly efficiency.",
 		"keyAttribute": ["Dexterity", "Strength"],
 		"type": "Class",
 		"classArchetype": true,
 		"mechanicalDeity": true,
+		"spellcasting": null,
 		"armor": "Medium"
 	}
 ]

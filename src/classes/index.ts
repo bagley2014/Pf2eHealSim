@@ -1,41 +1,8 @@
+import { AnswerMap, Character, CharacterSource, Question, Trait } from './types';
 import { confirm, select } from '@inquirer/prompts';
 
 import fg from 'fast-glob';
 import { readFileSync } from 'fs';
-import { z } from 'zod';
-
-type Arrayable<T> = T | T[];
-function arrayArrayable<T>(val: Arrayable<T>) {
-	if (Array.isArray(val)) return val;
-	return [val];
-}
-const Attribute = z.enum(['Strength', 'Dexterity', 'Constitution', 'Intelligence', 'Wisdom', 'Charisma']);
-
-const Character = z.object({
-	name: z.string(),
-	description: z.string().optional(),
-	armor: z.enum(['None', 'Light', 'Medium', 'Heavy']),
-	classArchetype: z.boolean(),
-	// focusSpells: z.boolean(), see spellcaster
-	keyAttribute: Attribute.or(Attribute.array()).transform(arrayArrayable),
-	mechanicalDeity: z.boolean(),
-	// spellcaster: z.boolean(), I might want to make this object | null so that I can nest some properties, like prepared/spontaneous or casting stat, but I need to figure out how the consuming logic would work with null and/or objects first
-	type: z.enum(['Class', 'Archetype']),
-});
-type Character = z.infer<typeof Character>;
-
-const Trait = Character.keyof();
-type Trait = z.infer<typeof Trait>;
-
-const AnswerMap = z.map(z.string(), Character.array());
-type AnswerMap = z.infer<typeof AnswerMap>;
-
-const Question = z.object({
-	text: z.string(),
-	answers: AnswerMap,
-	score: z.number(), // Lower is better
-});
-type Question = z.infer<typeof Question>;
 
 const getDataFilenames = () => fg.sync('**/classes/**/*.json');
 
@@ -55,8 +22,16 @@ function getQuestionText(trait: Trait): string {
 			return 'What key attribute do you want?';
 		case 'mechanicalDeity':
 			return "Do you want your character's deity choice to have a mechanical impact?";
-		// case 'spellcaster':
-		// 	return 'Do you want a spellcasting class feature?';
+		case 'spellcasting':
+			return 'Do you want spell slots and a spellcasting class feature?';
+		case 'spellcasting_attribute':
+			return 'What spellcasting attribute do you want?';
+		case 'spellcasting_full':
+			return 'Do you want to be a full caster?';
+		case 'spellcasting_repertoire':
+			return 'Do you want a spell repertoire class feature?';
+		case 'spellcasting_tradition':
+			return 'Which spellcasting tradition do you want?';
 		case 'type':
 			return 'Are you looking for a class or an archetype?';
 	}
@@ -65,8 +40,21 @@ function getQuestionText(trait: Trait): string {
 // Returns the list of answers that a character ISN'T disqualified by
 function getApplicableAnswers(trait: Trait, character: Character): string[] {
 	switch (trait) {
+		// Simple strings
 		case 'name':
-			return [character.name];
+			return [character[trait] || 'null'];
+		case 'spellcasting_attribute':
+		case 'spellcasting_tradition':
+			return [character[trait] || 'null', "Don't care"];
+
+		// Simple booleans
+		case 'mechanicalDeity':
+		case 'spellcasting':
+		case 'spellcasting_full':
+		case 'spellcasting_repertoire':
+			return character[trait] ? ['Yes', "Don't care"] : ['No', "Don't care"];
+
+		// Misc Section
 		case 'description':
 			return [];
 		case 'armor':
@@ -81,8 +69,6 @@ function getApplicableAnswers(trait: Trait, character: Character): string[] {
 			return character.classArchetype ? ['Yes'] : ['No', 'Yes'];
 		case 'keyAttribute':
 			return character.keyAttribute;
-		case 'mechanicalDeity':
-			return character.mechanicalDeity ? ['Yes', "Don't care"] : ['No', "Don't care"];
 		case 'type':
 			return [character.type, "Don't care"];
 	}
@@ -150,7 +136,7 @@ export function auditData() {
 	const data: Record<string, unknown>[] = [];
 	for (const file of getDataFilenames()) {
 		const json = JSON.parse(readFileSync(file, 'utf8'));
-		const fileData = Character.partial().passthrough().array().parse(json);
+		const fileData = CharacterSource.sourceType().partial().passthrough().array().parse(json);
 		data.push(...fileData);
 	}
 
@@ -165,7 +151,8 @@ export function auditData() {
 			traits.set(key, (traits.get(key) || 0) + 1);
 		}
 		// Track all the entries that are missing traits
-		for (const trait of Trait.options) {
+		const requiredTraits = CharacterSource.sourceType().keyof().options;
+		for (const trait of requiredTraits) {
 			if (!keys.includes(trait)) {
 				incompleteEntries.push(entry.name || entry);
 				break;
@@ -191,7 +178,8 @@ async function reduceCharacters(data: Character[], answeredQuestions: string[] =
 	// Figure out possible questions
 	const possibleQuestions = [];
 	for (const trait of Trait.options) {
-		possibleQuestions.push(getQuestion(trait, data));
+		// Skip any traits where any of the characters have a null value
+		if (!data.map((x) => x[trait]).filter((x) => x === null).length) possibleQuestions.push(getQuestion(trait, data));
 	}
 
 	// Decide which question to ask, ignoring questions that were already answered
@@ -221,13 +209,13 @@ async function main() {
 	const data: Character[] = [];
 	for (const file of getDataFilenames()) {
 		const json = JSON.parse(readFileSync(file, 'utf8'));
-		const fileData = Character.array().parse(json);
+		const fileData = CharacterSource.array().parse(json);
 		data.push(...fileData);
 	}
 
 	do {
 		const selectedCharacter = await reduceCharacters(data);
-		console.log(selectedCharacter.name);
+		console.log(selectedCharacter.description || selectedCharacter.name);
 	} while (await confirm({ message: 'Start over?', default: false, transformer: (b) => (b ? 'Yes' : 'No') }));
 }
 
