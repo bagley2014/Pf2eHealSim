@@ -1,0 +1,62 @@
+[
+	{
+		"name": "Druid",
+		"description": "You are one of those who hear nature’s call. You stand in awe of the majesty of its power and give yourself over to its service.",
+		"kind": { "name": "Class", "armor": "Medium", "classArchetype": false, "keyAttribute": "Wisdom" },
+		"animalCompanion": true,
+		"familiar": true,
+		"mechanicalDeity": false,
+		"spellcasting": {
+			"attribute": "Wisdom",
+			"repertoire": false,
+			"full": true,
+			"tradition": "Primal"
+		},
+		"focusSpells": {
+			"attribute": "Wisdom",
+			"tradition": "Primal"
+		},
+		"martialWeaponTraining": false,
+		"shieldBlock": true
+	},
+	{
+		"name": "Flexible Druid",
+		"description": "You are one of those who hear nature’s call. You stand in awe of the majesty of its power and give yourself over to its service. You've learned how to cast spells flexibly, blending the best elements of spontaneous and prepared spellcasting at the cost of casting fewer spells each day.",
+		"kind": { "name": "Class", "armor": "Medium", "classArchetype": true, "keyAttribute": "Wisdom" },
+		"animalCompanion": true,
+		"familiar": true,
+		"mechanicalDeity": false,
+		"spellcasting": {
+			"attribute": "Wisdom",
+			"repertoire": true,
+			"full": true,
+			"tradition": "Primal"
+		},
+		"focusSpells": {
+			"attribute": "Wisdom",
+			"tradition": "Primal"
+		},
+		"martialWeaponTraining": false,
+		"shieldBlock": true
+	},
+	{
+		"name": "Druid Archetype",
+		"description": "You have entered a druidic circle and learned a few of the order’s secrets, granting you primal power.",
+		"kind": { "name": "Archetype", "armorTraining": false, "multiclass": true, "tenPlusFeats": true },
+		"animalCompanion": true,
+		"familiar": true,
+		"mechanicalDeity": false,
+		"spellcasting": {
+			"attribute": "Wisdom",
+			"repertoire": false,
+			"full": false,
+			"tradition": "Primal"
+		},
+		"focusSpells": {
+			"attribute": "Wisdom",
+			"tradition": "Primal"
+		},
+		"martialWeaponTraining": false,
+		"shieldBlock": false
+	}
+]

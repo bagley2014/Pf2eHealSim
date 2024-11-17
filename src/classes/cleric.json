@@ -97,7 +97,7 @@
 			"tradition": "Divine"
 		},
 		"martialWeaponTraining": true,
-		"shieldBlock": true
+		"shieldBlock": false
 	},
 	{
 		"name": "Cleric Archetype",
