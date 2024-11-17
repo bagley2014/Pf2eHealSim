@@ -171,6 +171,25 @@
 		}
 	},
 	{
+		"name": "Fey Sorcerer",
+		"description": "You didn't choose to become a spellcaster—you were born one. There's magic in your blood. Fey whimsy or a tryst in a moonlit grove put the bewitching magic of the First World into your family's bloodline.",
+		"keyAttribute": "Charisma",
+		"type": "Class",
+		"classArchetype": false,
+		"mechanicalDeity": false,
+		"armor": "None",
+		"spellcasting": {
+			"attribute": "Charisma",
+			"repertoire": true,
+			"full": true,
+			"tradition": "Primal"
+		},
+		"focusSpells": {
+			"attribute": "Charisma",
+			"tradition": "Primal"
+		}
+	},
+	{
 		"name": "Hag Sorcerer",
 		"description": "You didn't choose to become a spellcaster—you were born one. There's magic in your blood. A hag cursed your family long ago, or you are a descendant of a hag or changeling, and their magic infests your blood and soul.",
 		"keyAttribute": "Charisma",

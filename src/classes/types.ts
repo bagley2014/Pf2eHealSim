@@ -11,6 +11,12 @@ const Attribute = z.enum(['Strength', 'Dexterity', 'Constitution', 'Intelligence
 const CharacterType = z.enum(['Class', 'Archetype']);
 const SpellcastingTradition = z.enum(['Arcane', 'Divine', 'Occult', 'Primal']);
 
+export const CanonicalOptionOrdering: string[] = ["Don't care", 'Yes', 'No']
+	.concat(Armor.options)
+	.concat(Attribute.options)
+	.concat(CharacterType.options)
+	.concat(SpellcastingTradition.options);
+
 // How characters are actually represented in JSON, transformed into a flat, easy to work with version
 export const CharacterSource = z
 	.object({
@@ -18,7 +24,12 @@ export const CharacterSource = z
 		description: z.string().optional(),
 		armor: Armor,
 		classArchetype: z.boolean(),
-		// focusSpells: z.boolean(), see spellcaster
+		focusSpells: z
+			.object({
+				attribute: Attribute,
+				tradition: SpellcastingTradition,
+			})
+			.nullable(),
 		keyAttribute: Attribute.or(Attribute.array()).transform(arrayArrayable),
 		mechanicalDeity: z.boolean(),
 		spellcasting: z
@@ -31,9 +42,14 @@ export const CharacterSource = z
 			.nullable(),
 		type: CharacterType,
 	})
-	.transform(({ spellcasting, ...rest }) => {
+	.transform(({ focusSpells, spellcasting, ...rest }) => {
 		const character: Character = {
 			...rest,
+
+			focusSpells: focusSpells ? true : false,
+			focusSpells_attribute: focusSpells?.attribute || null,
+			focusSpells_tradition: focusSpells?.tradition || null,
+
 			spellcasting: spellcasting ? true : false,
 			spellcasting_attribute: spellcasting?.attribute || null,
 			spellcasting_full: spellcasting?.full || null,
@@ -49,8 +65,10 @@ const Character = z.object({
 	description: z.string().optional(),
 	armor: Armor,
 	classArchetype: z.boolean(),
-	// focusSpells: z.boolean(), see spellcaster
-	keyAttribute: Attribute.or(Attribute.array()).transform(arrayArrayable),
+	focusSpells: z.boolean(),
+	focusSpells_attribute: Attribute.nullable(),
+	focusSpells_tradition: SpellcastingTradition.nullable(),
+	keyAttribute: Attribute.array(),
 	mechanicalDeity: z.boolean(),
 	spellcasting: z.boolean(),
 	spellcasting_attribute: Attribute.nullable(),

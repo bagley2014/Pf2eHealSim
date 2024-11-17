@@ -1,4 +1,4 @@
-import { AnswerMap, Character, CharacterSource, Question, Trait } from './types';
+import { AnswerMap, CanonicalOptionOrdering, Character, CharacterSource, Question, Trait } from './types';
 import { confirm, select } from '@inquirer/prompts';
 
 import fg from 'fast-glob';
@@ -16,8 +16,12 @@ function getQuestionText(trait: Trait): string {
 			return "What's the lowest armor proficiency you'd accept?";
 		case Trait.enum.classArchetype:
 			return 'Is taking a class archetype ok?';
-		// case 'focusSpells':
-		// 	return 'Do you want focus spells?';
+		case Trait.enum.focusSpells:
+			return 'Do you want focus spells?';
+		case Trait.enum.focusSpells_attribute:
+			return 'What focus spell spellcasting attribute do you want?';
+		case Trait.enum.focusSpells_tradition:
+			return 'Which focus spell tradition do you want?';
 		case Trait.enum.keyAttribute:
 			return 'What key attribute do you want?';
 		case Trait.enum.mechanicalDeity:
@@ -42,7 +46,9 @@ function getApplicableAnswers(trait: Trait, character: Character): string[] {
 	switch (trait) {
 		// Simple strings
 		case Trait.enum.name:
-			return [character[trait] || 'null'];
+			return [character[trait]];
+		case Trait.enum.focusSpells_attribute:
+		case Trait.enum.focusSpells_tradition:
 		case Trait.enum.spellcasting_attribute:
 		case Trait.enum.spellcasting_tradition:
 		case Trait.enum.type:
@@ -50,6 +56,7 @@ function getApplicableAnswers(trait: Trait, character: Character): string[] {
 
 		// Simple booleans
 		case Trait.enum.mechanicalDeity:
+		case Trait.enum.focusSpells:
 		case Trait.enum.spellcasting:
 		case Trait.enum.spellcasting_full:
 		case Trait.enum.spellcasting_repertoire:
@@ -128,6 +135,7 @@ function getBestQuestion(questions: Question[], maxScore: number) {
 	return bestQuestion;
 }
 
+// This would make sense in a CI test
 export function auditData() {
 	console.log('___Audit___');
 
@@ -193,8 +201,10 @@ async function reduceCharacters(data: Character[], answeredQuestions: string[] =
 		message: bestQuestion.text,
 		choices: bestQuestion.answers
 			.entries()
-			.map(([answer, characters]) => ({ name: answer, value: characters }))
-			.toArray(),
+			.toArray()
+			.sort()
+			.sort(([answerA, _], [answerB, __]) => CanonicalOptionOrdering.indexOf(answerA) - CanonicalOptionOrdering.indexOf(answerB))
+			.map(([answer, characters]) => ({ name: answer, value: characters })),
 	});
 
 	// Recurse using the set of remaining options
