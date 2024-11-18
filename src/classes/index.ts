@@ -1,4 +1,4 @@
-import { AnswerMap, CanonicalOptionOrdering, Character, CharacterSource, Question, Trait } from './types';
+import { AnswerMap, Character, CharacterSource, Question, Trait, compareTraitStrings as compareTraitStringsCanonically } from './types';
 import { confirm, select } from '@inquirer/prompts';
 
 import { getDataFilenames } from './helpers';
@@ -200,11 +200,8 @@ async function reduceCharacters(data: Character[], answeredQuestions: string[] =
 		choices: bestQuestion.answers
 			.entries()
 			.toArray()
-			.sort()
-			.sort(
-				([answerA, _], [answerB, __]) =>
-					(CanonicalOptionOrdering.indexOf(answerA) + 1 || Infinity) - (CanonicalOptionOrdering.indexOf(answerB) + 1 || Infinity),
-			)
+			.sort() // Alphabetical
+			.sort(([a, _], [b, __]) => compareTraitStringsCanonically(a, b)) // Canonical
 			.map(([answer, characters]) => ({ name: answer, value: characters })),
 	});
 

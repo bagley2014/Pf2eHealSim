@@ -11,11 +11,14 @@ const Attribute = z.enum(['Strength', 'Dexterity', 'Constitution', 'Intelligence
 const CharacterKind = z.enum(['Class', 'Archetype']);
 const SpellcastingTradition = z.enum(['Arcane', 'Divine', 'Occult', 'Primal']);
 
-export const CanonicalOptionOrdering: string[] = ["Don't care", 'Yes', 'No']
+const CanonicalOptionOrdering: string[] = ["Don't care", 'Yes', 'No']
 	.concat(Armor.options)
 	.concat(Attribute.options)
 	.concat(CharacterKind.options)
 	.concat(SpellcastingTradition.options);
+
+export const compareTraitStrings = (answerA: string, answerB: string) =>
+	(CanonicalOptionOrdering.indexOf(answerA) + 1 || Infinity) - (CanonicalOptionOrdering.indexOf(answerB) + 1 || Infinity);
 
 // How characters are actually represented in JSON, transformed into a flat, easy to work with version
 export const CharacterSource = z
