@@ -42,11 +42,6 @@ export const CharacterSource = z
 				tradition: SpellcastingTradition.or(SpellcastingTradition.array()).transform(arrayArrayable),
 			})
 			.nullable(),
-		// Maybe I should make a pseudospellcasting property for impulses and quick alchemy
-		// Maybe I should make a lot of these simple boolean properties true | undefined instead, so I don't have to explicitly define them everywhere
-		// 		That would also allow me to add a bunch more of them, like expert weapon proficiency at level 1, without needing to edit every single entry
-		//		The issue is that I might forget that a property exists and not include it somewhere that I should, then I'd have no way of knowing I'd made that mistake
-		//		Alternatively, I could group properties into objects more liberally, like a "martial" object that includes more details on weapon, armor, and shield proficiencies, then some classes I could easily leave it null and not have to go back and update, while others I would be forced to update as I add new properties
 		martialWeaponTraining: z.boolean().or(z.string()),
 		shieldBlock: z.boolean(),
 		animalCompanion: z.boolean(),
