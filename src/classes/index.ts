@@ -100,7 +100,7 @@ function getApplicableAnswers(trait: Trait, character: Character): string[] {
 		case Trait.enum.focusSpells_tradition:
 		case Trait.enum.spellcasting_attribute:
 		case Trait.enum.spellcasting_tradition:
-			return [...(character[trait] || ['null']), "Don't Care"];
+			return [...(character[trait] || ['null']), "Don't care"];
 
 		// Misc Section
 		case Trait.enum.description:
