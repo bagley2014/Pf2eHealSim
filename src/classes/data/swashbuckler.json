@@ -1,7 +1,7 @@
 [
 	{
 		"name": "Swashbuckler",
-		"description": "Fighting for honor, greed, loyalty, or simply the thrill of battle, you are an undisputed master of weaponry and combat techniques. You combine your actions through clever combinations of opening moves, finishing strikes, and counterattacks whenever your foes are unwise enough to drop their guard.",
+		"description": "Many warriors rely on brute force, weighty armor, or cumbersome weapons. For you, battle is a dance where you move among foes with style and grace. You dart among combatants with flair and land powerful finishing moves with a flick of the wrist and a flash of the blade, all while countering attacks with elegant ripostes that keep enemies off balance.",
 		"kind": { "name": "Class", "armor": "Light", "classArchetype": false, "keyAttribute": "Dexterity" },
 		"animalCompanion": false,
 		"familiar": false,
@@ -14,7 +14,7 @@
 	},
 	{
 		"name": "Swashbuckler Archetype",
-		"description": "You have spent time learning the art of warfare, increasing your skill with martial arms and at wearing armor. With further training, you can become a true combat specialist.",
+		"description": "You fight with flair and style, adding swashbuckling tricks to your combat repertoire.",
 		"kind": { "name": "Archetype", "armorTraining": false, "multiclass": true, "tenPlusFeats": true },
 		"animalCompanion": false,
 		"familiar": false,

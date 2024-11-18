@@ -1,7 +1,7 @@
 [
 	{
 		"name": "Ranger",
-		"description": "You are an emissary of a deity, a devoted servant who has taken up a weighty mantle, and you devoutly pursue a cause that holds you apart from those around you.",
+		"description": "Some rangers believe civilization wears down the soul, but still needs to be protected from wild creatures. Others say nature needs to be protected from the greedy, who wish to tame its beauty and plunder its treasures. You could champion either goal, or both. You might be a scout, tracker, or hunter of fugitives or beasts, haunting the edge of civilization or exploring the wilds.",
 		"kind": { "name": "Class", "armor": "Medium", "classArchetype": false, "keyAttribute": ["Strength", "Dexterity"] },
 		"animalCompanion": true,
 		"familiar": false,
@@ -17,7 +17,7 @@
 	},
 	{
 		"name": "Precision Ranger",
-		"description": "You are an emissary of a deity, a devoted servant who has taken up a weighty mantle, and you devoutly pursue a cause that holds you apart from those around you.",
+		"description": "Some rangers believe civilization wears down the soul, but still needs to be protected from wild creatures. Others say nature needs to be protected from the greedy, who wish to tame its beauty and plunder its treasures. You could champion either goal, or both. You have trained to aim for your prey’s weak points.",
 		"kind": { "name": "Class", "armor": "Medium", "classArchetype": false, "keyAttribute": ["Strength", "Dexterity"] },
 		"animalCompanion": true,
 		"familiar": false,
