@@ -10,15 +10,17 @@ export const Armor = z.enum(['Unarmored', 'Light', 'Medium', 'Heavy']);
 const Attribute = z.enum(['Strength', 'Dexterity', 'Constitution', 'Intelligence', 'Wisdom', 'Charisma']);
 const CharacterKind = z.enum(['Class', 'Archetype']);
 const SpellcastingTradition = z.enum(['Arcane', 'Divine', 'Occult', 'Primal']);
+export const Answer = z.enum(["Don't care", 'Yes', 'No']);
 
-const CanonicalOptionOrdering: string[] = ["Don't care", 'Yes', 'No']
+const CanonicalOptionOrdering: string[] = ([] as string[])
+	.concat(Answer.options)
 	.concat(Armor.options)
 	.concat(Attribute.options)
 	.concat(CharacterKind.options)
 	.concat(SpellcastingTradition.options);
 
-export const compareTraitStrings = (answerA: string, answerB: string) =>
-	(CanonicalOptionOrdering.indexOf(answerA) + 1 || Infinity) - (CanonicalOptionOrdering.indexOf(answerB) + 1 || Infinity);
+export const compareTraitStringsCanonically = (answerA: string, answerB: string) =>
+	(CanonicalOptionOrdering.indexOf(answerA) + 1 || 10000) - (CanonicalOptionOrdering.indexOf(answerB) + 1 || 10000); // Using 10000 instead of Infinity because Infinity - Infinity == NaN
 
 // How characters are actually represented in JSON, transformed into a flat, easy to work with version
 export const CharacterSource = z

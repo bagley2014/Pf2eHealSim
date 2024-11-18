@@ -1,12 +1,4 @@
-import {
-	AnswerMap,
-	Armor,
-	Character,
-	CharacterSource,
-	Question,
-	Trait,
-	compareTraitStrings as compareTraitStringsCanonically,
-} from './types';
+import { AnswerMap, Armor, Character, CharacterSource, Question, Trait, compareTraitStringsCanonically } from './types';
 import { confirm, select } from '@inquirer/prompts';
 
 import { getDataFilenames } from './helpers';
@@ -203,14 +195,15 @@ async function reduceCharacters(data: Character[], answeredQuestions: string[] =
 	answeredQuestions.push(bestQuestion.text);
 
 	// Ask the question
+	const answerChoices = bestQuestion.answers
+		.entries()
+		.map(([answer, characters]) => ({ name: answer, value: characters }))
+		.toArray();
 	const remainingCharacters = await select({
 		message: bestQuestion.text,
-		choices: bestQuestion.answers
-			.entries()
-			.toArray()
-			.sort() // Alphabetical
-			.sort(([a, _], [b, __]) => compareTraitStringsCanonically(a, b)) // Canonical
-			.map(([answer, characters]) => ({ name: answer, value: characters })),
+		choices: answerChoices
+			.sort(({ name: a }, { name: b }) => (a > b ? 1 : b > a ? -1 : 0)) // Alphabetical
+			.sort(({ name: a }, { name: b }) => compareTraitStringsCanonically(a, b)), // Canonical
 	});
 
 	// Recurse using the set of remaining options
