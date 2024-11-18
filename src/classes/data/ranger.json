@@ -1,0 +1,66 @@
+[
+	{
+		"name": "Ranger",
+		"description": "You are an emissary of a deity, a devoted servant who has taken up a weighty mantle, and you devoutly pursue a cause that holds you apart from those around you.",
+		"kind": { "name": "Class", "armor": "Medium", "classArchetype": false, "keyAttribute": ["Strength", "Dexterity"] },
+		"animalCompanion": true,
+		"familiar": false,
+		"mechanicalDeity": false,
+		"spellcasting": null,
+		"focusSpells": {
+			"attribute": "Wisdom",
+			"tradition": "Primal"
+		},
+		"martialWeaponTraining": true,
+		"shieldBlock": false,
+		"precisionDamage": false
+	},
+	{
+		"name": "Precision Ranger",
+		"description": "You are an emissary of a deity, a devoted servant who has taken up a weighty mantle, and you devoutly pursue a cause that holds you apart from those around you.",
+		"kind": { "name": "Class", "armor": "Medium", "classArchetype": false, "keyAttribute": ["Strength", "Dexterity"] },
+		"animalCompanion": true,
+		"familiar": false,
+		"mechanicalDeity": false,
+		"spellcasting": null,
+		"focusSpells": {
+			"attribute": "Wisdom",
+			"tradition": "Primal"
+		},
+		"martialWeaponTraining": true,
+		"shieldBlock": false,
+		"precisionDamage": true
+	},
+	{
+		"name": "Vindicator",
+		"description": "Vindicators are skilled warriors who use keen analytical talents and a smattering of divine magic to seek out such monstrous prey and pronounce judgment upon them.",
+		"kind": { "name": "Class", "armor": "Medium", "classArchetype": true, "keyAttribute": ["Strength", "Dexterity"] },
+		"animalCompanion": true,
+		"familiar": false,
+		"mechanicalDeity": true,
+		"spellcasting": null,
+		"focusSpells": {
+			"attribute": "Wisdom",
+			"tradition": "Divine"
+		},
+		"martialWeaponTraining": true,
+		"shieldBlock": false,
+		"precisionDamage": false
+	},
+	{
+		"name": "Ranger Archetype",
+		"description": "You have studied hunting, tracking, and wilderness survival, adding a ranger’s tools to your skill set. Your keen eyes while hunting prey help gather more information.",
+		"kind": { "name": "Archetype", "armorTraining": false, "multiclass": true, "tenPlusFeats": true },
+		"animalCompanion": true,
+		"familiar": false,
+		"mechanicalDeity": false,
+		"spellcasting": null,
+		"focusSpells": {
+			"attribute": "Wisdom",
+			"tradition": "Primal"
+		},
+		"martialWeaponTraining": false,
+		"shieldBlock": false,
+		"precisionDamage": false
+	}
+]
