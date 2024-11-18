@@ -7,9 +7,9 @@ function arrayArrayable<T>(val: Arrayable<T>) {
 }
 
 export const Armor = z.enum(['Unarmored', 'Light', 'Medium', 'Heavy']);
-const Attribute = z.enum(['Strength', 'Dexterity', 'Constitution', 'Intelligence', 'Wisdom', 'Charisma']);
+export const Attribute = z.enum(['Strength', 'Dexterity', 'Constitution', 'Intelligence', 'Wisdom', 'Charisma']);
 const CharacterKind = z.enum(['Class', 'Archetype']);
-const SpellcastingTradition = z.enum(['Arcane', 'Divine', 'Occult', 'Primal']);
+export const SpellcastingTradition = z.enum(['Arcane', 'Divine', 'Occult', 'Primal']);
 export const Answer = z.enum(["Don't care", 'Yes', 'No']);
 
 const CanonicalOptionOrdering: string[] = ([] as string[])

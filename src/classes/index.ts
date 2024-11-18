@@ -1,4 +1,4 @@
-import { AnswerMap, Armor, Character, CharacterSource, Question, Trait, compareTraitStringsCanonically } from './types';
+import { Answer, AnswerMap, Armor, Character, CharacterSource, Question, Trait, compareTraitStringsCanonically } from './types';
 import { confirm, select } from '@inquirer/prompts';
 
 import { getDataFilenames } from './helpers';
@@ -62,7 +62,7 @@ function getApplicableAnswers(trait: Trait, character: Character): string[] {
 		case Trait.enum.name:
 			return [character[trait]];
 		case Trait.enum.kind:
-			return [character[trait] || 'null', "Don't care"];
+			return [character[trait] || 'null', Answer.enum["Don't care"]];
 
 		// Simple booleans
 		case Trait.enum.mechanicalDeity:
@@ -72,7 +72,7 @@ function getApplicableAnswers(trait: Trait, character: Character): string[] {
 		case Trait.enum.spellcasting:
 		case Trait.enum.spellcasting_full:
 		case Trait.enum.spellcasting_repertoire:
-			return character[trait] ? ['Yes', "Don't care"] : ['No', "Don't care"];
+			return character[trait] ? [Answer.enum.Yes, Answer.enum["Don't care"]] : [Answer.enum.No, Answer.enum["Don't care"]];
 
 		// Booleans where "Yes" eliminates options, but "No" does not
 		case Trait.enum.animalCompanion:
@@ -80,11 +80,11 @@ function getApplicableAnswers(trait: Trait, character: Character): string[] {
 		case Trait.enum.archetype_multiclass:
 		case Trait.enum.archetype_tenPlusFeats:
 		case Trait.enum.familiar:
-			return character[trait] ? ['Yes', "Don't care"] : ["Don't care"];
+			return character[trait] ? [Answer.enum.Yes, Answer.enum["Don't care"]] : [Answer.enum["Don't care"]];
 
 		// Booleans where "No" eliminates options, but "Yes" does not
 		case Trait.enum.class_classArchetype:
-			return character[trait] ? ["Don't care"] : ['No', "Don't care"];
+			return character[trait] ? [Answer.enum["Don't care"]] : [Answer.enum.No, Answer.enum["Don't care"]];
 
 		// String arrays
 		case Trait.enum.class_keyAttribute:
@@ -92,25 +92,25 @@ function getApplicableAnswers(trait: Trait, character: Character): string[] {
 		case Trait.enum.focusSpells_tradition:
 		case Trait.enum.spellcasting_attribute:
 		case Trait.enum.spellcasting_tradition:
-			return [...(character[trait] || ['null']), "Don't care"];
+			return [...(character[trait] || ['null']), Answer.enum["Don't care"]];
 
 		// Misc Section
 		case Trait.enum.description:
 			return [];
 		case Trait.enum.class_armor:
 			return character.class_armor == Armor.enum.Heavy
-				? ['Unarmored', 'Light', 'Medium', 'Heavy']
+				? [Armor.enum.Unarmored, Armor.Enum.Light, Armor.Enum.Medium, Armor.Enum.Heavy]
 				: character.class_armor == Armor.enum.Medium
-					? ['Unarmored', 'Light', 'Medium']
+					? [Armor.enum.Unarmored, Armor.Enum.Light, Armor.Enum.Medium]
 					: character.class_armor == Armor.enum.Light
-						? ['Unarmored', 'Light']
-						: ['Unarmored'];
+						? [Armor.enum.Unarmored, Armor.Enum.Light]
+						: [Armor.enum.Unarmored];
 		case Trait.enum.martialWeaponTraining:
 			return character.martialWeaponTraining === true
-				? ['Yes, all martial weapons', 'Yes, some martial weapons', "Don't care"]
+				? ['Yes, all martial weapons', 'Yes, some martial weapons', Answer.enum["Don't care"]]
 				: character.martialWeaponTraining
-					? ['Yes, some martial weapons', "Don't care"]
-					: ["Don't care"];
+					? ['Yes, some martial weapons', Answer.enum["Don't care"]]
+					: [Answer.enum["Don't care"]];
 	}
 }
 
@@ -224,7 +224,7 @@ async function main() {
 		const selectedCharacter = await reduceCharacters(data);
 		console.log(selectedCharacter.name);
 		if (selectedCharacter.description) console.log(selectedCharacter.description);
-	} while (await confirm({ message: 'Start over?', default: false, transformer: (b) => (b ? 'Yes' : 'No') }));
+	} while (await confirm({ message: 'Start over?', default: false, transformer: (b) => (b ? Answer.enum.Yes : Answer.enum.No) }));
 }
 
 main();
