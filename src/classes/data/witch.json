@@ -1,0 +1,338 @@
+[
+	{
+		"name": "Arcane Witch",
+		"description": "You command powerful magic, not through study or devotion to any ideal, but as a vessel or agent for a mysterious, otherworldly patron that even you don't entirely understand. This entity might be a covert divinity, a powerful fey, a manifestation of natural energies, an ancient spirit, or any other mighty supernatural being—but its nature is likely as much a mystery to you as it is to anyone else.",
+		"kind": { "name": "Class", "armor": "Unarmored", "classArchetype": false, "keyAttribute": "Intelligence" },
+		"animalCompanion": false,
+		"familiar": true,
+		"mechanicalDeity": false,
+		"spellcasting": {
+			"attribute": "Intelligence",
+			"repertoire": false,
+			"full": true,
+			"tradition": "Arcane"
+		},
+		"focusSpells": {
+			"attribute": "Intelligence",
+			"tradition": "Arcane"
+		},
+		"martialWeaponTraining": false,
+		"shieldBlock": false,
+		"precisionDamage": false
+	},
+	{
+		"name": "Divine Witch",
+		"description": "You command powerful magic, not through study or devotion to any ideal, but as a vessel or agent for a mysterious, otherworldly patron that even you don't entirely understand. This entity might be a covert divinity, a powerful fey, a manifestation of natural energies, an ancient spirit, or any other mighty supernatural being—but its nature is likely as much a mystery to you as it is to anyone else.",
+		"kind": { "name": "Class", "armor": "Unarmored", "classArchetype": false, "keyAttribute": "Intelligence" },
+		"animalCompanion": false,
+		"familiar": true,
+		"mechanicalDeity": false,
+		"spellcasting": {
+			"attribute": "Intelligence",
+			"repertoire": false,
+			"full": true,
+			"tradition": "Divine"
+		},
+		"focusSpells": {
+			"attribute": "Intelligence",
+			"tradition": "Divine"
+		},
+		"martialWeaponTraining": false,
+		"shieldBlock": false,
+		"precisionDamage": false
+	},
+	{
+		"name": "Occult Witch",
+		"description": "You command powerful magic, not through study or devotion to any ideal, but as a vessel or agent for a mysterious, otherworldly patron that even you don't entirely understand. This entity might be a covert divinity, a powerful fey, a manifestation of natural energies, an ancient spirit, or any other mighty supernatural being—but its nature is likely as much a mystery to you as it is to anyone else.",
+		"kind": { "name": "Class", "armor": "Unarmored", "classArchetype": false, "keyAttribute": "Intelligence" },
+		"animalCompanion": false,
+		"familiar": true,
+		"mechanicalDeity": false,
+		"spellcasting": {
+			"attribute": "Intelligence",
+			"repertoire": false,
+			"full": true,
+			"tradition": "Occult"
+		},
+		"focusSpells": {
+			"attribute": "Intelligence",
+			"tradition": "Occult"
+		},
+		"martialWeaponTraining": false,
+		"shieldBlock": false,
+		"precisionDamage": false
+	},
+	{
+		"name": "Primal Witch",
+		"description": "You command powerful magic, not through study or devotion to any ideal, but as a vessel or agent for a mysterious, otherworldly patron that even you don't entirely understand. This entity might be a covert divinity, a powerful fey, a manifestation of natural energies, an ancient spirit, or any other mighty supernatural being—but its nature is likely as much a mystery to you as it is to anyone else.",
+		"kind": { "name": "Class", "armor": "Unarmored", "classArchetype": false, "keyAttribute": "Intelligence" },
+		"animalCompanion": false,
+		"familiar": true,
+		"mechanicalDeity": false,
+		"spellcasting": {
+			"attribute": "Intelligence",
+			"repertoire": false,
+			"full": true,
+			"tradition": "Primal"
+		},
+		"focusSpells": {
+			"attribute": "Intelligence",
+			"tradition": "Primal"
+		},
+		"martialWeaponTraining": false,
+		"shieldBlock": false,
+		"precisionDamage": false
+	},
+	{
+		"name": "Arcane Seneschal Witch",
+		"description": "Whether dead or simply missing, your patron has gone silent, and you can no longer hear its whisper. While other witches might find this silence disquieting and lose hope without direction, you embrace this new challenge.",
+		"kind": { "name": "Class", "armor": "Unarmored", "classArchetype": true, "keyAttribute": "Intelligence" },
+		"animalCompanion": false,
+		"familiar": true,
+		"mechanicalDeity": false,
+		"spellcasting": {
+			"attribute": "Intelligence",
+			"repertoire": false,
+			"full": true,
+			"tradition": "Arcane"
+		},
+		"focusSpells": {
+			"attribute": "Intelligence",
+			"tradition": "Arcane"
+		},
+		"martialWeaponTraining": false,
+		"shieldBlock": false,
+		"precisionDamage": false
+	},
+	{
+		"name": "Divine Seneschal Witch",
+		"description": "Whether dead or simply missing, your patron has gone silent, and you can no longer hear its whisper. While other witches might find this silence disquieting and lose hope without direction, you embrace this new challenge.",
+		"kind": { "name": "Class", "armor": "Unarmored", "classArchetype": true, "keyAttribute": "Intelligence" },
+		"animalCompanion": false,
+		"familiar": true,
+		"mechanicalDeity": false,
+		"spellcasting": {
+			"attribute": "Intelligence",
+			"repertoire": false,
+			"full": true,
+			"tradition": "Divine"
+		},
+		"focusSpells": {
+			"attribute": "Intelligence",
+			"tradition": "Divine"
+		},
+		"martialWeaponTraining": false,
+		"shieldBlock": false,
+		"precisionDamage": false
+	},
+	{
+		"name": "Occult Seneschal Witch",
+		"description": "Whether dead or simply missing, your patron has gone silent, and you can no longer hear its whisper. While other witches might find this silence disquieting and lose hope without direction, you embrace this new challenge.",
+		"kind": { "name": "Class", "armor": "Unarmored", "classArchetype": true, "keyAttribute": "Intelligence" },
+		"animalCompanion": false,
+		"familiar": true,
+		"mechanicalDeity": false,
+		"spellcasting": {
+			"attribute": "Intelligence",
+			"repertoire": false,
+			"full": true,
+			"tradition": "Occult"
+		},
+		"focusSpells": {
+			"attribute": "Intelligence",
+			"tradition": "Occult"
+		},
+		"martialWeaponTraining": false,
+		"shieldBlock": false,
+		"precisionDamage": false
+	},
+	{
+		"name": "Primal Seneschal Witch",
+		"description": "Whether dead or simply missing, your patron has gone silent, and you can no longer hear its whisper. While other witches might find this silence disquieting and lose hope without direction, you embrace this new challenge.",
+		"kind": { "name": "Class", "armor": "Unarmored", "classArchetype": true, "keyAttribute": "Intelligence" },
+		"animalCompanion": false,
+		"familiar": true,
+		"mechanicalDeity": false,
+		"spellcasting": {
+			"attribute": "Intelligence",
+			"repertoire": false,
+			"full": true,
+			"tradition": "Primal"
+		},
+		"focusSpells": {
+			"attribute": "Intelligence",
+			"tradition": "Primal"
+		},
+		"martialWeaponTraining": false,
+		"shieldBlock": false,
+		"precisionDamage": false
+	},
+	{
+		"name": "Flexible Arcane Witch",
+		"description": "You command powerful magic, not through study or devotion to any ideal, but as a vessel or agent for a mysterious, otherworldly patron that even you don't entirely understand. You've learned how to cast spells flexibly, blending the best elements of spontaneous and prepared spellcasting at the cost of casting fewer spells each day.",
+		"kind": { "name": "Class", "armor": "Unarmored", "classArchetype": true, "keyAttribute": "Intelligence" },
+		"animalCompanion": false,
+		"familiar": true,
+		"mechanicalDeity": false,
+		"spellcasting": {
+			"attribute": "Intelligence",
+			"repertoire": true,
+			"full": true,
+			"tradition": "Arcane"
+		},
+		"focusSpells": {
+			"attribute": "Intelligence",
+			"tradition": "Arcane"
+		},
+		"martialWeaponTraining": false,
+		"shieldBlock": false,
+		"precisionDamage": false
+	},
+	{
+		"name": "Flexible Divine Witch",
+		"description": "You command powerful magic, not through study or devotion to any ideal, but as a vessel or agent for a mysterious, otherworldly patron that even you don't entirely understand. You've learned how to cast spells flexibly, blending the best elements of spontaneous and prepared spellcasting at the cost of casting fewer spells each day.",
+		"kind": { "name": "Class", "armor": "Unarmored", "classArchetype": true, "keyAttribute": "Intelligence" },
+		"animalCompanion": false,
+		"familiar": true,
+		"mechanicalDeity": false,
+		"spellcasting": {
+			"attribute": "Intelligence",
+			"repertoire": true,
+			"full": true,
+			"tradition": "Divine"
+		},
+		"focusSpells": {
+			"attribute": "Intelligence",
+			"tradition": "Divine"
+		},
+		"martialWeaponTraining": false,
+		"shieldBlock": false,
+		"precisionDamage": false
+	},
+	{
+		"name": "Flexible Occult Witch",
+		"description": "You command powerful magic, not through study or devotion to any ideal, but as a vessel or agent for a mysterious, otherworldly patron that even you don't entirely understand. You've learned how to cast spells flexibly, blending the best elements of spontaneous and prepared spellcasting at the cost of casting fewer spells each day.",
+		"kind": { "name": "Class", "armor": "Unarmored", "classArchetype": true, "keyAttribute": "Intelligence" },
+		"animalCompanion": false,
+		"familiar": true,
+		"mechanicalDeity": false,
+		"spellcasting": {
+			"attribute": "Intelligence",
+			"repertoire": true,
+			"full": true,
+			"tradition": "Occult"
+		},
+		"focusSpells": {
+			"attribute": "Intelligence",
+			"tradition": "Occult"
+		},
+		"martialWeaponTraining": false,
+		"shieldBlock": false,
+		"precisionDamage": false
+	},
+	{
+		"name": "Flexible Primal Witch",
+		"description": "You command powerful magic, not through study or devotion to any ideal, but as a vessel or agent for a mysterious, otherworldly patron that even you don't entirely understand. You've learned how to cast spells flexibly, blending the best elements of spontaneous and prepared spellcasting at the cost of casting fewer spells each day.",
+		"kind": { "name": "Class", "armor": "Unarmored", "classArchetype": true, "keyAttribute": "Intelligence" },
+		"animalCompanion": false,
+		"familiar": true,
+		"mechanicalDeity": false,
+		"spellcasting": {
+			"attribute": "Intelligence",
+			"repertoire": true,
+			"full": true,
+			"tradition": "Primal"
+		},
+		"focusSpells": {
+			"attribute": "Intelligence",
+			"tradition": "Primal"
+		},
+		"martialWeaponTraining": false,
+		"shieldBlock": false,
+		"precisionDamage": false
+	},
+	{
+		"name": "Primal Witch Archetype",
+		"description": "You have heard the whispers of a distant patron, who sent an emissary to teach you powerful magic.",
+		"kind": { "name": "Archetype", "armorTraining": false, "multiclass": true, "tenPlusFeats": true },
+		"animalCompanion": false,
+		"familiar": true,
+		"mechanicalDeity": false,
+		"spellcasting": {
+			"attribute": "Intelligence",
+			"repertoire": false,
+			"full": false,
+			"tradition": "Primal"
+		},
+		"focusSpells": {
+			"attribute": "Intelligence",
+			"tradition": "Primal"
+		},
+		"martialWeaponTraining": false,
+		"shieldBlock": false,
+		"precisionDamage": false
+	},
+	{
+		"name": "Occult Witch Archetype",
+		"description": "You have heard the whispers of a distant patron, who sent an emissary to teach you powerful magic.",
+		"kind": { "name": "Archetype", "armorTraining": false, "multiclass": true, "tenPlusFeats": true },
+		"animalCompanion": false,
+		"familiar": true,
+		"mechanicalDeity": false,
+		"spellcasting": {
+			"attribute": "Intelligence",
+			"repertoire": false,
+			"full": false,
+			"tradition": "Occult"
+		},
+		"focusSpells": {
+			"attribute": "Intelligence",
+			"tradition": "Occult"
+		},
+		"martialWeaponTraining": false,
+		"shieldBlock": false,
+		"precisionDamage": false
+	},
+	{
+		"name": "Arcane Witch Archetype",
+		"description": "You have heard the whispers of a distant patron, who sent an emissary to teach you powerful magic.",
+		"kind": { "name": "Archetype", "armorTraining": false, "multiclass": true, "tenPlusFeats": true },
+		"animalCompanion": false,
+		"familiar": true,
+		"mechanicalDeity": false,
+		"spellcasting": {
+			"attribute": "Intelligence",
+			"repertoire": false,
+			"full": false,
+			"tradition": "Arcane"
+		},
+		"focusSpells": {
+			"attribute": "Intelligence",
+			"tradition": "Arcane"
+		},
+		"martialWeaponTraining": false,
+		"shieldBlock": false,
+		"precisionDamage": false
+	},
+	{
+		"name": "Divine Witch Archetype",
+		"description": "You have heard the whispers of a distant patron, who sent an emissary to teach you powerful magic.",
+		"kind": { "name": "Archetype", "armorTraining": false, "multiclass": true, "tenPlusFeats": true },
+		"animalCompanion": false,
+		"familiar": true,
+		"mechanicalDeity": false,
+		"spellcasting": {
+			"attribute": "Intelligence",
+			"repertoire": false,
+			"full": false,
+			"tradition": "Divine"
+		},
+		"focusSpells": {
+			"attribute": "Intelligence",
+			"tradition": "Divine"
+		},
+		"martialWeaponTraining": false,
+		"shieldBlock": false,
+		"precisionDamage": false
+	}
+]

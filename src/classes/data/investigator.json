@@ -13,6 +13,24 @@
 		"precisionDamage": true
 	},
 	{
+		"name": "Palatine Detective",
+		"description": "Whether at the invitation of a senior member of the Esoteric Order of the Palatine Eye, after going through a rigorous sorting process, or by a twist of fate, you recently underwent a secret ritual involving The Lost Gospels of Tabris that granted you a greater understanding of both the divine and the occult.",
+		"kind": { "name": "Class", "armor": "Light", "classArchetype": true, "keyAttribute": "Intelligence" },
+		"animalCompanion": false,
+		"familiar": false,
+		"mechanicalDeity": false,
+		"spellcasting": {
+			"attribute": "Intelligence",
+			"repertoire": true,
+			"full": false,
+			"tradition": ["Divine", "Occult"]
+		},
+		"focusSpells": null,
+		"martialWeaponTraining": true,
+		"shieldBlock": false,
+		"precisionDamage": true
+	},
+	{
 		"name": "Investigator Archetype",
 		"description": "You’ve developed a keen eye for investigating mysteries.",
 		"kind": { "name": "Archetype", "armorTraining": false, "multiclass": true, "tenPlusFeats": true },
