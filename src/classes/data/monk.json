@@ -2,7 +2,7 @@
 	{
 		"name": "Monk",
 		"description": "The strength of your fist flows from your mind and spirit. You seek perfection, honing your body into a flawless instrument and your mind into an orderly bastion of wisdom.",
-		"kind": { "name": "Class", "armor": "None", "classArchetype": false, "keyAttribute": ["Strength", "Dexterity"] },
+		"kind": { "name": "Class", "armor": "Unarmored", "classArchetype": false, "keyAttribute": ["Strength", "Dexterity"] },
 		"animalCompanion": false,
 		"familiar": false,
 		"mechanicalDeity": false,

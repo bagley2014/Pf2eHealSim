@@ -6,7 +6,7 @@ function arrayArrayable<T>(val: Arrayable<T>) {
 	return [val];
 }
 
-const Armor = z.enum(['None', 'Light', 'Medium', 'Heavy']);
+export const Armor = z.enum(['Unarmored', 'Light', 'Medium', 'Heavy']);
 const Attribute = z.enum(['Strength', 'Dexterity', 'Constitution', 'Intelligence', 'Wisdom', 'Charisma']);
 const CharacterKind = z.enum(['Class', 'Archetype']);
 const SpellcastingTradition = z.enum(['Arcane', 'Divine', 'Occult', 'Primal']);

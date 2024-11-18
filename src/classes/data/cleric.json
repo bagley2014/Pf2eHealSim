@@ -23,7 +23,7 @@
 	{
 		"name": "Cloistered Cleric",
 		"description": "Deities work their will upon the world in infinite ways, and you serve as one of their most stalwart mortal servants. You are a cleric of the cloth, focusing on divine magic and your connection to your deity’s domains.",
-		"kind": { "name": "Class", "armor": "None", "classArchetype": false, "keyAttribute": "Wisdom" },
+		"kind": { "name": "Class", "armor": "Unarmored", "classArchetype": false, "keyAttribute": "Wisdom" },
 		"animalCompanion": false,
 		"familiar": false,
 		"mechanicalDeity": true,
@@ -65,7 +65,7 @@
 	{
 		"name": "Flexible Cloistered Cleric",
 		"description": "Deities work their will upon the world in infinite ways, and you serve as one of their most stalwart mortal servants. You are a cleric of the cloth, focusing on divine magic and your connection to your deity’s domains. You've learned how to cast spells flexibly, blending the best elements of spontaneous and prepared spellcasting at the cost of casting fewer spells each day.",
-		"kind": { "name": "Class", "armor": "None", "classArchetype": true, "keyAttribute": "Wisdom" },
+		"kind": { "name": "Class", "armor": "Unarmored", "classArchetype": true, "keyAttribute": "Wisdom" },
 		"animalCompanion": false,
 		"familiar": false,
 		"mechanicalDeity": true,

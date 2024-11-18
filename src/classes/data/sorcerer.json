@@ -2,7 +2,7 @@
 	{
 		"name": "Arcane Sorcerer",
 		"description": "You didn't choose to become a spellcaster—you were born one. There's magic in your blood.",
-		"kind": { "name": "Class", "armor": "None", "classArchetype": false, "keyAttribute": "Charisma" },
+		"kind": { "name": "Class", "armor": "Unarmored", "classArchetype": false, "keyAttribute": "Charisma" },
 		"animalCompanion": false,
 		"familiar": true,
 		"mechanicalDeity": false,
@@ -23,7 +23,7 @@
 	{
 		"name": "Divine Sorcerer",
 		"description": "You didn't choose to become a spellcaster—you were born one. There's magic in your blood.",
-		"kind": { "name": "Class", "armor": "None", "classArchetype": false, "keyAttribute": "Charisma" },
+		"kind": { "name": "Class", "armor": "Unarmored", "classArchetype": false, "keyAttribute": "Charisma" },
 		"animalCompanion": false,
 		"familiar": true,
 		"mechanicalDeity": false,
@@ -44,7 +44,7 @@
 	{
 		"name": "Occult Sorcerer",
 		"description": "You didn't choose to become a spellcaster—you were born one. There's magic in your blood.",
-		"kind": { "name": "Class", "armor": "None", "classArchetype": false, "keyAttribute": "Charisma" },
+		"kind": { "name": "Class", "armor": "Unarmored", "classArchetype": false, "keyAttribute": "Charisma" },
 		"animalCompanion": false,
 		"familiar": true,
 		"mechanicalDeity": false,
@@ -65,7 +65,7 @@
 	{
 		"name": "Primal Sorcerer",
 		"description": "You didn't choose to become a spellcaster—you were born one. There's magic in your blood.",
-		"kind": { "name": "Class", "armor": "None", "classArchetype": false, "keyAttribute": "Charisma" },
+		"kind": { "name": "Class", "armor": "Unarmored", "classArchetype": false, "keyAttribute": "Charisma" },
 		"animalCompanion": false,
 		"familiar": true,
 		"mechanicalDeity": false,

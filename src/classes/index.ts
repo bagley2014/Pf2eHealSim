@@ -1,4 +1,12 @@
-import { AnswerMap, Character, CharacterSource, Question, Trait, compareTraitStrings as compareTraitStringsCanonically } from './types';
+import {
+	AnswerMap,
+	Armor,
+	Character,
+	CharacterSource,
+	Question,
+	Trait,
+	compareTraitStrings as compareTraitStringsCanonically,
+} from './types';
 import { confirm, select } from '@inquirer/prompts';
 
 import { getDataFilenames } from './helpers';
@@ -98,13 +106,13 @@ function getApplicableAnswers(trait: Trait, character: Character): string[] {
 		case Trait.enum.description:
 			return [];
 		case Trait.enum.class_armor:
-			return character.class_armor == 'Heavy'
-				? ['None', 'Light', 'Medium', 'Heavy']
-				: character.class_armor == 'Medium'
-					? ['None', 'Light', 'Medium']
-					: character.class_armor == 'Light'
-						? ['None', 'Light']
-						: ['None'];
+			return character.class_armor == Armor.enum.Heavy
+				? ['Unarmored', 'Light', 'Medium', 'Heavy']
+				: character.class_armor == Armor.enum.Medium
+					? ['Unarmored', 'Light', 'Medium']
+					: character.class_armor == Armor.enum.Light
+						? ['Unarmored', 'Light']
+						: ['Unarmored'];
 		case Trait.enum.martialWeaponTraining:
 			return character.martialWeaponTraining === true
 				? ['Yes, all martial weapons', 'Yes, some martial weapons', "Don't care"]
