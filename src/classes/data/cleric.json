@@ -8,7 +8,7 @@
 		"mechanicalDeity": true,
 		"spellcasting": {
 			"attribute": "Wisdom",
-			"repertoire": false,
+			"kind": "Prepared",
 			"full": true,
 			"tradition": "Divine"
 		},
@@ -16,8 +16,9 @@
 			"attribute": "Wisdom",
 			"tradition": "Divine"
 		},
-		"martialWeaponTraining": "Favored Weapon",
+		"martialWeaponTraining": "The favored weapon of your deity",
 		"shieldBlock": true,
+		"spellLikeAbility": false,
 		"precisionDamage": false
 	},
 	{
@@ -29,7 +30,7 @@
 		"mechanicalDeity": true,
 		"spellcasting": {
 			"attribute": "Wisdom",
-			"repertoire": false,
+			"kind": "Prepared",
 			"full": true,
 			"tradition": "Divine"
 		},
@@ -37,8 +38,9 @@
 			"attribute": "Wisdom",
 			"tradition": "Divine"
 		},
-		"martialWeaponTraining": "Favored Weapon",
+		"martialWeaponTraining": "The favored weapon of your deity",
 		"shieldBlock": false,
+		"spellLikeAbility": false,
 		"precisionDamage": false
 	},
 	{
@@ -50,7 +52,7 @@
 		"mechanicalDeity": true,
 		"spellcasting": {
 			"attribute": "Wisdom",
-			"repertoire": true,
+			"kind": "Spontaneous",
 			"full": true,
 			"tradition": "Divine"
 		},
@@ -58,8 +60,9 @@
 			"attribute": "Wisdom",
 			"tradition": "Divine"
 		},
-		"martialWeaponTraining": "Favored Weapon",
+		"martialWeaponTraining": "The favored weapon of your deity",
 		"shieldBlock": true,
+		"spellLikeAbility": false,
 		"precisionDamage": false
 	},
 	{
@@ -71,7 +74,7 @@
 		"mechanicalDeity": true,
 		"spellcasting": {
 			"attribute": "Wisdom",
-			"repertoire": true,
+			"kind": "Spontaneous",
 			"full": true,
 			"tradition": "Divine"
 		},
@@ -79,8 +82,9 @@
 			"attribute": "Wisdom",
 			"tradition": "Divine"
 		},
-		"martialWeaponTraining": "Favored Weapon",
+		"martialWeaponTraining": "The favored weapon of your deity",
 		"shieldBlock": false,
+		"spellLikeAbility": false,
 		"precisionDamage": false
 	},
 	{
@@ -92,7 +96,7 @@
 		"mechanicalDeity": true,
 		"spellcasting": {
 			"attribute": "Wisdom",
-			"repertoire": false,
+			"kind": "Prepared",
 			"full": true,
 			"tradition": "Divine"
 		},
@@ -102,6 +106,7 @@
 		},
 		"martialWeaponTraining": true,
 		"shieldBlock": false,
+		"spellLikeAbility": false,
 		"precisionDamage": false
 	},
 	{
@@ -113,7 +118,7 @@
 		"mechanicalDeity": true,
 		"spellcasting": {
 			"attribute": "Wisdom",
-			"repertoire": false,
+			"kind": "Prepared",
 			"full": false,
 			"tradition": "Divine"
 		},
@@ -123,6 +128,7 @@
 		},
 		"martialWeaponTraining": false,
 		"shieldBlock": false,
+		"spellLikeAbility": false,
 		"precisionDamage": false
 	}
 ]

@@ -1,0 +1,24 @@
+[
+	{
+		"name": "Animist",
+		"description": "You are the interlocutor between the seen and unseen, the voice that connects the mortal and the spiritual. You bond with spirits, manifesting their distinct magic and allowing their knowledge to flow through you.",
+		"kind": { "name": "Class", "armor": "Medium", "classArchetype": false, "keyAttribute": "Wisdom" },
+		"animalCompanion": false,
+		"familiar": true,
+		"mechanicalDeity": false,
+		"spellcasting": {
+			"attribute": "Wisdom",
+			"kind": ["Prepared", "Spontaneous"],
+			"full": true,
+			"tradition": "Divine"
+		},
+		"focusSpells": {
+			"attribute": "Wisdom",
+			"tradition": "Divine"
+		},
+		"martialWeaponTraining": false,
+		"shieldBlock": false,
+		"spellLikeAbility": false,
+		"precisionDamage": false
+	}
+]

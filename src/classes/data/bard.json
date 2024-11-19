@@ -8,7 +8,7 @@
 		"mechanicalDeity": false,
 		"spellcasting": {
 			"attribute": "Charisma",
-			"repertoire": true,
+			"kind": "Spontaneous",
 			"full": true,
 			"tradition": "Occult"
 		},
@@ -18,6 +18,7 @@
 		},
 		"martialWeaponTraining": true,
 		"shieldBlock": false,
+		"spellLikeAbility": false,
 		"precisionDamage": false
 	},
 	{
@@ -29,7 +30,7 @@
 		"mechanicalDeity": false,
 		"spellcasting": {
 			"attribute": "Charisma",
-			"repertoire": true,
+			"kind": "Spontaneous",
 			"full": false,
 			"tradition": "Occult"
 		},
@@ -39,6 +40,7 @@
 		},
 		"martialWeaponTraining": false,
 		"shieldBlock": false,
+		"spellLikeAbility": false,
 		"precisionDamage": false
 	}
 ]

@@ -9,7 +9,17 @@ function arrayArrayable<T>(val: Arrayable<T>) {
 export const Armor = z.enum(['Unarmored', 'Light', 'Medium', 'Heavy']);
 export const Attribute = z.enum(['Strength', 'Dexterity', 'Constitution', 'Intelligence', 'Wisdom', 'Charisma']);
 const CharacterKind = z.enum(['Class', 'Archetype']);
+export const MartialWeapon = z.enum([
+	'All',
+	'Alchemical Bombs',
+	'Crossbows and Firearms',
+	'Polearms',
+	'The favored weapon of your deity',
+	'None',
+]);
 export const SpellcastingTradition = z.enum(['Arcane', 'Divine', 'Occult', 'Primal']);
+const SpellcastingKind = z.enum(['Prepared', 'Spontaneous', 'Innate']);
+const SpellLikeAbility = z.enum(['Impulses', 'Quick Alchemy']);
 export const Answer = z.enum(["Don't care", 'Yes', 'No']);
 
 const CanonicalOptionOrdering: string[] = ([] as string[])
@@ -17,8 +27,10 @@ const CanonicalOptionOrdering: string[] = ([] as string[])
 	.concat(Armor.options)
 	.concat(Attribute.options)
 	.concat(CharacterKind.options)
-	.concat(SpellcastingTradition.options);
-
+	.concat(MartialWeapon.options)
+	.concat(SpellcastingKind.options)
+	.concat(SpellcastingTradition.options)
+	.concat(SpellLikeAbility.options);
 export const compareTraitStringsCanonically = (answerA: string, answerB: string) =>
 	(CanonicalOptionOrdering.indexOf(answerA) + 1 || 10000) - (CanonicalOptionOrdering.indexOf(answerB) + 1 || 10000); // Using 10000 instead of Infinity because Infinity - Infinity == NaN
 
@@ -37,16 +49,17 @@ export const CharacterSource = z
 		spellcasting: z
 			.object({
 				attribute: Attribute.or(Attribute.array()).transform(arrayArrayable),
-				repertoire: z.boolean(),
+				kind: SpellcastingKind.or(SpellcastingKind.array()).transform(arrayArrayable),
 				full: z.boolean(),
 				tradition: SpellcastingTradition.or(SpellcastingTradition.array()).transform(arrayArrayable),
 			})
 			.nullable(),
-		martialWeaponTraining: z.boolean().or(z.string()),
+		martialWeaponTraining: z.boolean().or(MartialWeapon),
 		shieldBlock: z.boolean(),
 		animalCompanion: z.boolean(),
 		familiar: z.boolean(),
 		precisionDamage: z.boolean(),
+		spellLikeAbility: SpellLikeAbility.or(z.literal(false)),
 		kind: z.discriminatedUnion('name', [
 			z.object({
 				name: z.literal(CharacterKind.enum.Class),
@@ -62,9 +75,16 @@ export const CharacterSource = z
 			}),
 		]),
 	})
-	.transform(({ kind, focusSpells, spellcasting, ...rest }) => {
+	.transform(({ kind, focusSpells, martialWeaponTraining, spellcasting, ...rest }) => {
 		const character: Character = {
 			...rest,
+
+			martialWeaponTraining:
+				martialWeaponTraining === true
+					? MartialWeapon.enum.All
+					: martialWeaponTraining === false
+						? MartialWeapon.enum.None
+						: martialWeaponTraining,
 
 			kind: kind.name,
 			archetype_armorTraining: kind.name == CharacterKind.enum.Archetype ? kind.armorTraining : null,
@@ -81,7 +101,7 @@ export const CharacterSource = z
 			spellcasting: spellcasting ? true : false,
 			spellcasting_attribute: spellcasting && spellcasting.attribute,
 			spellcasting_full: spellcasting && spellcasting.full,
-			spellcasting_repertoire: spellcasting && spellcasting.repertoire,
+			spellcasting_kind: spellcasting && spellcasting.kind,
 			spellcasting_tradition: spellcasting && spellcasting.tradition,
 		};
 		return character;
@@ -103,15 +123,16 @@ const Character = z.object({
 	focusSpells_attribute: Attribute.array().nullable(),
 	focusSpells_tradition: SpellcastingTradition.array().nullable(),
 	kind: CharacterKind,
-	martialWeaponTraining: z.boolean().or(z.string()),
+	martialWeaponTraining: MartialWeapon,
 	mechanicalDeity: z.boolean(),
 	precisionDamage: z.boolean(),
 	shieldBlock: z.boolean(),
 	spellcasting: z.boolean(),
 	spellcasting_attribute: Attribute.array().nullable(),
-	spellcasting_repertoire: z.boolean().nullable(),
+	spellcasting_kind: SpellcastingKind.array().nullable(),
 	spellcasting_full: z.boolean().nullable(),
 	spellcasting_tradition: SpellcastingTradition.array().nullable(),
+	spellLikeAbility: SpellLikeAbility.or(z.literal(false)),
 });
 export type Character = z.infer<typeof Character>;
 

@@ -10,6 +10,7 @@
 		"focusSpells": null,
 		"martialWeaponTraining": true,
 		"shieldBlock": false,
+		"spellLikeAbility": false,
 		"precisionDamage": false
 	},
 	{
@@ -21,13 +22,14 @@
 		"mechanicalDeity": false,
 		"spellcasting": {
 			"attribute": "Intelligence",
-			"repertoire": false,
+			"kind": "Prepared",
 			"full": false,
 			"tradition": "Arcane"
 		},
 		"focusSpells": null,
 		"martialWeaponTraining": true,
 		"shieldBlock": false,
+		"spellLikeAbility": false,
 		"precisionDamage": false
 	},
 	{
@@ -41,6 +43,7 @@
 		"focusSpells": null,
 		"martialWeaponTraining": "Crossbows and Firearms",
 		"shieldBlock": false,
+		"spellLikeAbility": false,
 		"precisionDamage": false
 	}
 ]

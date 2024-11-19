@@ -13,6 +13,7 @@
 		},
 		"martialWeaponTraining": false,
 		"shieldBlock": false,
+		"spellLikeAbility": false,
 		"precisionDamage": false
 	},
 	{
@@ -29,6 +30,7 @@
 		},
 		"martialWeaponTraining": false,
 		"shieldBlock": false,
+		"spellLikeAbility": false,
 		"precisionDamage": false
 	}
 ]

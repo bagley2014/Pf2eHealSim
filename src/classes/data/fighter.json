@@ -10,6 +10,7 @@
 		"focusSpells": null,
 		"martialWeaponTraining": true,
 		"shieldBlock": true,
+		"spellLikeAbility": false,
 		"precisionDamage": false
 	},
 	{
@@ -23,6 +24,7 @@
 		"focusSpells": null,
 		"martialWeaponTraining": true,
 		"shieldBlock": false,
+		"spellLikeAbility": false,
 		"precisionDamage": false
 	},
 	{
@@ -36,6 +38,7 @@
 		"focusSpells": null,
 		"martialWeaponTraining": true,
 		"shieldBlock": false,
+		"spellLikeAbility": false,
 		"precisionDamage": false
 	}
 ]

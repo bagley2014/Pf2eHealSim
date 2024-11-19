@@ -1,4 +1,4 @@
-import { Answer, AnswerMap, Armor, Character, Question, Trait } from './types';
+import { Answer, AnswerMap, Armor, Character, MartialWeapon, Question, Trait } from './types';
 
 import { Stats } from 'fast-stats';
 
@@ -28,8 +28,8 @@ function getQuestionText(trait: Trait): string {
 			return 'What spellcasting attribute do you want?';
 		case Trait.enum.spellcasting_full:
 			return 'Do you want to be a full caster?';
-		case Trait.enum.spellcasting_repertoire:
-			return 'Do you want a spell repertoire class feature?';
+		case Trait.enum.spellcasting_kind:
+			return 'What kind of spell slots do you want?';
 		case Trait.enum.spellcasting_tradition:
 			return 'Which spellcasting tradition do you want?';
 		case Trait.enum.kind:
@@ -41,7 +41,7 @@ function getQuestionText(trait: Trait): string {
 		case Trait.enum.archetype_armorTraining:
 			return 'Must the archetype dedication give some armor training?';
 		case Trait.enum.martialWeaponTraining:
-			return 'Do you want martial weapon proficiency at level 1?';
+			return 'What martial weapon proficiencies do you want?';
 		case Trait.enum.shieldBlock:
 			return 'Do you want Shield Block at level 1?';
 		case Trait.enum.animalCompanion:
@@ -50,6 +50,8 @@ function getQuestionText(trait: Trait): string {
 			return 'Do you want to get access to a familiar?';
 		case Trait.enum.precisionDamage:
 			return 'Do you want a way to add precision damage to your attacks?';
+		case Trait.enum.spellLikeAbility:
+			return 'Do you want a spell-like ability?';
 	}
 }
 
@@ -69,7 +71,6 @@ function getApplicableAnswers(trait: Trait, character: Character): string[] {
 		case Trait.enum.shieldBlock:
 		case Trait.enum.spellcasting:
 		case Trait.enum.spellcasting_full:
-		case Trait.enum.spellcasting_repertoire:
 			return character[trait] ? [Answer.enum.Yes, Answer.enum["Don't care"]] : [Answer.enum.No, Answer.enum["Don't care"]];
 
 		// Booleans where "Yes" eliminates options, but "No" does not
@@ -89,6 +90,7 @@ function getApplicableAnswers(trait: Trait, character: Character): string[] {
 		case Trait.enum.focusSpells_attribute:
 		case Trait.enum.focusSpells_tradition:
 		case Trait.enum.spellcasting_attribute:
+		case Trait.enum.spellcasting_kind:
 		case Trait.enum.spellcasting_tradition:
 			return [...(character[trait] || ['null']), Answer.enum["Don't care"]];
 
@@ -104,11 +106,13 @@ function getApplicableAnswers(trait: Trait, character: Character): string[] {
 						? [Armor.enum.Unarmored, Armor.Enum.Light]
 						: [Armor.enum.Unarmored];
 		case Trait.enum.martialWeaponTraining:
-			return character.martialWeaponTraining === true
-				? ['Yes, all martial weapons', 'Yes, some martial weapons', Answer.enum["Don't care"]]
-				: character.martialWeaponTraining
-					? ['Yes, some martial weapons', Answer.enum["Don't care"]]
-					: [Answer.enum["Don't care"]];
+			return character.martialWeaponTraining === MartialWeapon.enum.All
+				? [...MartialWeapon.exclude([MartialWeapon.enum.None]).options, Answer.enum["Don't care"]]
+				: [character.martialWeaponTraining, Answer.enum["Don't care"]];
+		case Trait.enum.spellLikeAbility:
+			return character.spellLikeAbility
+				? [Answer.enum.Yes, `Yes, ${character.spellLikeAbility}`, Answer.enum["Don't care"]]
+				: [Answer.enum.No, Answer.enum["Don't care"]];
 	}
 }
 

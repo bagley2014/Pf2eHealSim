@@ -8,7 +8,7 @@
 		"mechanicalDeity": false,
 		"spellcasting": {
 			"attribute": "Intelligence",
-			"repertoire": false,
+			"kind": "Prepared",
 			"full": true,
 			"tradition": "Arcane"
 		},
@@ -18,6 +18,7 @@
 		},
 		"martialWeaponTraining": false,
 		"shieldBlock": false,
+		"spellLikeAbility": false,
 		"precisionDamage": false
 	},
 	{
@@ -29,7 +30,7 @@
 		"mechanicalDeity": false,
 		"spellcasting": {
 			"attribute": "Intelligence",
-			"repertoire": false,
+			"kind": "Prepared",
 			"full": true,
 			"tradition": "Divine"
 		},
@@ -39,6 +40,7 @@
 		},
 		"martialWeaponTraining": false,
 		"shieldBlock": false,
+		"spellLikeAbility": false,
 		"precisionDamage": false
 	},
 	{
@@ -50,7 +52,7 @@
 		"mechanicalDeity": false,
 		"spellcasting": {
 			"attribute": "Intelligence",
-			"repertoire": false,
+			"kind": "Prepared",
 			"full": true,
 			"tradition": "Occult"
 		},
@@ -60,6 +62,7 @@
 		},
 		"martialWeaponTraining": false,
 		"shieldBlock": false,
+		"spellLikeAbility": false,
 		"precisionDamage": false
 	},
 	{
@@ -71,7 +74,7 @@
 		"mechanicalDeity": false,
 		"spellcasting": {
 			"attribute": "Intelligence",
-			"repertoire": false,
+			"kind": "Prepared",
 			"full": true,
 			"tradition": "Primal"
 		},
@@ -81,6 +84,7 @@
 		},
 		"martialWeaponTraining": false,
 		"shieldBlock": false,
+		"spellLikeAbility": false,
 		"precisionDamage": false
 	},
 	{
@@ -92,7 +96,7 @@
 		"mechanicalDeity": false,
 		"spellcasting": {
 			"attribute": "Intelligence",
-			"repertoire": false,
+			"kind": "Prepared",
 			"full": true,
 			"tradition": "Arcane"
 		},
@@ -102,6 +106,7 @@
 		},
 		"martialWeaponTraining": false,
 		"shieldBlock": false,
+		"spellLikeAbility": false,
 		"precisionDamage": false
 	},
 	{
@@ -113,7 +118,7 @@
 		"mechanicalDeity": false,
 		"spellcasting": {
 			"attribute": "Intelligence",
-			"repertoire": false,
+			"kind": "Prepared",
 			"full": true,
 			"tradition": "Divine"
 		},
@@ -123,6 +128,7 @@
 		},
 		"martialWeaponTraining": false,
 		"shieldBlock": false,
+		"spellLikeAbility": false,
 		"precisionDamage": false
 	},
 	{
@@ -134,7 +140,7 @@
 		"mechanicalDeity": false,
 		"spellcasting": {
 			"attribute": "Intelligence",
-			"repertoire": false,
+			"kind": "Prepared",
 			"full": true,
 			"tradition": "Occult"
 		},
@@ -144,6 +150,7 @@
 		},
 		"martialWeaponTraining": false,
 		"shieldBlock": false,
+		"spellLikeAbility": false,
 		"precisionDamage": false
 	},
 	{
@@ -155,7 +162,7 @@
 		"mechanicalDeity": false,
 		"spellcasting": {
 			"attribute": "Intelligence",
-			"repertoire": false,
+			"kind": "Prepared",
 			"full": true,
 			"tradition": "Primal"
 		},
@@ -165,6 +172,7 @@
 		},
 		"martialWeaponTraining": false,
 		"shieldBlock": false,
+		"spellLikeAbility": false,
 		"precisionDamage": false
 	},
 	{
@@ -176,7 +184,7 @@
 		"mechanicalDeity": false,
 		"spellcasting": {
 			"attribute": "Intelligence",
-			"repertoire": true,
+			"kind": "Spontaneous",
 			"full": true,
 			"tradition": "Arcane"
 		},
@@ -186,6 +194,7 @@
 		},
 		"martialWeaponTraining": false,
 		"shieldBlock": false,
+		"spellLikeAbility": false,
 		"precisionDamage": false
 	},
 	{
@@ -197,7 +206,7 @@
 		"mechanicalDeity": false,
 		"spellcasting": {
 			"attribute": "Intelligence",
-			"repertoire": true,
+			"kind": "Spontaneous",
 			"full": true,
 			"tradition": "Divine"
 		},
@@ -207,6 +216,7 @@
 		},
 		"martialWeaponTraining": false,
 		"shieldBlock": false,
+		"spellLikeAbility": false,
 		"precisionDamage": false
 	},
 	{
@@ -218,7 +228,7 @@
 		"mechanicalDeity": false,
 		"spellcasting": {
 			"attribute": "Intelligence",
-			"repertoire": true,
+			"kind": "Spontaneous",
 			"full": true,
 			"tradition": "Occult"
 		},
@@ -228,6 +238,7 @@
 		},
 		"martialWeaponTraining": false,
 		"shieldBlock": false,
+		"spellLikeAbility": false,
 		"precisionDamage": false
 	},
 	{
@@ -239,7 +250,7 @@
 		"mechanicalDeity": false,
 		"spellcasting": {
 			"attribute": "Intelligence",
-			"repertoire": true,
+			"kind": "Spontaneous",
 			"full": true,
 			"tradition": "Primal"
 		},
@@ -249,6 +260,7 @@
 		},
 		"martialWeaponTraining": false,
 		"shieldBlock": false,
+		"spellLikeAbility": false,
 		"precisionDamage": false
 	},
 	{
@@ -260,7 +272,7 @@
 		"mechanicalDeity": false,
 		"spellcasting": {
 			"attribute": "Intelligence",
-			"repertoire": false,
+			"kind": "Prepared",
 			"full": false,
 			"tradition": "Primal"
 		},
@@ -270,6 +282,7 @@
 		},
 		"martialWeaponTraining": false,
 		"shieldBlock": false,
+		"spellLikeAbility": false,
 		"precisionDamage": false
 	},
 	{
@@ -281,7 +294,7 @@
 		"mechanicalDeity": false,
 		"spellcasting": {
 			"attribute": "Intelligence",
-			"repertoire": false,
+			"kind": "Prepared",
 			"full": false,
 			"tradition": "Occult"
 		},
@@ -291,6 +304,7 @@
 		},
 		"martialWeaponTraining": false,
 		"shieldBlock": false,
+		"spellLikeAbility": false,
 		"precisionDamage": false
 	},
 	{
@@ -302,7 +316,7 @@
 		"mechanicalDeity": false,
 		"spellcasting": {
 			"attribute": "Intelligence",
-			"repertoire": false,
+			"kind": "Prepared",
 			"full": false,
 			"tradition": "Arcane"
 		},
@@ -312,6 +326,7 @@
 		},
 		"martialWeaponTraining": false,
 		"shieldBlock": false,
+		"spellLikeAbility": false,
 		"precisionDamage": false
 	},
 	{
@@ -323,7 +338,7 @@
 		"mechanicalDeity": false,
 		"spellcasting": {
 			"attribute": "Intelligence",
-			"repertoire": false,
+			"kind": "Prepared",
 			"full": false,
 			"tradition": "Divine"
 		},
@@ -333,6 +348,7 @@
 		},
 		"martialWeaponTraining": false,
 		"shieldBlock": false,
+		"spellLikeAbility": false,
 		"precisionDamage": false
 	}
 ]

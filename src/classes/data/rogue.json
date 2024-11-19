@@ -10,6 +10,7 @@
 		"focusSpells": null,
 		"martialWeaponTraining": true,
 		"shieldBlock": false,
+		"spellLikeAbility": false,
 		"precisionDamage": true
 	},
 	{
@@ -23,6 +24,7 @@
 		"focusSpells": null,
 		"martialWeaponTraining": true,
 		"shieldBlock": false,
+		"spellLikeAbility": false,
 		"precisionDamage": true
 	},
 	{
@@ -36,6 +38,7 @@
 		"focusSpells": null,
 		"martialWeaponTraining": true,
 		"shieldBlock": false,
+		"spellLikeAbility": false,
 		"precisionDamage": true
 	},
 	{
@@ -49,6 +52,7 @@
 		"focusSpells": null,
 		"martialWeaponTraining": true,
 		"shieldBlock": false,
+		"spellLikeAbility": false,
 		"precisionDamage": true
 	},
 	{
@@ -62,6 +66,7 @@
 		"focusSpells": null,
 		"martialWeaponTraining": true,
 		"shieldBlock": false,
+		"spellLikeAbility": false,
 		"precisionDamage": true
 	},
 	{
@@ -75,6 +80,7 @@
 		"focusSpells": null,
 		"martialWeaponTraining": false,
 		"shieldBlock": false,
+		"spellLikeAbility": false,
 		"precisionDamage": true
 	}
 ]

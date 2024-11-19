@@ -10,6 +10,7 @@
 		"focusSpells": null,
 		"martialWeaponTraining": "Alchemical Bombs",
 		"shieldBlock": false,
+		"spellLikeAbility": "Quick Alchemy",
 		"precisionDamage": false
 	},
 	{
@@ -23,6 +24,7 @@
 		"focusSpells": null,
 		"martialWeaponTraining": "Alchemical Bombs",
 		"shieldBlock": false,
+		"spellLikeAbility": "Quick Alchemy",
 		"precisionDamage": false
 	}
 ]
