@@ -1,6 +1,5 @@
 ## Add data
 
-- Animist
 - Exemplar
 - Inventor
 - Psychic
@@ -10,7 +9,8 @@
 
 ## Add properties
 
-- A pseudospellcasting property for impulses and quick alchemy
+See this table for data: https://pf2easy.com/index.php?id=2507&name=classes
+This table is kind of neat for saves/perception: https://docs.google.com/spreadsheets/d/1Kif7MyhmwOQsqL92x_5UmF_75vb79TOg9jqd36SdP_g/edit?gid=893826129#gid=893826129
 
 ### In consideration
 
@@ -19,6 +19,9 @@
   - But the value might not outweigh the cost if I have to separate out more subclasses
   - If I make it an array and put something like ["Undead", "Angelic", "Demonic", "Diabolic"] on the Divine Sorcerer and "Undead" on the Oracle, then that might work well enough for a questions like "What theme do you want?"
   - The issue with that being something like a Cleric or Champion of Urgathoa having something of an undead theme; how would I know where to draw the line?
+- Extra skills? I'm not sure how I'd ask the question. Multiple choice with just numbers? Multiple choice with numbers+ (meaning "at least")?
+  - Generally, it seems like all numeric properties kind of have this problem
+- Perception/Saves? Hard to know how to ask a question someone might actually care to answer.
 
 ### Problems properties might solve
 

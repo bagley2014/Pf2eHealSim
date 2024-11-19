@@ -20,5 +20,24 @@
 		"shieldBlock": false,
 		"spellLikeAbility": false,
 		"precisionDamage": false
+	},
+	{
+		"name": "Animist Archetype",
+		"description": "You have established a relationship with a spiritual entity known as an apparition, unlocking the ability to use animistic magic.",
+		"kind": { "name": "Archetype", "armorTraining": false, "multiclass": true, "tenPlusFeats": true },
+		"animalCompanion": false,
+		"familiar": true,
+		"mechanicalDeity": false,
+		"spellcasting": {
+			"attribute": "Wisdom",
+			"kind": "Prepared",
+			"full": false,
+			"tradition": "Divine"
+		},
+		"focusSpells": null,
+		"martialWeaponTraining": false,
+		"shieldBlock": false,
+		"spellLikeAbility": false,
+		"precisionDamage": false
 	}
 ]
