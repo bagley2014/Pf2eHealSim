@@ -1,6 +1,7 @@
 import { Answer, AnswerMap, Armor, Character, CharacterSource, Question, Trait, compareTraitStringsCanonically } from './types';
 import { confirm, select } from '@inquirer/prompts';
 
+import { Stats } from 'fast-stats';
 import { getDataFilenames } from './helpers';
 import { readFileSync } from 'fs';
 
@@ -114,14 +115,41 @@ function getApplicableAnswers(trait: Trait, character: Character): string[] {
 	}
 }
 
-function getQuestion(trait: Trait, characters: Character[]): Question {
-	// geometric mean
-	const average = (arr: number[]) =>
-		Math.pow(
-			arr.reduce((acc, val) => acc * val, 1),
-			1 / arr.length,
+function getScore(answers: AnswerMap, characters: Character[]) {
+	// If there are no answers, the question gets a score of Infinity, which signifies that it should be ignored
+	// Otherwise, we start by assigning each answer a score based on what portion of the characters will remain if that answer is selected
+	//		Thus, the max score an answer can receive is 1, meaning 100% of the characters will remain if that answer is selected
+	//		The purpose of representing the answers' scores as percentages is so that we can justify using the geometric mean, because the fraction is applied multiplicatively
+	// Then, we compute a score for the question as a whole by multiplying the geometric mean of answers' scores with their geometric standard deviation
+	// 		The geometric mean tells us how good the answers are on average
+	//			The problem with an averaging metric is that questions with two answers, one that eliminates no options and another that eliminated most options, would get a really good score, because any average would be low
+	// 		The standard deviation is useful for identifying questions where all the answers leave a similar number of remaining results
+	//			In theory, having lots of choices that leave the same number of options would minimize the number of options remaining, and would be optimal, meaning the standard deviation is enough on its own
+	//			But in practice, there options that can end up under multiple answers, meaning that a completely worthless question that can't eliminate any options with any answer will still have a good standard deviation
+	//		By combining the two metrics, we try to reduce the pitfalls of both
+	//			Not only do we identify a question whose answers are good "on average" but we also try to account for whether or not that's caused by outliers
+	//			With this metric, questions with two answers, one scored near zero and another near one, get scores close to the max* of one rather than one close to the average
+	//			(*that's the max an answer can have; a question can actually go higher, for math reasons I don't quite comprehend)
+	// Note that the score for a question where all the answers are useless (aka have a score of 1) is also 1, meaning that useless questions have a score of 1
+	//		(The worst geometric mean in this case is 1, naturally, and the smallest geometric standard deviation is also 1, representing absolutely no spread, so our final score is 1)
+	//		But not all questions with a score >= 1 are useless, sometimes they're just not that good
+	//		Any deviation is going to be greater than 1, and a bad, but not useless, average may be "high" (ake close to 1) enough to give a high score
+	let score = Infinity;
+	if (answers.size) {
+		const s = new Stats().push(
+			answers
+				.values()
+				.map((x) => x.length / characters.length)
+				.toArray(),
 		);
+		const geometricStandardDeviation = s.gstddev();
+		const geometricMean = s.gmean();
+		score = geometricMean * geometricStandardDeviation;
+	}
+	return score;
+}
 
+function getQuestion(trait: Trait, characters: Character[]): Question {
 	const answers: AnswerMap = new Map<string, Character[]>();
 	const addCharacter = (key: string, value: Character) => answers.set(key, [...(answers.get(key) || []), value]);
 
@@ -131,23 +159,10 @@ function getQuestion(trait: Trait, characters: Character[]): Question {
 		}
 	}
 
-	return {
-		text: getQuestionText(trait),
-		answers: answers,
-		// This tells us how many characters remain given each answer, on average
-		score:
-			answers.size == 0
-				? Infinity
-				: average(
-						answers
-							.values()
-							.map((x) => x.length)
-							.toArray(),
-					),
-	};
+	return { answers, text: getQuestionText(trait), score: getScore(answers, characters) };
 }
 
-function getBestQuestion(questions: Question[], maxScore: number) {
+function getBestQuestion(questions: Question[]) {
 	if (questions.length == 0) throw new Error('Questions must be non-zero in length');
 
 	questions.sort((a, b) => a.score - b.score);
@@ -162,8 +177,8 @@ function getBestQuestion(questions: Question[], maxScore: number) {
 	// Filter out questions with only one answer, for they are useless
 	bestQuestion = tryFilter((question) => question.answers.size > 1);
 
-	// Filter out questions with the max score, for they have no discernment power and are therefore useless
-	bestQuestion = tryFilter((question) => question.score + 0.0001 < maxScore);
+	// Filter out questions with high scores, for they are unlikely to produce good results
+	bestQuestion = tryFilter((question) => question.score + 0.0001 < 1);
 
 	// Avoid asking about the class directly, because we only want to do that if we have no other choice, since it isn't meaningful on its own
 	bestQuestion = tryFilter((question) => question.text != getQuestionText('name'));
@@ -188,10 +203,7 @@ async function reduceCharacters(data: Character[], answeredQuestions: string[] =
 	}
 
 	// Decide which question to ask, ignoring questions that were already answered
-	const bestQuestion = getBestQuestion(
-		possibleQuestions.filter((x) => !answeredQuestions.includes(x.text)),
-		data.length,
-	);
+	const bestQuestion = getBestQuestion(possibleQuestions.filter((x) => !answeredQuestions.includes(x.text)));
 	answeredQuestions.push(bestQuestion.text);
 
 	// Ask the question

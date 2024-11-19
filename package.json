@@ -31,7 +31,9 @@
 	},
 	"dependencies": {
 		"@inquirer/prompts": "^7.1.0",
+		"@types/fast-stats": "^0.0.35",
 		"fast-glob": "^3.3.2",
+		"fast-stats": "^0.0.7",
 		"nodeplotlib": "^0.7.7",
 		"zod": "^3.21.4"
 	},
