@@ -145,6 +145,7 @@ export type AnswerMap = z.infer<typeof AnswerMap>;
 const Question = z.object({
 	text: z.string(),
 	answers: AnswerMap,
+	useless: z.boolean(),
 	score: z.number(), // Lower is better
 });
 export type Question = z.infer<typeof Question>;

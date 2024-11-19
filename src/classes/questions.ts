@@ -23,7 +23,7 @@ function getQuestionText(trait: Trait): string {
 		case Trait.enum.mechanicalDeity:
 			return "Do you want your character's deity choice to have a mechanical impact?";
 		case Trait.enum.spellcasting:
-			return 'Do you want spell slots and a spellcasting class feature?';
+			return 'Do you want spell slots?';
 		case Trait.enum.spellcasting_attribute:
 			return 'What spellcasting attribute do you want?';
 		case Trait.enum.spellcasting_full:
@@ -160,9 +160,18 @@ export function getQuestion(trait: Trait, characters: Character[]): Question {
 		}
 	}
 
-	return { answers, text: getQuestionText(trait), score: getScore(answers, characters) };
+	// A question is useless if all the answers apply to all the options, aka, none of the answers eliminate any of the options
+	const useless = answers.values().every((x) => x.length == characters.length);
+
+	return { answers, text: getQuestionText(trait), score: getScore(answers, characters), useless };
 }
 
+// This function applies filters to the questions sequentially, keeping track of the best question before each filter is applied
+// If a filter eliminates all the options, then we return the best question from before the filter was applied
+// Because of this, the most important filters should be applied first, since they'll be the least likely to be ignored
+// The "name" question filter is notable, because if that becomes the best question, the "game" is over,
+//		so avoid filtering out valid but "suboptimal" questions before that filter
+//		Anything before that filter is intended to be omitted permanently, not just deprioritized
 export function findBestQuestion(questions: Question[]) {
 	if (questions.length == 0) throw new Error('Questions must be non-zero in length');
 
@@ -175,17 +184,17 @@ export function findBestQuestion(questions: Question[]) {
 		return questions.length == 0 ? bestQuestion : questions[0];
 	};
 
-	// Filter out questions with only one answer, for they are useless
-	bestQuestion = tryFilter((question) => question.answers.size > 1);
+	// Filter out questions marked useless, for they are useless
+	bestQuestion = tryFilter((question) => !question.useless);
 
-	// Filter out questions with high scores, for they are unlikely to produce good results
-	bestQuestion = tryFilter((question) => question.score + 0.0001 < 1);
+	// Filter out questions with only one answer, for they are also useless
+	bestQuestion = tryFilter((question) => question.answers.size > 1);
 
 	// Avoid asking about the class directly, because we only want to do that if we have no other choice, since it isn't meaningful on its own
 	bestQuestion = tryFilter((question) => question.text != getQuestionText('name'));
 
-	// Filter out questions with more than three answers, for they are unwieldy
-	bestQuestion = tryFilter((question) => question.answers.size <= 3);
+	// Filter out questions with more than four answers, for they are unwieldy
+	bestQuestion = tryFilter((question) => question.answers.size <= 4);
 
 	return bestQuestion;
 }
