@@ -1,4 +1,4 @@
-import { Answer, AnswerMap, Armor, Character, MartialWeapon, Question, Trait } from './types';
+import { Answer, AnswerMap, Armor, Character, MartialWeapon, Question, Rarity, Trait } from './types';
 
 import { Stats } from 'fast-stats';
 
@@ -52,6 +52,8 @@ function getQuestionText(trait: Trait): string {
 			return 'Do you want a way to add precision damage to your attacks?';
 		case Trait.enum.spellLikeAbility:
 			return 'Do you want a spell-like ability?';
+		case Trait.enum.rarity:
+			return "What's the highest rarity you can use?";
 	}
 }
 
@@ -97,13 +99,21 @@ function getApplicableAnswers(trait: Trait, character: Character): string[] {
 		// Misc Section
 		case Trait.enum.description:
 			return [];
+		case Trait.enum.rarity:
+			return character.rarity == Rarity.enum.Common
+				? [Rarity.enum.Unique, Rarity.enum.Rare, Rarity.enum.Uncommon, Rarity.enum.Common]
+				: character.rarity == Rarity.enum.Uncommon
+					? [Rarity.enum.Unique, Rarity.enum.Rare, Rarity.enum.Uncommon]
+					: character.rarity == Rarity.enum.Rare
+						? [Rarity.enum.Unique, Rarity.enum.Rare]
+						: [Rarity.enum.Unique];
 		case Trait.enum.class_armor:
 			return character.class_armor == Armor.enum.Heavy
-				? [Armor.enum.Unarmored, Armor.Enum.Light, Armor.Enum.Medium, Armor.Enum.Heavy]
+				? [Armor.enum.Unarmored, Armor.enum.Light, Armor.enum.Medium, Armor.enum.Heavy]
 				: character.class_armor == Armor.enum.Medium
-					? [Armor.enum.Unarmored, Armor.Enum.Light, Armor.Enum.Medium]
+					? [Armor.enum.Unarmored, Armor.enum.Light, Armor.enum.Medium]
 					: character.class_armor == Armor.enum.Light
-						? [Armor.enum.Unarmored, Armor.Enum.Light]
+						? [Armor.enum.Unarmored, Armor.enum.Light]
 						: [Armor.enum.Unarmored];
 		case Trait.enum.martialWeaponTraining:
 			return character.martialWeaponTraining === MartialWeapon.enum.All

@@ -18,6 +18,7 @@
 		},
 		"martialWeaponTraining": true,
 		"shieldBlock": false,
+		"rarity": "Common",
 		"spellLikeAbility": false,
 		"precisionDamage": false
 	},
@@ -40,6 +41,7 @@
 		},
 		"martialWeaponTraining": true,
 		"shieldBlock": true,
+		"rarity": "Common",
 		"spellLikeAbility": false,
 		"precisionDamage": false
 	},
@@ -62,6 +64,7 @@
 		},
 		"martialWeaponTraining": false,
 		"shieldBlock": false,
+		"rarity": "Common",
 		"spellLikeAbility": false,
 		"precisionDamage": false
 	}

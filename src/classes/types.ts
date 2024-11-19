@@ -17,6 +17,7 @@ export const MartialWeapon = z.enum([
 	'The favored weapon of your deity',
 	'None',
 ]);
+export const Rarity = z.enum(['Unique', 'Rare', 'Uncommon', 'Common']);
 export const SpellcastingTradition = z.enum(['Arcane', 'Divine', 'Occult', 'Primal']);
 const SpellcastingKind = z.enum(['Prepared', 'Spontaneous', 'Innate']);
 const SpellLikeAbility = z.enum(['Impulses', 'Quick Alchemy']);
@@ -28,6 +29,7 @@ const CanonicalOptionOrdering: string[] = ([] as string[])
 	.concat(Attribute.options)
 	.concat(CharacterKind.options)
 	.concat(MartialWeapon.options)
+	.concat(Rarity.options)
 	.concat(SpellcastingKind.options)
 	.concat(SpellcastingTradition.options)
 	.concat(SpellLikeAbility.options);
@@ -60,6 +62,7 @@ export const CharacterSource = z
 		familiar: z.boolean(),
 		precisionDamage: z.boolean(),
 		spellLikeAbility: SpellLikeAbility.or(z.literal(false)),
+		rarity: Rarity,
 		kind: z.discriminatedUnion('name', [
 			z.object({
 				name: z.literal(CharacterKind.enum.Class),
@@ -126,6 +129,7 @@ const Character = z.object({
 	martialWeaponTraining: MartialWeapon,
 	mechanicalDeity: z.boolean(),
 	precisionDamage: z.boolean(),
+	rarity: Rarity,
 	shieldBlock: z.boolean(),
 	spellcasting: z.boolean(),
 	spellcasting_attribute: Attribute.array().nullable(),

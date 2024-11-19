@@ -10,6 +10,7 @@
 		"focusSpells": null,
 		"martialWeaponTraining": true,
 		"shieldBlock": false,
+		"rarity": "Uncommon",
 		"spellLikeAbility": false,
 		"precisionDamage": false
 	},
@@ -29,6 +30,7 @@
 		"focusSpells": null,
 		"martialWeaponTraining": true,
 		"shieldBlock": false,
+		"rarity": "Uncommon",
 		"spellLikeAbility": false,
 		"precisionDamage": false
 	},
@@ -43,6 +45,7 @@
 		"focusSpells": null,
 		"martialWeaponTraining": "Crossbows and Firearms",
 		"shieldBlock": false,
+		"rarity": "Uncommon",
 		"spellLikeAbility": false,
 		"precisionDamage": false
 	}
