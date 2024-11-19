@@ -3,7 +3,7 @@
 		"name": "Animist",
 		"description": "You are the interlocutor between the seen and unseen, the voice that connects the mortal and the spiritual. You bond with spirits, manifesting their distinct magic and allowing their knowledge to flow through you.",
 		"kind": { "name": "Class", "armor": "Medium", "classArchetype": false, "keyAttribute": "Wisdom" },
-		"animalCompanion": false,
+		"companion": false,
 		"familiar": true,
 		"mechanicalDeity": false,
 		"spellcasting": {
@@ -26,7 +26,7 @@
 		"name": "Animist Archetype",
 		"description": "You have established a relationship with a spiritual entity known as an apparition, unlocking the ability to use animistic magic.",
 		"kind": { "name": "Archetype", "armorTraining": false, "multiclass": true, "tenPlusFeats": true },
-		"animalCompanion": false,
+		"companion": false,
 		"familiar": true,
 		"mechanicalDeity": false,
 		"spellcasting": {

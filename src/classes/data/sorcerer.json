@@ -3,7 +3,7 @@
 		"name": "Arcane Sorcerer",
 		"description": "You didn't choose to become a spellcaster—you were born one. There's magic in your blood.",
 		"kind": { "name": "Class", "armor": "Unarmored", "classArchetype": false, "keyAttribute": "Charisma" },
-		"animalCompanion": false,
+		"companion": false,
 		"familiar": true,
 		"mechanicalDeity": false,
 		"spellcasting": {
@@ -26,7 +26,7 @@
 		"name": "Divine Sorcerer",
 		"description": "You didn't choose to become a spellcaster—you were born one. There's magic in your blood.",
 		"kind": { "name": "Class", "armor": "Unarmored", "classArchetype": false, "keyAttribute": "Charisma" },
-		"animalCompanion": false,
+		"companion": false,
 		"familiar": true,
 		"mechanicalDeity": false,
 		"spellcasting": {
@@ -49,7 +49,7 @@
 		"name": "Occult Sorcerer",
 		"description": "You didn't choose to become a spellcaster—you were born one. There's magic in your blood.",
 		"kind": { "name": "Class", "armor": "Unarmored", "classArchetype": false, "keyAttribute": "Charisma" },
-		"animalCompanion": false,
+		"companion": false,
 		"familiar": true,
 		"mechanicalDeity": false,
 		"spellcasting": {
@@ -72,7 +72,7 @@
 		"name": "Primal Sorcerer",
 		"description": "You didn't choose to become a spellcaster—you were born one. There's magic in your blood.",
 		"kind": { "name": "Class", "armor": "Unarmored", "classArchetype": false, "keyAttribute": "Charisma" },
-		"animalCompanion": false,
+		"companion": false,
 		"familiar": true,
 		"mechanicalDeity": false,
 		"spellcasting": {
@@ -95,7 +95,7 @@
 		"name": "Primal Sorcerer Archetype",
 		"description": "You coax the magic power in your blood to manifest, accessing magic others don't expect you to have.",
 		"kind": { "name": "Archetype", "armorTraining": false, "multiclass": true, "tenPlusFeats": true },
-		"animalCompanion": false,
+		"companion": false,
 		"familiar": true,
 		"mechanicalDeity": false,
 		"spellcasting": {
@@ -118,7 +118,7 @@
 		"name": "Occult Sorcerer Archetype",
 		"description": "You coax the magic power in your blood to manifest, accessing magic others don't expect you to have.",
 		"kind": { "name": "Archetype", "armorTraining": false, "multiclass": true, "tenPlusFeats": true },
-		"animalCompanion": false,
+		"companion": false,
 		"familiar": true,
 		"mechanicalDeity": false,
 		"spellcasting": {
@@ -141,7 +141,7 @@
 		"name": "Arcane Sorcerer Archetype",
 		"description": "You coax the magic power in your blood to manifest, accessing magic others don't expect you to have.",
 		"kind": { "name": "Archetype", "armorTraining": false, "multiclass": true, "tenPlusFeats": true },
-		"animalCompanion": false,
+		"companion": false,
 		"familiar": true,
 		"mechanicalDeity": false,
 		"spellcasting": {
@@ -164,7 +164,7 @@
 		"name": "Divine Sorcerer Archetype",
 		"description": "You coax the magic power in your blood to manifest, accessing magic others don't expect you to have.",
 		"kind": { "name": "Archetype", "armorTraining": false, "multiclass": true, "tenPlusFeats": true },
-		"animalCompanion": false,
+		"companion": false,
 		"familiar": true,
 		"mechanicalDeity": false,
 		"spellcasting": {

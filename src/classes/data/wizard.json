@@ -3,7 +3,7 @@
 		"name": "Wizard",
 		"description": "You are an eternal student of the secrets of the universe, using your mastery of magic to cast powerful spells. You treat magic like a science, cross-referencing the latest texts on practical spellcraft with ancient tomes to discover and understand arcane magic.",
 		"kind": { "name": "Class", "armor": "Unarmored", "classArchetype": false, "keyAttribute": "Intelligence" },
-		"animalCompanion": false,
+		"companion": false,
 		"familiar": true,
 		"mechanicalDeity": false,
 		"spellcasting": {
@@ -26,7 +26,7 @@
 		"name": "Runelord",
 		"description": "You are an eternal student of the secrets of the universe, using your mastery of magic to cast powerful spells. You've learned arcane magic following the path of the runelords.",
 		"kind": { "name": "Class", "armor": "Unarmored", "classArchetype": true, "keyAttribute": "Intelligence" },
-		"animalCompanion": false,
+		"companion": false,
 		"familiar": true,
 		"mechanicalDeity": false,
 		"spellcasting": {
@@ -49,7 +49,7 @@
 		"name": "Flexible Wizard",
 		"description": "You are an eternal student of the secrets of the universe, using your mastery of magic to cast powerful spells. You've learned how to cast spells flexibly, blending the best elements of spontaneous and prepared spellcasting at the cost of casting fewer spells each day.",
 		"kind": { "name": "Class", "armor": "Unarmored", "classArchetype": true, "keyAttribute": "Intelligence" },
-		"animalCompanion": false,
+		"companion": false,
 		"familiar": true,
 		"mechanicalDeity": false,
 		"spellcasting": {
@@ -72,7 +72,7 @@
 		"name": "Wizard Archetype",
 		"description": "You have dabbled in the arcane arts and, through discipline and academic study, learned how to cast a few spells.",
 		"kind": { "name": "Archetype", "armorTraining": false, "multiclass": true, "tenPlusFeats": true },
-		"animalCompanion": false,
+		"companion": false,
 		"familiar": true,
 		"mechanicalDeity": false,
 		"spellcasting": {

@@ -44,8 +44,8 @@ function getQuestionText(trait: Trait): string {
 			return 'What martial weapon proficiencies do you want?';
 		case Trait.enum.shieldBlock:
 			return 'Do you want Shield Block at level 1?';
-		case Trait.enum.animalCompanion:
-			return 'Do you want to get access to an animal companion?';
+		case Trait.enum.companion:
+			return 'Do you want to get access to (some kind of) a companion?';
 		case Trait.enum.familiar:
 			return 'Do you want to get access to a familiar?';
 		case Trait.enum.precisionDamage:
@@ -76,7 +76,6 @@ function getApplicableAnswers(trait: Trait, character: Character): string[] {
 			return character[trait] ? [Answer.enum.Yes, Answer.enum["Don't care"]] : [Answer.enum.No, Answer.enum["Don't care"]];
 
 		// Booleans where "Yes" eliminates options, but "No" does not
-		case Trait.enum.animalCompanion:
 		case Trait.enum.archetype_armorTraining:
 		case Trait.enum.archetype_multiclass:
 		case Trait.enum.archetype_tenPlusFeats:
@@ -86,6 +85,13 @@ function getApplicableAnswers(trait: Trait, character: Character): string[] {
 		// Booleans where "No" eliminates options, but "Yes" does not
 		case Trait.enum.class_classArchetype:
 			return character[trait] ? [Answer.enum["Don't care"]] : [Answer.enum.No, Answer.enum["Don't care"]];
+
+		// Booleans where a meaningful string is used in place of `true`
+		case Trait.enum.companion:
+		case Trait.enum.spellLikeAbility:
+			return character[trait]
+				? [Answer.enum.Yes, character[trait], Answer.enum["Don't care"]]
+				: [Answer.enum.No, Answer.enum["Don't care"]];
 
 		// String arrays
 		case Trait.enum.class_keyAttribute:
@@ -119,10 +125,6 @@ function getApplicableAnswers(trait: Trait, character: Character): string[] {
 			return character.martialWeaponTraining === MartialWeapon.enum.All
 				? [...MartialWeapon.exclude([MartialWeapon.enum.None]).options, Answer.enum["Don't care"]]
 				: [character.martialWeaponTraining, Answer.enum["Don't care"]];
-		case Trait.enum.spellLikeAbility:
-			return character.spellLikeAbility
-				? [Answer.enum.Yes, character.spellLikeAbility, Answer.enum["Don't care"]]
-				: [Answer.enum.No, Answer.enum["Don't care"]];
 	}
 }
 

@@ -3,7 +3,7 @@
 		"name": "Bard",
 		"description": "You are a master of artistry, a scholar of hidden secrets, and a captivating persuader. Using powerful performances, you influence minds and elevate souls to new levels of heroics.",
 		"kind": { "name": "Class", "armor": "Light", "classArchetype": false, "keyAttribute": "Charisma" },
-		"animalCompanion": false,
+		"companion": false,
 		"familiar": false,
 		"mechanicalDeity": false,
 		"spellcasting": {
@@ -26,7 +26,7 @@
 		"name": "Bard Archetype",
 		"description": "A muse has called you to dabble in occult lore, allowing you to cast a few spells. The deeper you delve, the more powerful your performances become.",
 		"kind": { "name": "Archetype", "armorTraining": false, "multiclass": true, "tenPlusFeats": true },
-		"animalCompanion": false,
+		"companion": false,
 		"familiar": false,
 		"mechanicalDeity": false,
 		"spellcasting": {

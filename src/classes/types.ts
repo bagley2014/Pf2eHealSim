@@ -9,6 +9,7 @@ function arrayArrayable<T>(val: Arrayable<T>) {
 export const Armor = z.enum(['Unarmored', 'Light', 'Medium', 'Heavy']);
 export const Attribute = z.enum(['Strength', 'Dexterity', 'Constitution', 'Intelligence', 'Wisdom', 'Charisma']);
 const CharacterKind = z.enum(['Class', 'Archetype']);
+const CompanionKind = z.enum(['Animal', 'Construct']);
 export const MartialWeapon = z.enum([
 	'All',
 	'Alchemical Bombs',
@@ -28,6 +29,7 @@ const CanonicalOptionOrdering: string[] = ([] as string[])
 	.concat(Armor.options)
 	.concat(Attribute.options)
 	.concat(CharacterKind.options)
+	.concat(CompanionKind.options)
 	.concat(MartialWeapon.options)
 	.concat(Rarity.options)
 	.concat(SpellcastingKind.options)
@@ -59,7 +61,7 @@ export const CharacterSource = z
 			.nullable(),
 		martialWeaponTraining: z.boolean().or(MartialWeapon),
 		shieldBlock: z.boolean(),
-		animalCompanion: z.boolean(),
+		companion: CompanionKind.or(z.literal(false)),
 		familiar: z.boolean(),
 		precisionDamage: z.boolean(),
 		spellLikeAbility: SpellLikeAbility.or(z.literal(false)),
@@ -115,13 +117,13 @@ export const CharacterSource = z
 const Character = z.object({
 	name: z.string(),
 	description: z.string().optional(),
-	animalCompanion: z.boolean(),
 	archetype_armorTraining: z.boolean().nullable(),
 	archetype_multiclass: z.boolean().nullable(),
 	archetype_tenPlusFeats: z.boolean().nullable(),
 	class_armor: Armor.nullable(),
 	class_classArchetype: z.boolean().nullable(),
 	class_keyAttribute: Attribute.array().nullable(),
+	companion: CompanionKind.or(z.literal(false)),
 	familiar: z.boolean(),
 	focusSpells: z.boolean(),
 	focusSpells_attribute: Attribute.array().nullable(),

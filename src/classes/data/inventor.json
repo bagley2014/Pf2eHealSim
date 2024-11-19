@@ -1,0 +1,32 @@
+[
+	{
+		"name": "Inventor",
+		"description": "Any tinkerer can follow a diagram to make a device, but you invent the impossible! Every strange contraption you dream up is a unique experiment pushing the edge of possibility, a mysterious machine that seems to work for only you.",
+		"kind": { "name": "Class", "armor": "Medium", "classArchetype": false, "keyAttribute": "Intelligence" },
+		"companion": "Construct",
+		"familiar": false,
+		"mechanicalDeity": false,
+		"spellcasting": null,
+		"focusSpells": null,
+		"martialWeaponTraining": true,
+		"shieldBlock": true,
+		"rarity": "Uncommon",
+		"spellLikeAbility": false,
+		"precisionDamage": false
+	},
+	{
+		"name": "Inventor Archetype",
+		"description": "You revel in the creation of clever inventions, deploying your brilliance to defeat your foes. Explosives, gadgets, and innovative technologies? You have ideas for all of them, and you’re eager to test your theories.",
+		"kind": { "name": "Archetype", "armorTraining": false, "multiclass": true, "tenPlusFeats": true },
+		"companion": "Construct",
+		"familiar": false,
+		"mechanicalDeity": false,
+		"spellcasting": null,
+		"focusSpells": null,
+		"martialWeaponTraining": true,
+		"shieldBlock": true,
+		"rarity": "Uncommon",
+		"spellLikeAbility": false,
+		"precisionDamage": false
+	}
+]

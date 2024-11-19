@@ -1,7 +1,6 @@
 ## Add data
 
 - Exemplar
-- Inventor
 - Psychic
 - Summoner
 - Thaumaturge
