@@ -121,7 +121,7 @@ function getApplicableAnswers(trait: Trait, character: Character): string[] {
 				: [character.martialWeaponTraining, Answer.enum["Don't care"]];
 		case Trait.enum.spellLikeAbility:
 			return character.spellLikeAbility
-				? [Answer.enum.Yes, `Yes, ${character.spellLikeAbility}`, Answer.enum["Don't care"]]
+				? [Answer.enum.Yes, character.spellLikeAbility, Answer.enum["Don't care"]]
 				: [Answer.enum.No, Answer.enum["Don't care"]];
 	}
 }

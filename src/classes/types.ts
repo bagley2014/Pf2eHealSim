@@ -24,7 +24,7 @@ const SpellLikeAbility = z.enum(['Impulses', 'Quick Alchemy']);
 export const Answer = z.enum(["Don't care", 'Yes', 'No']);
 
 const CanonicalOptionOrdering: string[] = ([] as string[])
-	.concat(Answer.options)
+	.concat(Answer.exclude([Answer.enum.No]).options)
 	.concat(Armor.options)
 	.concat(Attribute.options)
 	.concat(CharacterKind.options)
@@ -32,7 +32,8 @@ const CanonicalOptionOrdering: string[] = ([] as string[])
 	.concat(Rarity.options)
 	.concat(SpellcastingKind.options)
 	.concat(SpellcastingTradition.options)
-	.concat(SpellLikeAbility.options);
+	.concat(SpellLikeAbility.options)
+	.concat(Answer.extract([Answer.enum.No]).options);
 export const compareTraitStringsCanonically = (answerA: string, answerB: string) =>
 	(CanonicalOptionOrdering.indexOf(answerA) + 1 || 10000) - (CanonicalOptionOrdering.indexOf(answerB) + 1 || 10000); // Using 10000 instead of Infinity because Infinity - Infinity == NaN
 
