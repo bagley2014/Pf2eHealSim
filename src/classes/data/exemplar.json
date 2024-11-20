@@ -1,0 +1,32 @@
+[
+	{
+		"name": "Exemplar",
+		"description": "As the war god died, his power rained through the many planes of creation, sparking conflict and instilling divine energy in those previously without it. Whether you were directly touched by this power, claimed it from an ancient being or artifact, or whether it awoke something long dormant in your lineage, a spark of the divine now blazes within your soul, granting you abilities, sacred weapons, and divine signifiers that reach into the realm previously reserved for gods and legends.",
+		"kind": { "name": "Class", "armor": "Medium", "classArchetype": false, "keyAttribute": ["Strength", "Dexterity"] },
+		"companion": false,
+		"familiar": false,
+		"mechanicalDeity": false,
+		"spellcasting": null,
+		"focusSpells": null,
+		"martialWeaponTraining": true,
+		"shieldBlock": true,
+		"rarity": "Rare",
+		"spellLikeAbility": false,
+		"precisionDamage": true
+	},
+	{
+		"name": "Exemplar Archetype",
+		"description": "You have awakened a tiny spark of divinity within yourself, either through your deeds or through exposure to a source of divine power. As you nurture this spark, you can become a potent divine combatant.",
+		"kind": { "name": "Archetype", "armorTraining": false, "multiclass": true, "tenPlusFeats": true },
+		"companion": false,
+		"familiar": false,
+		"mechanicalDeity": false,
+		"spellcasting": null,
+		"focusSpells": null,
+		"martialWeaponTraining": true,
+		"shieldBlock": false,
+		"rarity": "Rare",
+		"spellLikeAbility": false,
+		"precisionDamage": true
+	}
+]

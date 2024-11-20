@@ -1,6 +1,5 @@
 ## Add data
 
-- Exemplar
 - Psychic
 - Summoner
 - Thaumaturge
