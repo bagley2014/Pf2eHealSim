@@ -10,6 +10,8 @@
 See this table for data: https://pf2easy.com/index.php?id=2507&name=classes
 This table is kind of neat for saves/perception: https://docs.google.com/spreadsheets/d/1Kif7MyhmwOQsqL92x_5UmF_75vb79TOg9jqd36SdP_g/edit?gid=893826129#gid=893826129
 
+- Add something like "deity's domain" to the focus spells object; it should be true on Cleric, Champion, Oracle, their archetypes, and eventually the Soul Warden archetype
+
 ### In consideration
 
 - Something to note a class that places emphasis on Recalling Knowledge
@@ -22,6 +24,11 @@ This table is kind of neat for saves/perception: https://docs.google.com/spreads
 - Perception/Saves? Hard to know how to ask a question someone might actually care to answer.
 
 ### Problems properties might solve
+
+- Summoner needs help
+
+  - An Eidolon isn't a companion...
+  - The player kind of plays as the Eidolon, which is kind of a martial... Not sure how to represent that, or if it really means anything
 
 - It's a bit tedious when adding new properties, because I have to support them on every existing entry
   - Maybe I should make a lot of these simple boolean properties true | undefined instead, so I don't have to explicitly define them everywhere

@@ -1,0 +1,186 @@
+[
+	{
+		"name": "Summoner (Arcane)",
+		"description": "You can magically beckon a powerful being called an eidolon to your side, serving as the mortal conduit that anchors it to the world. Whether your eidolon is a friend, a servant, or even a personal god, your connection to it marks you as extraordinary, shaping the course of your life dramatically.",
+		"kind": { "name": "Class", "armor": "Unarmored", "classArchetype": false, "keyAttribute": "Charisma" },
+		"companion": false,
+		"familiar": true,
+		"mechanicalDeity": false,
+		"spellcasting": {
+			"attribute": "Charisma",
+			"kind": "Spontaneous",
+			"full": false,
+			"tradition": "Arcane"
+		},
+		"focusSpells": {
+			"attribute": "Charisma",
+			"tradition": "Arcane"
+		},
+		"martialWeaponTraining": false,
+		"shieldBlock": false,
+		"rarity": "Common",
+		"spellLikeAbility": false,
+		"precisionDamage": false
+	},
+	{
+		"name": "Summoner (Divine)",
+		"description": "You can magically beckon a powerful being called an eidolon to your side, serving as the mortal conduit that anchors it to the world. Whether your eidolon is a friend, a servant, or even a personal god, your connection to it marks you as extraordinary, shaping the course of your life dramatically.",
+		"kind": { "name": "Class", "armor": "Unarmored", "classArchetype": false, "keyAttribute": "Charisma" },
+		"companion": false,
+		"familiar": true,
+		"mechanicalDeity": false,
+		"spellcasting": {
+			"attribute": "Charisma",
+			"kind": "Spontaneous",
+			"full": false,
+			"tradition": "Divine"
+		},
+		"focusSpells": {
+			"attribute": "Charisma",
+			"tradition": "Divine"
+		},
+		"martialWeaponTraining": false,
+		"shieldBlock": false,
+		"rarity": "Common",
+		"spellLikeAbility": false,
+		"precisionDamage": false
+	},
+	{
+		"name": "Summoner (Occult)",
+		"description": "You can magically beckon a powerful being called an eidolon to your side, serving as the mortal conduit that anchors it to the world. Whether your eidolon is a friend, a servant, or even a personal god, your connection to it marks you as extraordinary, shaping the course of your life dramatically.",
+		"kind": { "name": "Class", "armor": "Unarmored", "classArchetype": false, "keyAttribute": "Charisma" },
+		"companion": false,
+		"familiar": true,
+		"mechanicalDeity": false,
+		"spellcasting": {
+			"attribute": "Charisma",
+			"kind": "Spontaneous",
+			"full": false,
+			"tradition": "Occult"
+		},
+		"focusSpells": {
+			"attribute": "Charisma",
+			"tradition": "Occult"
+		},
+		"martialWeaponTraining": false,
+		"shieldBlock": false,
+		"rarity": "Common",
+		"spellLikeAbility": false,
+		"precisionDamage": false
+	},
+	{
+		"name": "Summoner (Primal)",
+		"description": "You can magically beckon a powerful being called an eidolon to your side, serving as the mortal conduit that anchors it to the world. Whether your eidolon is a friend, a servant, or even a personal god, your connection to it marks you as extraordinary, shaping the course of your life dramatically.",
+		"kind": { "name": "Class", "armor": "Unarmored", "classArchetype": false, "keyAttribute": "Charisma" },
+		"companion": false,
+		"familiar": true,
+		"mechanicalDeity": false,
+		"spellcasting": {
+			"attribute": "Charisma",
+			"kind": "Spontaneous",
+			"full": false,
+			"tradition": "Primal"
+		},
+		"focusSpells": {
+			"attribute": "Charisma",
+			"tradition": "Primal"
+		},
+		"martialWeaponTraining": false,
+		"shieldBlock": false,
+		"rarity": "Common",
+		"spellLikeAbility": false,
+		"precisionDamage": false
+	},
+	{
+		"name": "Summoner Archetype (Arcane)",
+		"description": "You have a tenuous connection to an eidolon, a bodiless being that shares your life force, and with effort you can manifest the eidolon into the world.",
+		"kind": { "name": "Class", "armor": "Unarmored", "classArchetype": false, "keyAttribute": "Charisma" },
+		"companion": false,
+		"familiar": true,
+		"mechanicalDeity": false,
+		"spellcasting": {
+			"attribute": "Charisma",
+			"kind": "Spontaneous",
+			"full": false,
+			"tradition": "Arcane"
+		},
+		"focusSpells": {
+			"attribute": "Charisma",
+			"tradition": "Arcane"
+		},
+		"martialWeaponTraining": false,
+		"shieldBlock": false,
+		"rarity": "Common",
+		"spellLikeAbility": false,
+		"precisionDamage": false
+	},
+	{
+		"name": "Summoner Archetype (Divine)",
+		"description": "You have a tenuous connection to an eidolon, a bodiless being that shares your life force, and with effort you can manifest the eidolon into the world.",
+		"kind": { "name": "Class", "armor": "Unarmored", "classArchetype": false, "keyAttribute": "Charisma" },
+		"companion": false,
+		"familiar": true,
+		"mechanicalDeity": false,
+		"spellcasting": {
+			"attribute": "Charisma",
+			"kind": "Spontaneous",
+			"full": false,
+			"tradition": "Divine"
+		},
+		"focusSpells": {
+			"attribute": "Charisma",
+			"tradition": "Divine"
+		},
+		"martialWeaponTraining": false,
+		"shieldBlock": false,
+		"rarity": "Common",
+		"spellLikeAbility": false,
+		"precisionDamage": false
+	},
+	{
+		"name": "Summoner Archetype (Occult)",
+		"description": "You have a tenuous connection to an eidolon, a bodiless being that shares your life force, and with effort you can manifest the eidolon into the world.",
+		"kind": { "name": "Class", "armor": "Unarmored", "classArchetype": false, "keyAttribute": "Charisma" },
+		"companion": false,
+		"familiar": true,
+		"mechanicalDeity": false,
+		"spellcasting": {
+			"attribute": "Charisma",
+			"kind": "Spontaneous",
+			"full": false,
+			"tradition": "Occult"
+		},
+		"focusSpells": {
+			"attribute": "Charisma",
+			"tradition": "Occult"
+		},
+		"martialWeaponTraining": false,
+		"shieldBlock": false,
+		"rarity": "Common",
+		"spellLikeAbility": false,
+		"precisionDamage": false
+	},
+	{
+		"name": "Summoner Archetype (Primal)",
+		"description": "You have a tenuous connection to an eidolon, a bodiless being that shares your life force, and with effort you can manifest the eidolon into the world.",
+		"kind": { "name": "Class", "armor": "Unarmored", "classArchetype": false, "keyAttribute": "Charisma" },
+		"companion": false,
+		"familiar": true,
+		"mechanicalDeity": false,
+		"spellcasting": {
+			"attribute": "Charisma",
+			"kind": "Spontaneous",
+			"full": false,
+			"tradition": "Primal"
+		},
+		"focusSpells": {
+			"attribute": "Charisma",
+			"tradition": "Primal"
+		},
+		"martialWeaponTraining": false,
+		"shieldBlock": false,
+		"rarity": "Common",
+		"spellLikeAbility": false,
+		"precisionDamage": false
+	}
+]
