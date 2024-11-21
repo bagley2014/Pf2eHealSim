@@ -1,0 +1,82 @@
+[
+	{
+		"name": "Psychic (Charisma)",
+		"description": "The mind can perceive truths hidden to fine-tuned instruments, house more secrets than any tome, and move objects and hearts more deftly than any lever. By delving into both the conscious and subconscious aspects of your inner self, you have awoken to the might of psychic magic, allowing you to cast spells not through incantations or gestures but by the power of your will alone.",
+		"kind": { "name": "Class", "armor": "Unarmored", "classArchetype": false, "keyAttribute": "Charisma" },
+		"companion": false,
+		"familiar": false,
+		"mechanicalDeity": false,
+		"spellcasting": {
+			"attribute": "Charisma",
+			"kind": "Spontaneous",
+			"full": true,
+			"tradition": "Occult"
+		},
+		"focusSpells": null,
+		"martialWeaponTraining": false,
+		"shieldBlock": false,
+		"rarity": "Common",
+		"spellLikeAbility": false,
+		"precisionDamage": false
+	},
+	{
+		"name": "Psychic (Intelligence)",
+		"description": "The mind can perceive truths hidden to fine-tuned instruments, house more secrets than any tome, and move objects and hearts more deftly than any lever. By delving into both the conscious and subconscious aspects of your inner self, you have awoken to the might of psychic magic, allowing you to cast spells not through incantations or gestures but by the power of your will alone.",
+		"kind": { "name": "Class", "armor": "Unarmored", "classArchetype": false, "keyAttribute": "Intelligence" },
+		"companion": false,
+		"familiar": false,
+		"mechanicalDeity": false,
+		"spellcasting": {
+			"attribute": "Intelligence",
+			"kind": "Spontaneous",
+			"full": true,
+			"tradition": "Occult"
+		},
+		"focusSpells": null,
+		"martialWeaponTraining": false,
+		"shieldBlock": false,
+		"rarity": "Common",
+		"spellLikeAbility": false,
+		"precisionDamage": false
+	},
+	{
+		"name": "Psychic Archetype (Charisma)",
+		"description": "You've awoken the latent abilities of your mind, taking your first steps into wielding psychic magic.",
+		"kind": { "name": "Archetype", "armorTraining": false, "multiclass": true, "tenPlusFeats": true },
+		"companion": false,
+		"familiar": false,
+		"mechanicalDeity": false,
+		"spellcasting": {
+			"attribute": "Charisma",
+			"kind": "Spontaneous",
+			"full": false,
+			"tradition": "Occult"
+		},
+		"focusSpells": null,
+		"martialWeaponTraining": false,
+		"shieldBlock": false,
+		"rarity": "Common",
+		"spellLikeAbility": false,
+		"precisionDamage": false
+	},
+	{
+		"name": "Psychic Archetype (Intelligence)",
+		"description": "You've awoken the latent abilities of your mind, taking your first steps into wielding psychic magic.",
+		"kind": { "name": "Archetype", "armorTraining": false, "multiclass": true, "tenPlusFeats": true },
+		"companion": false,
+		"familiar": false,
+		"mechanicalDeity": false,
+		"spellcasting": {
+			"attribute": "Intelligence",
+			"kind": "Spontaneous",
+			"full": false,
+			"tradition": "Occult"
+		},
+		"focusSpells": null,
+		"martialWeaponTraining": false,
+		"shieldBlock": false,
+		"rarity": "Common",
+		"spellLikeAbility": false,
+		"precisionDamage": false
+	}
+]

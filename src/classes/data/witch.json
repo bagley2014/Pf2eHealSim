@@ -1,6 +1,6 @@
 [
 	{
-		"name": "Arcane Witch",
+		"name": "Witch (Arcane)",
 		"description": "You command powerful magic, not through study or devotion to any ideal, but as a vessel or agent for a mysterious, otherworldly patron that even you don't entirely understand. This entity might be a covert divinity, a powerful fey, a manifestation of natural energies, an ancient spirit, or any other mighty supernatural being—but its nature is likely as much a mystery to you as it is to anyone else.",
 		"kind": { "name": "Class", "armor": "Unarmored", "classArchetype": false, "keyAttribute": "Intelligence" },
 		"companion": false,
@@ -23,7 +23,7 @@
 		"precisionDamage": false
 	},
 	{
-		"name": "Divine Witch",
+		"name": "Witch (Divine)",
 		"description": "You command powerful magic, not through study or devotion to any ideal, but as a vessel or agent for a mysterious, otherworldly patron that even you don't entirely understand. This entity might be a covert divinity, a powerful fey, a manifestation of natural energies, an ancient spirit, or any other mighty supernatural being—but its nature is likely as much a mystery to you as it is to anyone else.",
 		"kind": { "name": "Class", "armor": "Unarmored", "classArchetype": false, "keyAttribute": "Intelligence" },
 		"companion": false,
@@ -46,7 +46,7 @@
 		"precisionDamage": false
 	},
 	{
-		"name": "Occult Witch",
+		"name": "Witch (Occult)",
 		"description": "You command powerful magic, not through study or devotion to any ideal, but as a vessel or agent for a mysterious, otherworldly patron that even you don't entirely understand. This entity might be a covert divinity, a powerful fey, a manifestation of natural energies, an ancient spirit, or any other mighty supernatural being—but its nature is likely as much a mystery to you as it is to anyone else.",
 		"kind": { "name": "Class", "armor": "Unarmored", "classArchetype": false, "keyAttribute": "Intelligence" },
 		"companion": false,
@@ -69,7 +69,7 @@
 		"precisionDamage": false
 	},
 	{
-		"name": "Primal Witch",
+		"name": "Witch (Primal)",
 		"description": "You command powerful magic, not through study or devotion to any ideal, but as a vessel or agent for a mysterious, otherworldly patron that even you don't entirely understand. This entity might be a covert divinity, a powerful fey, a manifestation of natural energies, an ancient spirit, or any other mighty supernatural being—but its nature is likely as much a mystery to you as it is to anyone else.",
 		"kind": { "name": "Class", "armor": "Unarmored", "classArchetype": false, "keyAttribute": "Intelligence" },
 		"companion": false,
@@ -92,8 +92,8 @@
 		"precisionDamage": false
 	},
 	{
-		"name": "Arcane Seneschal Witch",
-		"description": "Whether dead or simply missing, your patron has gone silent, and you can no longer hear its whisper. While other witches might find this silence disquieting and lose hope without direction, you embrace this new challenge.",
+		"name": "Seneschal Witch (Arcane)",
+		"description": "Whether dead or simply missing, your patron has gone silent, and you can no longer hear its whisper. While Witch (other)es might find this silence disquieting and lose hope without direction, you embrace this new challenge.",
 		"kind": { "name": "Class", "armor": "Unarmored", "classArchetype": true, "keyAttribute": "Intelligence" },
 		"companion": false,
 		"familiar": true,
@@ -115,8 +115,8 @@
 		"precisionDamage": false
 	},
 	{
-		"name": "Divine Seneschal Witch",
-		"description": "Whether dead or simply missing, your patron has gone silent, and you can no longer hear its whisper. While other witches might find this silence disquieting and lose hope without direction, you embrace this new challenge.",
+		"name": "Seneschal Witch (Divine)",
+		"description": "Whether dead or simply missing, your patron has gone silent, and you can no longer hear its whisper. While Witch (other)es might find this silence disquieting and lose hope without direction, you embrace this new challenge.",
 		"kind": { "name": "Class", "armor": "Unarmored", "classArchetype": true, "keyAttribute": "Intelligence" },
 		"companion": false,
 		"familiar": true,
@@ -138,8 +138,8 @@
 		"precisionDamage": false
 	},
 	{
-		"name": "Occult Seneschal Witch",
-		"description": "Whether dead or simply missing, your patron has gone silent, and you can no longer hear its whisper. While other witches might find this silence disquieting and lose hope without direction, you embrace this new challenge.",
+		"name": "Seneschal Witch (Occult)",
+		"description": "Whether dead or simply missing, your patron has gone silent, and you can no longer hear its whisper. While Witch (other)es might find this silence disquieting and lose hope without direction, you embrace this new challenge.",
 		"kind": { "name": "Class", "armor": "Unarmored", "classArchetype": true, "keyAttribute": "Intelligence" },
 		"companion": false,
 		"familiar": true,
@@ -161,8 +161,8 @@
 		"precisionDamage": false
 	},
 	{
-		"name": "Primal Seneschal Witch",
-		"description": "Whether dead or simply missing, your patron has gone silent, and you can no longer hear its whisper. While other witches might find this silence disquieting and lose hope without direction, you embrace this new challenge.",
+		"name": "Seneschal Witch (Primal)",
+		"description": "Whether dead or simply missing, your patron has gone silent, and you can no longer hear its whisper. While Witch (other)es might find this silence disquieting and lose hope without direction, you embrace this new challenge.",
 		"kind": { "name": "Class", "armor": "Unarmored", "classArchetype": true, "keyAttribute": "Intelligence" },
 		"companion": false,
 		"familiar": true,
@@ -184,7 +184,7 @@
 		"precisionDamage": false
 	},
 	{
-		"name": "Flexible Arcane Witch",
+		"name": "Flexible Witch (Arcane)",
 		"description": "You command powerful magic, not through study or devotion to any ideal, but as a vessel or agent for a mysterious, otherworldly patron that even you don't entirely understand. You've learned how to cast spells flexibly, blending the best elements of spontaneous and prepared spellcasting at the cost of casting fewer spells each day.",
 		"kind": { "name": "Class", "armor": "Unarmored", "classArchetype": true, "keyAttribute": "Intelligence" },
 		"companion": false,
@@ -207,7 +207,7 @@
 		"precisionDamage": false
 	},
 	{
-		"name": "Flexible Divine Witch",
+		"name": "Flexible Witch (Divine)",
 		"description": "You command powerful magic, not through study or devotion to any ideal, but as a vessel or agent for a mysterious, otherworldly patron that even you don't entirely understand. You've learned how to cast spells flexibly, blending the best elements of spontaneous and prepared spellcasting at the cost of casting fewer spells each day.",
 		"kind": { "name": "Class", "armor": "Unarmored", "classArchetype": true, "keyAttribute": "Intelligence" },
 		"companion": false,
@@ -230,7 +230,7 @@
 		"precisionDamage": false
 	},
 	{
-		"name": "Flexible Occult Witch",
+		"name": "Flexible Witch (Occult)",
 		"description": "You command powerful magic, not through study or devotion to any ideal, but as a vessel or agent for a mysterious, otherworldly patron that even you don't entirely understand. You've learned how to cast spells flexibly, blending the best elements of spontaneous and prepared spellcasting at the cost of casting fewer spells each day.",
 		"kind": { "name": "Class", "armor": "Unarmored", "classArchetype": true, "keyAttribute": "Intelligence" },
 		"companion": false,
@@ -253,7 +253,7 @@
 		"precisionDamage": false
 	},
 	{
-		"name": "Flexible Primal Witch",
+		"name": "Flexible Witch (Primal)",
 		"description": "You command powerful magic, not through study or devotion to any ideal, but as a vessel or agent for a mysterious, otherworldly patron that even you don't entirely understand. You've learned how to cast spells flexibly, blending the best elements of spontaneous and prepared spellcasting at the cost of casting fewer spells each day.",
 		"kind": { "name": "Class", "armor": "Unarmored", "classArchetype": true, "keyAttribute": "Intelligence" },
 		"companion": false,
@@ -276,7 +276,7 @@
 		"precisionDamage": false
 	},
 	{
-		"name": "Primal Witch Archetype",
+		"name": "Witch Archetype (Primal)",
 		"description": "You have heard the whispers of a distant patron, who sent an emissary to teach you powerful magic.",
 		"kind": { "name": "Archetype", "armorTraining": false, "multiclass": true, "tenPlusFeats": true },
 		"companion": false,
@@ -299,7 +299,7 @@
 		"precisionDamage": false
 	},
 	{
-		"name": "Occult Witch Archetype",
+		"name": "Witch Archetype (Occult)",
 		"description": "You have heard the whispers of a distant patron, who sent an emissary to teach you powerful magic.",
 		"kind": { "name": "Archetype", "armorTraining": false, "multiclass": true, "tenPlusFeats": true },
 		"companion": false,
@@ -322,7 +322,7 @@
 		"precisionDamage": false
 	},
 	{
-		"name": "Arcane Witch Archetype",
+		"name": "Witch Archetype (Arcane)",
 		"description": "You have heard the whispers of a distant patron, who sent an emissary to teach you powerful magic.",
 		"kind": { "name": "Archetype", "armorTraining": false, "multiclass": true, "tenPlusFeats": true },
 		"companion": false,
@@ -345,7 +345,7 @@
 		"precisionDamage": false
 	},
 	{
-		"name": "Divine Witch Archetype",
+		"name": "Witch Archetype (Divine)",
 		"description": "You have heard the whispers of a distant patron, who sent an emissary to teach you powerful magic.",
 		"kind": { "name": "Archetype", "armorTraining": false, "multiclass": true, "tenPlusFeats": true },
 		"companion": false,
