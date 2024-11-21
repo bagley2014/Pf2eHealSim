@@ -1,0 +1,32 @@
+[
+	{
+		"name": "Thaumaturge",
+		"description": "The world is full of the unexplainable: ancient magic, dead gods, and even stranger things. In response, you've scavenged the best parts of every magical tradition and built up a collection of esoterica—a broken holy relic here, a sprig of mistletoe there—that you can use to best any creature by exploiting their weaknesses and vulnerabilities.",
+		"kind": { "name": "Class", "armor": "Medium", "classArchetype": false, "keyAttribute": "Charisma" },
+		"companion": false,
+		"familiar": true,
+		"mechanicalDeity": false,
+		"spellcasting": null,
+		"focusSpells": null,
+		"martialWeaponTraining": true,
+		"shieldBlock": false,
+		"rarity": "Common",
+		"spellLikeAbility": false,
+		"precisionDamage": false
+	},
+	{
+		"name": "Thaumaturge Archetype",
+		"description": "Scraps of knowledge have taught you how to exploit the vulnerabilities of creatures and the powers of mystical objects.",
+		"kind": { "name": "Archetype", "armorTraining": false, "multiclass": true, "tenPlusFeats": true },
+		"companion": false,
+		"familiar": true,
+		"mechanicalDeity": false,
+		"spellcasting": null,
+		"focusSpells": null,
+		"martialWeaponTraining": false,
+		"shieldBlock": false,
+		"rarity": "Common",
+		"spellLikeAbility": false,
+		"precisionDamage": false
+	}
+]
