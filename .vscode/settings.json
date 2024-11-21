@@ -1,9 +1,17 @@
 {
-  "eslint.useFlatConfig": true,
-  "typescript.preferences.importModuleSpecifier": "relative",
-  "git.ignoreLimitWarning": true,
-  "prettier.useEditorConfig": false,
-  "totalTypeScript.hideAllTips": true,
-  "typescript.tsdk": "node_modules/typescript/lib",
-  "editor.formatOnSave": true
+	"eslint.useFlatConfig": true,
+	"typescript.preferences.importModuleSpecifier": "relative",
+	"git.ignoreLimitWarning": true,
+	"prettier.useEditorConfig": false,
+	"totalTypeScript.hideAllTips": true,
+	"typescript.tsdk": "node_modules/typescript/lib",
+	"editor.formatOnSave": true,
+	"cSpell.customDictionaries": {
+		"custom-dictionary-workspace": {
+			"name": "custom-dictionary-workspace",
+			"path": "${workspaceFolder:Pf2eHealSim}/.cspell/custom-dictionary-workspace.txt",
+			"addWords": true,
+			"scope": "workspace"
+		}
+	}
 }

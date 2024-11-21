@@ -1,0 +1,9 @@
+# Custom Dictionary Words
+Elementalist
+gmean
+gstddev
+multiclass
+Polearms
+spellcaster
+spellcasting
+Urgathoa
