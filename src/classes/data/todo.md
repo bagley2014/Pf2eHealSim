@@ -1,8 +1,5 @@
 ## Add data
 
-- Psychic
-- Summoner
-- Thaumaturge
 - Miscellaneous archetypes
 
 ## Add properties
@@ -11,6 +8,7 @@ See this table for data: https://pf2easy.com/index.php?id=2507&name=classes
 This table is kind of neat for saves/perception: https://docs.google.com/spreadsheets/d/1Kif7MyhmwOQsqL92x_5UmF_75vb79TOg9jqd36SdP_g/edit?gid=893826129#gid=893826129
 
 - Add something like "deity's domain" to the focus spells object; it should be true on Cleric, Champion, Oracle, their archetypes, and eventually the Soul Warden archetype
+- Add a string | false property representing whether the class gets a once-per-ten-minutes, auto-success healing option, with strings being something like "Focus Spell" or "Impulse"
 
 ### In consideration
 
