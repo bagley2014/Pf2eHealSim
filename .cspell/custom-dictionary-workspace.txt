@@ -2,6 +2,7 @@
 Elementalist
 gmean
 gstddev
+Kineticist
 multiclass
 Polearms
 spellcaster
