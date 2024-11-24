@@ -14,7 +14,8 @@
 		},
 		"focusSpells": {
 			"attribute": "Charisma",
-			"tradition": "Divine"
+			"tradition": "Divine",
+			"domainSpells": true
 		},
 		"martialWeaponTraining": false,
 		"shieldBlock": false,
@@ -37,7 +38,8 @@
 		},
 		"focusSpells": {
 			"attribute": "Charisma",
-			"tradition": "Divine"
+			"tradition": "Divine",
+			"domainSpells": true
 		},
 		"martialWeaponTraining": false,
 		"shieldBlock": false,

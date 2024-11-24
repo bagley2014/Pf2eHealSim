@@ -9,7 +9,8 @@
 		"spellcasting": null,
 		"focusSpells": {
 			"attribute": "Charisma",
-			"tradition": "Divine"
+			"tradition": "Divine",
+			"domainSpells": true
 		},
 		"martialWeaponTraining": true,
 		"shieldBlock": true,
@@ -27,7 +28,8 @@
 		"spellcasting": null,
 		"focusSpells": {
 			"attribute": "Charisma",
-			"tradition": "Divine"
+			"tradition": "Divine",
+			"domainSpells": true
 		},
 		"martialWeaponTraining": false,
 		"shieldBlock": false,

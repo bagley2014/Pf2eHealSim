@@ -14,7 +14,8 @@
 		},
 		"focusSpells": {
 			"attribute": "Wisdom",
-			"tradition": "Divine"
+			"tradition": "Divine",
+			"domainSpells": true
 		},
 		"martialWeaponTraining": "The favored weapon of your deity",
 		"shieldBlock": true,
@@ -37,7 +38,8 @@
 		},
 		"focusSpells": {
 			"attribute": "Wisdom",
-			"tradition": "Divine"
+			"tradition": "Divine",
+			"domainSpells": true
 		},
 		"martialWeaponTraining": "The favored weapon of your deity",
 		"shieldBlock": false,
@@ -60,7 +62,8 @@
 		},
 		"focusSpells": {
 			"attribute": "Wisdom",
-			"tradition": "Divine"
+			"tradition": "Divine",
+			"domainSpells": true
 		},
 		"martialWeaponTraining": "The favored weapon of your deity",
 		"shieldBlock": true,
@@ -83,7 +86,8 @@
 		},
 		"focusSpells": {
 			"attribute": "Wisdom",
-			"tradition": "Divine"
+			"tradition": "Divine",
+			"domainSpells": true
 		},
 		"martialWeaponTraining": "The favored weapon of your deity",
 		"shieldBlock": false,
@@ -106,7 +110,8 @@
 		},
 		"focusSpells": {
 			"attribute": "Wisdom",
-			"tradition": "Divine"
+			"tradition": "Divine",
+			"domainSpells": true
 		},
 		"martialWeaponTraining": true,
 		"shieldBlock": false,
@@ -129,7 +134,8 @@
 		},
 		"focusSpells": {
 			"attribute": "Wisdom",
-			"tradition": "Divine"
+			"tradition": "Divine",
+			"domainSpells": true
 		},
 		"martialWeaponTraining": false,
 		"shieldBlock": false,

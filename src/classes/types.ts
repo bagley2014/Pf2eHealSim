@@ -48,6 +48,7 @@ export const CharacterSource = z
 			.object({
 				attribute: Attribute.or(Attribute.array()).transform(arrayArrayable),
 				tradition: SpellcastingTradition.or(SpellcastingTradition.array()).transform(arrayArrayable),
+				domainSpells: z.literal(true).or(z.undefined()),
 			})
 			.nullable(),
 		mechanicalDeity: z.boolean(),
@@ -102,6 +103,7 @@ export const CharacterSource = z
 
 			focusSpells: focusSpells ? true : false,
 			focusSpells_attribute: focusSpells && focusSpells.attribute,
+			focusSpells_domainSpells: focusSpells && (focusSpells.domainSpells || false),
 			focusSpells_tradition: focusSpells && focusSpells.tradition,
 
 			spellcasting: spellcasting ? true : false,
@@ -127,6 +129,7 @@ const Character = z.object({
 	familiar: z.boolean(),
 	focusSpells: z.boolean(),
 	focusSpells_attribute: Attribute.array().nullable(),
+	focusSpells_domainSpells: z.boolean().nullable(),
 	focusSpells_tradition: SpellcastingTradition.array().nullable(),
 	kind: CharacterKind,
 	martialWeaponTraining: MartialWeapon,

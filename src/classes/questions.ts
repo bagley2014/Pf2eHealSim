@@ -16,6 +16,8 @@ function getQuestionText(trait: Trait): string {
 			return 'Do you want focus spells?';
 		case Trait.enum.focusSpells_attribute:
 			return 'What focus spell spellcasting attribute do you want?';
+		case Trait.enum.focusSpells_domainSpells:
+			return 'Do you want access to deity domain spells?';
 		case Trait.enum.focusSpells_tradition:
 			return 'Which focus spell tradition do you want?';
 		case Trait.enum.class_keyAttribute:
@@ -69,6 +71,7 @@ function getApplicableAnswers(trait: Trait, character: Character): string[] {
 		// Simple booleans
 		case Trait.enum.mechanicalDeity:
 		case Trait.enum.focusSpells:
+		case Trait.enum.focusSpells_domainSpells:
 		case Trait.enum.precisionDamage:
 		case Trait.enum.shieldBlock:
 		case Trait.enum.spellcasting:
