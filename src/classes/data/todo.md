@@ -11,6 +11,11 @@ This table is kind of neat for saves/perception: https://docs.google.com/spreads
 
 ### In consideration
 
+- Martial support, like distinguishing ranged classes from melee classes, is lacking
+  - Level 5 crit specialization
+  - Expert proficiency in some(?) weapon by level 5(?)
+  - Caster proficiency(?)
+  - Reactive strike available by level 6? (Vindicator has something that may qualify at level 8)
 - Something to note a class that places emphasis on Recalling Knowledge
 - Some sort of theme property, probably an array, that would hold things like "Undead" or "Draconic" and perhaps unify things like "Undead Sorcerer" and "Bones Oracle"
   - But the value might not outweigh the cost if I have to separate out more subclasses
@@ -32,6 +37,5 @@ This table is kind of neat for saves/perception: https://docs.google.com/spreads
     - That would also allow me to add a bunch more of them, like expert weapon proficiency at level 1, without needing to edit every single entry
     - The issue is that I might forget that a property exists and not include it somewhere that I should, then I'd have no way of knowing I'd made that mistake
     - Alternatively, I could group properties into objects more liberally, like a "martial" object that includes more details on weapon, armor, and shield proficiencies, then some classes I could easily leave it null and not have to go back and update, while others I would be forced to update as I add new properties
-- Martial support, like distinguishing ranged classes from melee classes, is lacking
 - Certain class archetypes, like the Seneschal Witch and the Warrior of Legend, currently only serve to take up space and need something to distinguish them
   - I intentionally omitted class archetypes like Wellspring Mage and Elementalist on the assumption that they don't change enough to warrant mentioning, so there's a bit of a conflict; either I add those in, or I take the others out, or I find a way to make those two fit my rule, or I find a better rule

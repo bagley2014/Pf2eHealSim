@@ -51,7 +51,7 @@ export const CharacterSource = z
 				domainSpells: z.literal(true).or(z.undefined()),
 			})
 			.nullable(),
-		mechanicalDeity: z.boolean(),
+		mechanicalDeity: z.boolean(), // Do you have the "deity" class feature or some other instruction to choose a deity?
 		spellcasting: z
 			.object({
 				attribute: Attribute.or(Attribute.array()).transform(arrayArrayable),
