@@ -55,7 +55,7 @@ function getQuestionText(trait: Trait): string {
 		case Trait.enum.spellLikeAbility:
 			return 'Do you want a spell-like ability?';
 		case Trait.enum.rarity:
-			return "What's the highest rarity you can use?";
+			return "What's the highest rarity you're allowed'?";
 		case Trait.enum.healingAbility:
 			return 'Do you want access to an infallible, 10-minute-cooldown healing ability?';
 	}
@@ -68,13 +68,12 @@ function getApplicableAnswers(trait: Trait, character: Character): string[] {
 		case Trait.enum.name:
 			return [character[trait]];
 		case Trait.enum.kind:
-			return [character[trait] || 'null', Answer.enum["Don't care"]];
+			return [character[trait], Answer.enum["Don't care"]];
 
 		// Simple booleans
 		case Trait.enum.mechanicalDeity:
 		case Trait.enum.focusSpells:
 		case Trait.enum.focusSpells_domainSpells:
-		case Trait.enum.precisionDamage:
 		case Trait.enum.shieldBlock:
 		case Trait.enum.spellcasting:
 		case Trait.enum.spellcasting_full:
@@ -85,6 +84,7 @@ function getApplicableAnswers(trait: Trait, character: Character): string[] {
 		case Trait.enum.archetype_multiclass:
 		case Trait.enum.archetype_tenPlusFeats:
 		case Trait.enum.familiar:
+		case Trait.enum.precisionDamage:
 			return character[trait] ? [Answer.enum.Yes, Answer.enum["Don't care"]] : [Answer.enum["Don't care"]];
 
 		// Booleans where "No" eliminates options, but "Yes" does not
@@ -180,6 +180,19 @@ export function getQuestion(trait: Trait, characters: Character[]): Question {
 	for (const character of characters) {
 		for (const answer of getApplicableAnswers(trait, character)) {
 			addCharacter(answer, character);
+		}
+	}
+
+	// If "Yes" is an answer, we don't want to include any identical answers,
+	// For example, exclude "Animal" from "Do you want a companion?" if "Yes" is an equivalent answer
+	if (answers.has(Answer.enum.Yes)) {
+		const yesChars = new Set(answers.get(Answer.enum.Yes)?.map((char) => char.name));
+		for (const answer of answers
+			.keys()
+			.toArray()
+			.filter((x) => x != Answer.enum.Yes)) {
+			const identicalCharSet = yesChars.symmetricDifference(new Set(answers.get(answer)!.map((char) => char.name))).size === 0;
+			if (identicalCharSet) answers.delete(answer);
 		}
 	}
 
