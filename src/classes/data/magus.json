@@ -18,6 +18,7 @@
 		},
 		"martialWeaponTraining": true,
 		"shieldBlock": false,
+		"healingAbility": false,
 		"rarity": "Common",
 		"spellLikeAbility": false,
 		"precisionDamage": false
@@ -41,6 +42,7 @@
 		},
 		"martialWeaponTraining": true,
 		"shieldBlock": true,
+		"healingAbility": false,
 		"rarity": "Common",
 		"spellLikeAbility": false,
 		"precisionDamage": false
@@ -64,6 +66,7 @@
 		},
 		"martialWeaponTraining": false,
 		"shieldBlock": false,
+		"healingAbility": false,
 		"rarity": "Common",
 		"spellLikeAbility": false,
 		"precisionDamage": false

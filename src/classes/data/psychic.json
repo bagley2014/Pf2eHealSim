@@ -15,6 +15,7 @@
 		"focusSpells": null,
 		"martialWeaponTraining": false,
 		"shieldBlock": false,
+		"healingAbility": false,
 		"rarity": "Common",
 		"spellLikeAbility": false,
 		"precisionDamage": false
@@ -35,6 +36,7 @@
 		"focusSpells": null,
 		"martialWeaponTraining": false,
 		"shieldBlock": false,
+		"healingAbility": false,
 		"rarity": "Common",
 		"spellLikeAbility": false,
 		"precisionDamage": false
@@ -55,6 +57,7 @@
 		"focusSpells": null,
 		"martialWeaponTraining": false,
 		"shieldBlock": false,
+		"healingAbility": false,
 		"rarity": "Common",
 		"spellLikeAbility": false,
 		"precisionDamage": false
@@ -75,6 +78,7 @@
 		"focusSpells": null,
 		"martialWeaponTraining": false,
 		"shieldBlock": false,
+		"healingAbility": false,
 		"rarity": "Common",
 		"spellLikeAbility": false,
 		"precisionDamage": false

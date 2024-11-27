@@ -10,6 +10,7 @@
 		"focusSpells": null,
 		"martialWeaponTraining": true,
 		"shieldBlock": true,
+		"healingAbility": ["Root Epithet", "Feat"],
 		"rarity": "Rare",
 		"spellLikeAbility": false,
 		"precisionDamage": true
@@ -25,6 +26,7 @@
 		"focusSpells": null,
 		"martialWeaponTraining": true,
 		"shieldBlock": false,
+		"healingAbility": false,
 		"rarity": "Rare",
 		"spellLikeAbility": false,
 		"precisionDamage": true

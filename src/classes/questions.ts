@@ -56,6 +56,8 @@ function getQuestionText(trait: Trait): string {
 			return 'Do you want a spell-like ability?';
 		case Trait.enum.rarity:
 			return "What's the highest rarity you can use?";
+		case Trait.enum.healingAbility:
+			return 'Do you want access to an infallible, 10-minute-cooldown healing ability?';
 	}
 }
 
@@ -94,6 +96,12 @@ function getApplicableAnswers(trait: Trait, character: Character): string[] {
 		case Trait.enum.spellLikeAbility:
 			return character[trait]
 				? [Answer.enum.Yes, character[trait], Answer.enum["Don't care"]]
+				: [Answer.enum.No, Answer.enum["Don't care"]];
+
+		// Booleans where a string array is used in place of `true`
+		case Trait.enum.healingAbility:
+			return character[trait]
+				? [Answer.enum.Yes, ...character[trait], Answer.enum["Don't care"]]
 				: [Answer.enum.No, Answer.enum["Don't care"]];
 
 		// String arrays

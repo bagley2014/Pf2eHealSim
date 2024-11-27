@@ -39,7 +39,7 @@ export function auditData() {
 
 	const unexpectedTraits = traits
 		.entries()
-		.filter((x) => !Trait.options.includes(x[0] as Trait))
+		.filter((x) => !Trait.options.includes(x[0] as Trait)) // I may be able to rewrite this with Trait.safeParse(x[0]).success to remove the typecast
 		.toArray();
 	if (unexpectedTraits?.length) console.log('Unexpected Traits:', unexpectedTraits);
 }

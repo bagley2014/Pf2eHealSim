@@ -6,10 +6,13 @@ function arrayArrayable<T>(val: Arrayable<T>) {
 	return [val];
 }
 
+// One reason for these enums is to check for misspellings or improper casing during parsing, ensuring data consistency
+// Another reason is to support a "canonical" ordering of options
 export const Armor = z.enum(['Unarmored', 'Light', 'Medium', 'Heavy']);
 export const Attribute = z.enum(['Strength', 'Dexterity', 'Constitution', 'Intelligence', 'Wisdom', 'Charisma']);
 const CharacterKind = z.enum(['Class', 'Archetype']);
 const CompanionKind = z.enum(['Animal', 'Construct']);
+const HealingKind = z.enum(['Feat', 'Focus Spell', 'Quick Alchemy', 'Other Class Feature']);
 export const MartialWeapon = z.enum([
 	'All',
 	'Alchemical Bombs',
@@ -30,6 +33,7 @@ const CanonicalOptionOrdering: string[] = ([] as string[])
 	.concat(Attribute.options)
 	.concat(CharacterKind.options)
 	.concat(CompanionKind.options)
+	.concat(HealingKind.options)
 	.concat(MartialWeapon.options)
 	.concat(Rarity.options)
 	.concat(SpellcastingKind.options)
@@ -66,6 +70,7 @@ export const CharacterSource = z
 		familiar: z.boolean(),
 		precisionDamage: z.boolean(),
 		spellLikeAbility: SpellLikeAbility.or(z.literal(false)),
+		healingAbility: z.string().or(z.string().array()).transform(arrayArrayable).or(z.literal(false)),
 		rarity: Rarity,
 		kind: z.discriminatedUnion('name', [
 			z.object({
@@ -82,9 +87,17 @@ export const CharacterSource = z
 			}),
 		]),
 	})
-	.transform(({ kind, focusSpells, martialWeaponTraining, spellcasting, ...rest }) => {
+	.transform(({ healingAbility, kind, focusSpells, martialWeaponTraining, spellcasting, ...rest }) => {
 		const character: Character = {
 			...rest,
+
+			healingAbility:
+				healingAbility === false
+					? false
+					: healingAbility.map((str) => {
+							const kind = HealingKind.safeParse(str);
+							return kind.success ? kind.data : HealingKind.enum['Other Class Feature'];
+						}),
 
 			martialWeaponTraining:
 				martialWeaponTraining === true
@@ -131,6 +144,7 @@ const Character = z.object({
 	focusSpells_attribute: Attribute.array().nullable(),
 	focusSpells_domainSpells: z.boolean().nullable(),
 	focusSpells_tradition: SpellcastingTradition.array().nullable(),
+	healingAbility: HealingKind.array().or(z.literal(false)),
 	kind: CharacterKind,
 	martialWeaponTraining: MartialWeapon,
 	mechanicalDeity: z.boolean(),
