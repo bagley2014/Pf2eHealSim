@@ -25,6 +25,8 @@ This table is kind of neat for saves/perception: https://docs.google.com/spreads
 
 ### Problems properties might solve
 
+- Archaeologist gives innate cantrips, but no spell slots; the spellcasting object may need to be adjusted to handle that somehow
+
 - Summoner needs help
 
   - An Eidolon isn't a companion...

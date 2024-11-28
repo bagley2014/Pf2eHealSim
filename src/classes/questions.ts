@@ -30,6 +30,7 @@ function getQuestionText(trait: Trait): string {
 			return 'What spellcasting attribute do you want?';
 		case Trait.enum.spellcasting_full:
 			return 'Do you want to be a full caster?';
+		// It seems innate casters can't use wands/staves/scrolls :/
 		case Trait.enum.spellcasting_kind:
 			return 'What kind of spell slots do you want?';
 		case Trait.enum.spellcasting_tradition:
@@ -37,7 +38,7 @@ function getQuestionText(trait: Trait): string {
 		case Trait.enum.kind:
 			return 'Are you looking for a class or just an archetype?';
 		case Trait.enum.archetype_tenPlusFeats:
-			return 'Must the archetype have 10 or more feats?';
+			return 'Must the archetype have 10 or more class feats?';
 		case Trait.enum.archetype_multiclass:
 			return 'Must the archetype be a multiclass archetype?';
 		case Trait.enum.archetype_armorTraining:

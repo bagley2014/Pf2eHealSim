@@ -1,0 +1,34 @@
+[
+	{
+		"name": "Acrobat",
+		"description": "You have trained your body to perform incredible, seemingly superhuman feats of grace and agility. You move in ways that leave your opponents fumbling for a response, turning every fight into a nimble piece of performance art.",
+		"kind": { "name": "Archetype", "armorTraining": false, "multiclass": false, "tenPlusFeats": false },
+		"companion": false,
+		"familiar": false,
+		"mechanicalDeity": false,
+		"spellcasting": null,
+		"focusSpells": null,
+		"martialWeaponTraining": false,
+		"shieldBlock": false,
+		"healingAbility": false,
+		"rarity": "Common",
+		"spellLikeAbility": false,
+		"precisionDamage": false
+	},
+	{
+		"name": "Archaeologist",
+		"description": "Adventurers raid tombs for material gain, but true archaeologists treasure the knowledge attained from such sites. You might accomplish your goals with scholarly learning, by training to overcome the tricks and traps set by ancient peoples and rivals, through magical training, or even with a bit of inexplicable luck.",
+		"kind": { "name": "Archetype", "armorTraining": false, "multiclass": false, "tenPlusFeats": false },
+		"companion": false,
+		"familiar": false,
+		"mechanicalDeity": false,
+		"spellcasting": null,
+		"focusSpells": null,
+		"martialWeaponTraining": false,
+		"shieldBlock": false,
+		"healingAbility": false,
+		"rarity": "Common",
+		"spellLikeAbility": false,
+		"precisionDamage": false
+	}
+]
